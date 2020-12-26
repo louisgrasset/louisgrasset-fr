@@ -14,7 +14,7 @@ const socialLinks = [
   },
   {
     title: "Twitter",
-    url: "https://twitter.com/louisgraset",
+    url: "https://twitter.com/louisgrasset",
     icon: twitter,
   },
   {
@@ -49,12 +49,13 @@ const IndexPage = () => {
                   href={`${link.url}`}
                   target="blank"
                   rel="noreferrer"
+                  className="hover:underline"
                 >
                   {link.title}
                 </a>
               </li>
             ))}
-            <li className="inline-block"><a href="./grasset-louis-cv.pdf">CV</a></li>
+            <li className="inline-block"><a href="./grasset-louis-cv.pdf" className="hover:underline">CV</a></li>
           </ul>
         </nav>
       </div>
