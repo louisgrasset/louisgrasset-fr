@@ -27,7 +27,7 @@ const socialLinks = [
 ];
 
 const IndexPage = () => {
-  const [isContactModalActive, setContactModalActive] = useState('false');
+  const [isContactModalActive, setContactModalActive] = useState(false);
   const toggleContactModal = () => {
     setContactModalActive(!isContactModalActive);
   };
