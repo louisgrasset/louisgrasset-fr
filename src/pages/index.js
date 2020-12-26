@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useState } from "react";
+import { useState, useEffect, useCallback, history } from "react";
 
 import Helmet from "react-helmet";
 
@@ -28,9 +28,31 @@ const socialLinks = [
 
 const IndexPage = () => {
   const [isContactModalActive, setContactModalActive] = useState(false);
-  const toggleContactModal = () => {
+  const toggleContactModal = useCallback(() => {
     setContactModalActive(!isContactModalActive);
-  };
+  }, [isContactModalActive]);
+
+
+
+  useEffect(() => {
+    // Get contact form success
+    const hash = window.location.hash;
+    if (hash && hash.substring(1, hash.length) === 'success') {
+      history.push('/');
+    }
+
+    // Close contact modal with escape key
+    const onKeyUp = (event) => {
+      if (event.keyCode === 27 && isContactModalActive) {
+        toggleContactModal();
+      }
+    };
+
+    document.addEventListener('keyup', (e) => onKeyUp(e));
+    return () => {
+      document.removeEventListener('keyup', (e) => onKeyUp(e));
+    };
+  }, [isContactModalActive, toggleContactModal]);
 
   return ([
     <main className="px-5 overflow-x-hidden lg:px-0">
@@ -49,7 +71,7 @@ const IndexPage = () => {
         <nav className="flex justify-between w-full">
           <a href="./">Louis Grasset</a>
           <ul>
-            {socialLinks.map((link, key) => (
+            {socialLinks.map(link => (
               <li key={link.title} className="inline-block mr-4">
                 <a
                   title={link.title}
@@ -79,7 +101,7 @@ const IndexPage = () => {
         </div>
       </div>
       <ul className="fixed top-0 flex-col items-center justify-center hidden w-10 h-full p-2 xl:flex left-4">
-        {socialLinks.map((link, key) => (
+        {socialLinks.map(link => (
           <li key={link.title} className="mb-4">
             <span>
               <a
@@ -95,7 +117,7 @@ const IndexPage = () => {
         ))}
       </ul>
       <div className={(isContactModalActive ? "flex" : "hidden") + " fixed top-0 left-0 items-center justify-center w-full h-screen backdrop-blur-5"}>
-        <div onClick={toggleContactModal} className="absolute w-full h-full bg-gray-900 cursor-pointer opacity-20" style={{ zIndex: -1 }}></div>
+        <div onClick={toggleContactModal} role="button" aria-label="Fermer la modale de contact" tabIndex="0" className="absolute w-full h-full bg-gray-900 cursor-pointer opacity-20" style={{ zIndex: -1 }}></div>
         <div className="container grid max-w-xl gap-8 p-10 overflow-x-auto bg-white shadow-2xl xl:gap-0 xl:max-w-3xl rounded-xl xl:grid-cols-2">
           <div className="flex-col pr-0 xl:pr-12">
             <h2 className="mb-4 text-2xl font-bold">Par où préfèrez-vous me contacter ?</h2>
@@ -104,7 +126,7 @@ const IndexPage = () => {
               <p>Le formulaire ci-contre vous permet également de prendre contact avec moi.</p>
             </div>
             <ul className="justify-self-end">
-              {socialLinks.filter(link => link.title === 'Twitter' || link.title === 'Linkedin').map((link, key) => (
+              {socialLinks.filter(link => link.title === 'Twitter' || link.title === 'Linkedin').map(link => (
                 <li key={link.title} className="inline-block mt-4 mr-4">
                   <span>
                     <a
@@ -119,24 +141,25 @@ const IndexPage = () => {
               ))}
             </ul>
           </div>
-          <form name="contact" method="POST" data-netlify="true" className="grid grid-cols-1 gap-4 pl-0 border-gray-200 xl:pl-12 xl:border-l">
+          <form name="contact" action="/#success" method="POST" data-netlify="true" className="grid grid-cols-1 gap-4 pl-0 border-gray-200 xl:pl-12 xl:border-l">
+            <input type="hidden" name="form-name" value="contact" />
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="mb-2 sm:mb-0">
                 <label htmlFor="firstname" className="block text-sm font-medium text-gray-700">Prénom</label>
-                <input type="text" name="firstname" id="firstname" class="focus:ring-blue-400 focus:border-blue-400 block w-full px-3 sm:text-sm border-gray-300 rounded-md" />
+                <input type="text" name="firstname" id="firstname" className="block w-full px-3 border-gray-300 rounded-md focus:ring-blue-400 focus:border-blue-400 sm:text-sm" />
               </div>
               <div>
                 <label htmlFor="lastname" className="block text-sm font-medium text-gray-700">Nom</label>
-                <input type="text" name="lastname" id="lastname" class="focus:ring-blue-400 focus:border-blue-400 block w-full px-3 sm:text-sm border-gray-300 rounded-md" />
+                <input type="text" name="lastname" id="lastname" className="block w-full px-3 border-gray-300 rounded-md focus:ring-blue-400 focus:border-blue-400 sm:text-sm" />
               </div>
             </div>
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
-              <input type="email" name="email" id="email" class="focus:ring-blue-400 focus:border-blue-400 block w-full px-3 sm:text-sm border-gray-300 rounded-md" />
+              <input type="email" name="email" id="email" className="block w-full px-3 border-gray-300 rounded-md focus:ring-blue-400 focus:border-blue-400 sm:text-sm" />
             </div>
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
-              <textarea name="message" id="message" class="focus:ring-blue-400 focus:border-blue-400 block w-full px-3 sm:text-sm border-gray-300 rounded-md h-30"></textarea>
+              <textarea name="message" id="message" className="block w-full px-3 border-gray-300 rounded-md focus:ring-blue-400 focus:border-blue-400 sm:text-sm h-30"></textarea>
             </div>
             <div>
               <input className="block h-12 px-6 font-medium text-white uppercase bg-gray-900 rounded-md cursor-pointer focus:outline-none focus:ring focus:border-gray-800" type="submit" value="Envoyer" />
@@ -144,7 +167,7 @@ const IndexPage = () => {
           </form>
         </div>
       </div>
-    </main >,
+    </main>,
     <footer className="py-10 font-light text-gray-700 bg-gray-200">
       <div className="container flex justify-between mx-auto align-top">
         <span>
@@ -152,7 +175,7 @@ const IndexPage = () => {
       Tous droits réservés.
       </span>
         <ul>
-          {socialLinks.map((link, key) => (
+          {socialLinks.map(link => (
             <li key={link.title} className="inline-block mx-6">
               <span>
                 <a
@@ -170,7 +193,7 @@ const IndexPage = () => {
           Retour en haut
           </button>
       </div>
-    </footer >
+    </footer>
   ]);
 };
 
