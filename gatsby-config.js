@@ -1,6 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: "Louis Grasset - Développeur web freelance",
+    description: `Louis Grasset, développeur web front end freelance. Développement adapté à vos besoin.`,
+    author: `@louisgrasset`,
+    siteUrl: `${process.env.GATSBY_SITE_URL}`
   },
   plugins: [
     "gatsby-plugin-postcss",
