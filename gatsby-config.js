@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "louisgrasset.fr",
+    title: "Louis Grasset - Développeur web freelance",
   },
   plugins: [
     "gatsby-plugin-postcss",
