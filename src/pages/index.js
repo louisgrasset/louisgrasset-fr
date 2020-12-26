@@ -132,7 +132,7 @@ const IndexPage = () => {
             </div>
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
-              <input type="text" name="email" id="email" class="focus:ring-blue-400 focus:border-blue-400 block w-full px-3 sm:text-sm border-gray-300 rounded-md" />
+              <input type="email" name="email" id="email" class="focus:ring-blue-400 focus:border-blue-400 block w-full px-3 sm:text-sm border-gray-300 rounded-md" />
             </div>
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
