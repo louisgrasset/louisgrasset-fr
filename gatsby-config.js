@@ -3,7 +3,7 @@ module.exports = {
     title: "Louis Grasset - Développeur web freelance",
     description: `Louis Grasset, développeur web front end freelance. Développement adapté à vos besoin.`,
     author: `@louisgrasset`,
-    siteUrl: `${process.env.GATSBY_SITE_URL}`
+    siteUrl: `${process.env.GATSBY_SITE_URL || "https://louisgrasset.fr"}`
   },
   plugins: [
     "gatsby-plugin-postcss",
