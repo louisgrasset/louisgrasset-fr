@@ -40,13 +40,6 @@ const IndexPage = () => {
   }, [isContactFormSubmitted]);
 
   useEffect(() => {
-    // Get contact form success
-    const hash = window.location.hash;
-    if (hash && hash.substring(1, hash.length) === 'success') {
-      window.history.replaceState(null, null, ' ');
-      toggleContactFormSubmission();
-    }
-
     // Close contact modal with escape key
     const onKeyUp = (event) => {
       if (event.keyCode === 27 && isContactModalActive) {
@@ -59,6 +52,17 @@ const IndexPage = () => {
       document.removeEventListener('keyup', (e) => onKeyUp(e));
     };
   }, [isContactModalActive, toggleContactModal]);
+
+  useEffect(() => {
+
+    // Get contact form success
+    const hash = window.location.hash;
+    if (hash && hash.substring(1, hash.length) === 'success') {
+      window.history.replaceState(null, null, ' ');
+      toggleContactFormSubmission();
+    }
+
+  }, [toggleContactFormSubmission]);
 
   return ([
     <main className="overflow-x-hidden">
@@ -162,14 +166,14 @@ const IndexPage = () => {
             </div>
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
-              <input type="email" name="email" id="email" className="block w-full px-3 border-gray-300 rounded-md focus:ring-blue-400 focus:border-blue-400 sm:text-sm" />
+              <input required type="email" name="email" id="email" className="block w-full px-3 border-gray-300 rounded-md focus:ring-blue-400 focus:border-blue-400 sm:text-sm" />
             </div>
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
               <textarea name="message" id="message" className="block w-full px-3 border-gray-300 rounded-md focus:ring-blue-400 focus:border-blue-400 sm:text-sm h-30"></textarea>
             </div>
             <div>
-              <input className="block h-12 px-6 font-medium text-white uppercase bg-gray-900 rounded-md cursor-pointer focus:outline-none focus:ring focus:border-gray-800" type="submit" value="Envoyer" />
+              <input required className="block h-12 px-6 font-medium text-white uppercase bg-gray-900 rounded-md cursor-pointer focus:outline-none focus:ring focus:border-gray-800" type="submit" value="Envoyer" />
             </div>
           </form>
         </div>
@@ -180,7 +184,7 @@ const IndexPage = () => {
         <span>
           Louis Grasset<br />
       Tous droits réservés.
-      Design inspiré par <a href="https://dribbble.com/shots/14572884-Redesigning-my-portfolio-Webflow" target="_blank" rel="noopener" className="underline"> ce shot</a>.
+      Design inspiré par <a href="https://dribbble.com/shots/14572884-Redesigning-my-portfolio-Webflow" target="_blank" rel="noreferrer" className="underline"> ce shot</a>.
         </span>
         <ul>
           {socialLinks.map(link => (
