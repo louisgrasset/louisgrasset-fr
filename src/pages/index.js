@@ -5,10 +5,12 @@ import Helmet from "react-helmet";
 
 import Alert from "../components/Alert/Alert";
 
+import companies from "../data/companies";
+
 import profile from "../images/profile.jpg";
-import linkedin from "../images/linkedin.svg";
-import malt from "../images/malt.svg";
-import twitter from "../images/twitter.svg";
+import linkedin from "../images/social/linkedin.svg";
+import malt from "../images/social/malt.svg";
+import twitter from "../images/social/twitter.svg";
 
 const socialLinks = [
   {
@@ -27,6 +29,7 @@ const socialLinks = [
     icon: linkedin,
   },
 ];
+
 
 const IndexPage = () => {
   const [isContactModalActive, setContactModalActive] = useState(false);
@@ -103,12 +106,17 @@ const IndexPage = () => {
         <div className="py-20">
           <img src={profile} alt="Louis Grasset" className="w-20 h-20 mb-4 rounded-full shadow-md"></img>
           <h1 className="text-6xl font-medium text-gray-900 md:text-7xl lg:text-8xl">
-            <span className="font-semibold text-black">Louis Grasset</span> <span className="invisible block text-sm md:visible md:inline-block md:text-7xl lg:text-8xl">—</span> Développeur web front end passionné qui croque le web.<br />
+            <span className="font-semibold text-black">Louis Grasset</span> <span className="invisible block text-sm md:visible md:inline-block md:text-7xl lg:text-8xl">—</span> Développeur web front end passionné. Je croque le web.<br />
           </h1>
           <p className="my-8 font-light text-gray-500 text-md">Actuellement en poste de Développeur R&amp;D chez <a href="https://yseop.com" className="underline">Yseop</a> et freelance.</p>
-          <button onClick={toggleContactModal} className="block h-12 px-6 font-medium text-white uppercase bg-gray-900 rounded-md focus:outline-none focus:ring-4 focus:ring-pink-500">
-            Prendre contact
+          <div className="grid grid-rows-2 gap-4 sm:max-w-md sm:grid-cols-2">
+            <button onClick={toggleContactModal} className="block h-12 px-6 font-medium text-white uppercase bg-gray-900 rounded-md shadow-md focus:outline-none focus:ring-4 focus:ring-pink-500">
+              Prendre contact
+            </button>
+            <button onClick={toggleContactModal} className="block h-12 px-6 font-medium text-gray-900 uppercase bg-white border border-gray-100 rounded-md shadow-md focus:outline-none focus:ring-4 focus:ring-pink-500">
+              Me connaître
           </button>
+          </div>
         </div>
       </div>
       <ul className="fixed top-0 flex-col items-center justify-center hidden w-10 h-full p-2 px-5 xl:flex left-4">
@@ -177,6 +185,24 @@ const IndexPage = () => {
             </div>
           </form>
         </div>
+      </div>
+      <div className="container px-5 py-20 mx-auto xl:px-20">
+        <h2 className="text-2xl font-bold text-gray-900 md:text-3xl">Entreprises</h2>
+        <p className="text-gray-500 text-md md:text-lg">Elles me font confiance</p>
+        <ul className="grid grid-cols-2 my-6 gap-x-3 gap-y-12 xl:gap-y-6 sm:grid-cols-3 lg:grid-cols-6 xl:flex xl:justify-between xl:flex-wrap">
+          {companies.map(link => (
+            <li key={link.title} className="xl:mr-8 xl:mb-8">
+              <a
+                title={link.title}
+                href={`${link.url}`}
+                target="blank"
+                rel="noreferrer"
+              >
+                <img src={link.icon} alt={link.title} className="h-12" />
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
     </main>,
     <footer className="px-5 py-10 font-light text-gray-700 bg-gray-200 ">
