@@ -142,7 +142,7 @@ const IndexPage = () => {
       </ul>
       <div className={(isContactModalActive ? "flex" : "hidden") + " fixed top-0 left-0 items-center justify-center w-full h-screen backdrop-blur-5"}>
         <div onClick={toggleContactModal} role="button" aria-label="Fermer la modale de contact" tabIndex="0" className="absolute w-full h-full bg-gray-900 cursor-pointer opacity-20" style={{ zIndex: -1 }}></div>
-        <div className="container grid max-w-xl gap-8 p-10 overflow-x-auto bg-white shadow-2xl xl:gap-0 xl:max-w-3xl rounded-xl xl:grid-cols-2">
+        <div className="container grid max-w-xl max-h-screen gap-8 p-10 overflow-y-auto bg-white shadow-2xl overscroll-contain xl:gap-0 xl:max-w-3xl rounded-xl xl:grid-cols-2">
           <div className="flex-col pr-0 xl:pr-12">
             <h2 className="mb-4 text-2xl font-bold">Par où préfèrez-vous me contacter ?</h2>
             <div className="font-light text-gray-700">
@@ -165,7 +165,7 @@ const IndexPage = () => {
               ))}
             </ul>
           </div>
-          <form name="contact" action="/#success" method="POST" data-netlify="true" className="grid grid-cols-1 gap-4 pl-0 border-gray-200 xl:pl-12 xl:border-l">
+          <form name="contact" action="/#success" method="POST" data-netlify="true" className="grid grid-cols-1 gap-4 pb-4 pl-0 border-gray-200 sm:pb-0 xl:pl-12 xl:border-l">
             <input type="hidden" name="form-name" value="contact" />
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="mb-2 sm:mb-0">
