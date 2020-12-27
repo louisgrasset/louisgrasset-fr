@@ -29,7 +29,11 @@ module.exports = {
       'blur': 'blur(20px)',
       'blur-5': 'blur(5px)',
     },
-    extend: {},
+    extend: {
+      gridTemplateColumns: {
+        '16-free': '16px minmax(max-content, 1fr)',
+      },
+    },
   },
   variants: {
     filter: ['responsive'], // defaults to ['responsive']

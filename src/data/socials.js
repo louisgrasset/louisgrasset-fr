@@ -1,6 +1,6 @@
-import linkedin from "../images/social/linkedin.svg";
-import malt from "../images/social/malt.svg";
-import twitter from "../images/social/twitter.svg";
+import linkedin from "../images/socials/linkedin.svg";
+import malt from "../images/socials/malt.svg";
+import twitter from "../images/socials/twitter.svg";
 
 const socials = [
     {
