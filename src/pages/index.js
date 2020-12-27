@@ -106,7 +106,7 @@ const IndexPage = () => {
             <span className="font-semibold text-black">Louis Grasset</span> <span className="invisible block text-sm md:visible md:inline-block md:text-7xl lg:text-8xl">—</span> Développeur web front end passionné qui croque le web.<br />
           </h1>
           <p className="my-8 font-light text-gray-500 text-md">Actuellement en poste de Développeur R&amp;D chez <a href="https://yseop.com" className="underline">Yseop</a> et freelance.</p>
-          <button onClick={toggleContactModal} className="block h-12 px-6 font-medium text-white uppercase bg-gray-900 rounded-md focus:outline-none focus:ring focus:border-gray-800">
+          <button onClick={toggleContactModal} className="block h-12 px-6 font-medium text-white uppercase bg-gray-900 rounded-md focus:outline-none focus:ring-4 focus:ring-pink-500">
             Prendre contact
           </button>
         </div>
@@ -157,23 +157,23 @@ const IndexPage = () => {
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="mb-2 sm:mb-0">
                 <label htmlFor="firstname" className="block text-sm font-medium text-gray-700">Prénom</label>
-                <input type="text" name="firstname" id="firstname" className="block w-full px-3 border-gray-300 rounded-md focus:ring-blue-400 focus:border-blue-400 sm:text-sm" />
+                <input type="text" name="firstname" id="firstname" className="block w-full px-3 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent sm:text-sm" />
               </div>
               <div>
                 <label htmlFor="lastname" className="block text-sm font-medium text-gray-700">Nom</label>
-                <input type="text" name="lastname" id="lastname" className="block w-full px-3 border-gray-300 rounded-md focus:ring-blue-400 focus:border-blue-400 sm:text-sm" />
+                <input type="text" name="lastname" id="lastname" className="block w-full px-3 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent sm:text-sm" />
               </div>
             </div>
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
-              <input required type="email" name="email" id="email" className="block w-full px-3 border-gray-300 rounded-md focus:ring-blue-400 focus:border-blue-400 sm:text-sm" />
+              <input required type="email" name="email" id="email" className="block w-full px-3 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent sm:text-sm" />
             </div>
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
-              <textarea name="message" id="message" className="block w-full px-3 border-gray-300 rounded-md focus:ring-blue-400 focus:border-blue-400 sm:text-sm h-30"></textarea>
+              <textarea name="message" id="message" className="block w-full px-3 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent sm:text-sm h-30"></textarea>
             </div>
             <div>
-              <input required className="block h-12 px-6 font-medium text-white uppercase bg-gray-900 rounded-md cursor-pointer focus:outline-none focus:ring focus:border-gray-800" type="submit" value="Envoyer" />
+              <input required className="block h-12 px-6 font-medium text-white uppercase bg-gray-900 rounded-md cursor-pointer focus:outline-none focus:ring-4 focus:ring-pink-500 focus:border-pink-500" type="submit" value="Envoyer" />
             </div>
           </form>
         </div>
@@ -201,9 +201,9 @@ const IndexPage = () => {
             </li>
           ))}
         </ul>
-        <button className="block w-48 h-12 px-6 bg-white md:justify-self-end" onClick={() => window.scroll({ top: 0, behavior: "smooth" })}>
+        <button className="block w-48 h-12 px-6 font-medium bg-white rounded-md md:justify-self-end focus:outline-none focus:ring-4 focus:ring-pink-500" onClick={() => window.scroll({ top: 0, behavior: "smooth" })}>
           Retour en haut
-          </button>
+        </button>
       </div>
     </footer>
   ]);
