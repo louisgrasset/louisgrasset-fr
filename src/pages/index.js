@@ -108,10 +108,10 @@ const IndexPage = () => {
           </ul>
         </nav>
       </div>
-      <div className="container flex min-h-screen px-5 mx-auto align-middle xl:px-20">
+      <div className="container flex px-5 mx-auto align-middle xl:px-20">
         <div className="py-20">
           <img src={profile} alt="Louis Grasset" className="w-20 h-20 mb-4 rounded-full shadow-md"></img>
-          <h1 className="text-6xl font-medium text-gray-900 md:text-7xl lg:text-8xl">
+          <h1 className="text-4xl font-medium text-gray-900 sm:text-6xl md:text-7xl lg:text-8xl">
             <span className="font-semibold text-black">Louis Grasset</span> <span className="invisible block text-sm md:visible md:inline-block md:text-7xl lg:text-8xl">—</span> Développeur web front end passionné. Je&nbsp;croque le web.<br />
           </h1>
           <p className="my-8 font-light text-gray-500 text-md">Actuellement en poste de Développeur R&amp;D chez <a href="https://yseop.com" className="underline">Yseop</a> et freelance.</p>

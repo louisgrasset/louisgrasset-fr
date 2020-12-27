@@ -1,6 +1,6 @@
 import yseop from "../images/companies/yseop.svg";
-import keleops from "../images/companies/keleops.svg";
 import unicancer from "../images/companies/unicancer.svg";
+import keleops from "../images/companies/keleops.svg";
 import radiance from "../images/companies/radiance.svg";
 import manitowoc from "../images/companies/manitowoc.svg";
 import sqli from "../images/companies/sqli.svg";
@@ -14,15 +14,15 @@ const companies = [
         year: 2020
     },
     {
-        title: "Keleops",
-        url: "https://www.keleops.ch",
-        icon: keleops,
-        year: 2020
-    },
-    {
         title: "Unicancer",
         url: "http://www.unicancer.fr",
         icon: unicancer,
+        year: 2020
+    },
+    {
+        title: "Keleops",
+        url: "https://www.keleops.ch",
+        icon: keleops,
         year: 2020
     },
     {
