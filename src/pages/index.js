@@ -70,7 +70,7 @@ const IndexPage = () => {
         <title>Louis Grasset</title>
       </Helmet>
       <Alert text={"Votre message a bien été envoyé."} show={isContactFormSubmitted} />
-      <div className="container relative flex px-5 pt-8 mx-auto align-middle sm:px-0 xl:px-20">
+      <div className="container relative flex px-5 pt-8 mx-auto align-middle xl:px-20">
         <div className="absolute top-0 right-0 overflow-hidden filter-blur-40" style={{ animation: 'spin 14s ease-out alternate infinite', zIndex: '-1' }}>
           <div className="relative grid grid-cols-2 origin-center transform -rotate-45 opacity-70 filter-blur-40">
             <div className="top-0 left-0 bg-yellow-500 rounded-full rounded-br-none w-60 h-60"></div>
@@ -99,7 +99,7 @@ const IndexPage = () => {
           </ul>
         </nav>
       </div>
-      <div className="container flex min-h-screen px-5 mx-auto align-middle sm:px-0 xl:px-20">
+      <div className="container flex min-h-screen px-5 mx-auto align-middle xl:px-20">
         <div className="py-20">
           <img src={profile} alt="Louis Grasset" className="w-20 h-20 mb-4 rounded-full shadow-md"></img>
           <h1 className="text-6xl font-medium text-gray-900 md:text-7xl lg:text-8xl">
@@ -111,7 +111,7 @@ const IndexPage = () => {
           </button>
         </div>
       </div>
-      <ul className="fixed top-0 flex-col items-center justify-center hidden w-10 h-full p-2 px-5 sm:px-0 xl:flex left-4">
+      <ul className="fixed top-0 flex-col items-center justify-center hidden w-10 h-full p-2 px-5 xl:flex left-4">
         {socialLinks.map(link => (
           <li key={link.title} className="mb-4">
             <span>
@@ -179,7 +179,7 @@ const IndexPage = () => {
         </div>
       </div>
     </main>,
-    <footer className="px-5 py-10 font-light text-gray-700 bg-gray-200 sm:px-0">
+    <footer className="px-5 py-10 font-light text-gray-700 bg-gray-200 ">
       <div className="container grid justify-between grid-flow-row gap-4 mx-auto align-top md:grid-flow-col md:grid-cols-3">
         <span>
           Louis Grasset<br />
