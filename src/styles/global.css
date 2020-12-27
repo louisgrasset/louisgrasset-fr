@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+}
+
 @keyframes spin {
     0% { transform: rotate(0deg) scale(1) }
     100% { transform: rotate(360deg) scale(1.2) }

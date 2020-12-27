@@ -1,7 +1,6 @@
 import * as React from "react";
 import { useState, useEffect, useCallback } from "react";
-
-import Helmet from "react-helmet";
+import { Helmet } from "react-helmet";
 
 import Alert from "../components/Alert/Alert";
 
@@ -30,8 +29,16 @@ const socials = [
   },
 ];
 
-
 const IndexPage = () => {
+  let refs = [];
+  refs.top = React.createRef();
+  refs.companies = React.createRef();
+
+  const scrollInto = (element) => {
+    element.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+
   const [isContactModalActive, setContactModalActive] = useState(false);
   const toggleContactModal = useCallback(() => {
     setContactModalActive(!isContactModalActive);
@@ -49,7 +56,6 @@ const IndexPage = () => {
         toggleContactModal();
       }
     };
-
     document.addEventListener('keyup', (e) => onKeyUp(e));
     return () => {
       document.removeEventListener('keyup', (e) => onKeyUp(e));
@@ -57,7 +63,6 @@ const IndexPage = () => {
   }, [isContactModalActive, toggleContactModal]);
 
   useEffect(() => {
-
     // Get contact form success
     const hash = window.location.hash;
     if (hash && hash.substring(1, hash.length) === 'success') {
@@ -67,8 +72,9 @@ const IndexPage = () => {
 
   }, [toggleContactFormSubmission]);
 
+
   return ([
-    <main className="overflow-x-hidden">
+    <main className="overflow-x-hidden" ref={refs.top}>
       <Helmet>
         <title>Louis Grasset</title>
       </Helmet>
@@ -113,7 +119,7 @@ const IndexPage = () => {
             <button onClick={toggleContactModal} className="block h-12 px-6 font-medium text-white uppercase bg-gray-900 rounded-md shadow-md focus:outline-none focus:ring-4 focus:ring-pink-500">
               Prendre contact
             </button>
-            <button onClick={toggleContactModal} className="block h-12 px-6 font-medium text-gray-900 uppercase bg-white border border-gray-100 rounded-md shadow-md focus:outline-none focus:ring-4 focus:ring-pink-500">
+            <button onClick={() => { scrollInto(refs.companies); }} className="block h-12 px-6 font-medium text-gray-900 uppercase bg-white border border-gray-100 rounded-md shadow-md focus:outline-none focus:ring-4 focus:ring-pink-500">
               Me connaître
           </button>
           </div>
@@ -186,7 +192,7 @@ const IndexPage = () => {
           </form>
         </div>
       </div>
-      <div className="container px-5 py-20 mx-auto xl:px-20">
+      <div className="container px-5 py-20 mx-auto xl:px-20" ref={refs.companies}>
         <h2 className="text-2xl font-bold text-gray-900 md:text-3xl">Entreprises</h2>
         <p className="text-gray-500 text-md md:text-lg">Elles me font confiance</p>
         <ul className="grid grid-cols-2 my-6 gap-x-3 gap-y-12 xl:gap-y-6 sm:grid-cols-3 lg:grid-cols-6 xl:flex xl:justify-between xl:flex-wrap">
@@ -227,7 +233,7 @@ const IndexPage = () => {
             </li>
           ))}
         </ul>
-        <button className="block w-48 h-12 px-6 font-medium bg-white rounded-md md:justify-self-end focus:outline-none focus:ring-4 focus:ring-pink-500" onClick={() => window.scroll({ top: 0, behavior: "smooth" })}>
+        <button className="block w-48 h-12 px-6 font-medium bg-white rounded-md md:justify-self-end focus:outline-none focus:ring-4 focus:ring-pink-500" onClick={() => scrollInto(refs.top)}>
           Retour en haut
         </button>
       </div>
