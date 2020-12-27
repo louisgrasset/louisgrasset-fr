@@ -1,7 +1,9 @@
 import * as React from "react";
-import { useState, useEffect, useCallback, history } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 import Helmet from "react-helmet";
+
+import Alert from "../components/Alert/Alert";
 
 import profile from "../images/profile.jpg";
 import linkedin from "../images/linkedin.svg";
@@ -32,13 +34,17 @@ const IndexPage = () => {
     setContactModalActive(!isContactModalActive);
   }, [isContactModalActive]);
 
-
+  const [isContactFormSubmitted, setContactFormSubmission] = useState(false);
+  const toggleContactFormSubmission = useCallback(() => {
+    setContactFormSubmission(!isContactFormSubmitted);
+  }, [isContactFormSubmitted]);
 
   useEffect(() => {
     // Get contact form success
     const hash = window.location.hash;
     if (hash && hash.substring(1, hash.length) === 'success') {
-      history.push('/');
+      window.history.replaceState(null, null, ' ');
+      toggleContactFormSubmission();
     }
 
     // Close contact modal with escape key
@@ -55,11 +61,12 @@ const IndexPage = () => {
   }, [isContactModalActive, toggleContactModal]);
 
   return ([
-    <main className="px-5 overflow-x-hidden lg:px-0">
+    <main className="overflow-x-hidden">
       <Helmet>
         <title>Louis Grasset</title>
       </Helmet>
-      <div className="container relative flex pt-8 mx-auto align-middle xl:px-20">
+      <Alert text={"Votre message a bien été envoyé."} show={isContactFormSubmitted} />
+      <div className="container relative flex px-5 pt-8 mx-auto align-middle sm:px-0 xl:px-20">
         <div className="absolute top-0 right-0 overflow-hidden filter-blur-40" style={{ animation: 'spin 14s ease-out alternate infinite', zIndex: '-1' }}>
           <div className="relative grid grid-cols-2 origin-center transform -rotate-45 opacity-70 filter-blur-40">
             <div className="top-0 left-0 bg-yellow-500 rounded-full rounded-br-none w-60 h-60"></div>
@@ -88,7 +95,7 @@ const IndexPage = () => {
           </ul>
         </nav>
       </div>
-      <div className="container flex min-h-screen mx-auto align-middle xl:px-20">
+      <div className="container flex min-h-screen px-5 mx-auto align-middle sm:px-0 xl:px-20">
         <div className="py-20">
           <img src={profile} alt="Louis Grasset" className="w-20 h-20 mb-4 rounded-full shadow-md"></img>
           <h1 className="text-6xl font-medium text-gray-900 md:text-7xl lg:text-8xl">
@@ -100,7 +107,7 @@ const IndexPage = () => {
           </button>
         </div>
       </div>
-      <ul className="fixed top-0 flex-col items-center justify-center hidden w-10 h-full p-2 xl:flex left-4">
+      <ul className="fixed top-0 flex-col items-center justify-center hidden w-10 h-full p-2 px-5 sm:px-0 xl:flex left-4">
         {socialLinks.map(link => (
           <li key={link.title} className="mb-4">
             <span>
@@ -168,15 +175,16 @@ const IndexPage = () => {
         </div>
       </div>
     </main>,
-    <footer className="py-10 font-light text-gray-700 bg-gray-200">
-      <div className="container flex justify-between mx-auto align-top">
+    <footer className="px-5 py-10 font-light text-gray-700 bg-gray-200 sm:px-0">
+      <div className="container grid justify-between grid-flow-row gap-4 mx-auto align-top md:grid-flow-col">
         <span>
           Louis Grasset<br />
       Tous droits réservés.
-      </span>
+      Design inspiré par <a href="https://dribbble.com/shots/14572884-Redesigning-my-portfolio-Webflow" target="_blank" rel="noopener" className="underline"> ce shot</a>.
+        </span>
         <ul>
           {socialLinks.map(link => (
-            <li key={link.title} className="inline-block mx-6">
+            <li key={link.title} className="inline-block mr-6">
               <span>
                 <a
                   title={link.title}
