@@ -112,7 +112,7 @@ const IndexPage = () => {
         <div className="py-20">
           <img src={profile} alt="Louis Grasset" className="w-20 h-20 mb-4 rounded-full shadow-md"></img>
           <h1 className="text-6xl font-medium text-gray-900 md:text-7xl lg:text-8xl">
-            <span className="font-semibold text-black">Louis Grasset</span> <span className="invisible block text-sm md:visible md:inline-block md:text-7xl lg:text-8xl">—</span> Développeur web front end passionné. Je croque le web.<br />
+            <span className="font-semibold text-black">Louis Grasset</span> <span className="invisible block text-sm md:visible md:inline-block md:text-7xl lg:text-8xl">—</span> Développeur web front end passionné. Je&nbsp;croque le web.<br />
           </h1>
           <p className="my-8 font-light text-gray-500 text-md">Actuellement en poste de Développeur R&amp;D chez <a href="https://yseop.com" className="underline">Yseop</a> et freelance.</p>
           <div className="grid grid-rows-2 gap-4 sm:max-w-md sm:grid-cols-2">
@@ -125,19 +125,18 @@ const IndexPage = () => {
           </div>
         </div>
       </div>
-      <ul className="fixed top-0 flex-col items-center justify-center hidden w-10 h-screen p-2 px-5 md:flex left-4">
+      <ul className="fixed top-0 flex-col items-center justify-center hidden w-10 h-screen p-2 px-5 xl:flex left-4">
         {socials.map((link, key) => (
           <li key={key} className="mb-4">
-            <span>
-              <a
-                title={link.title}
-                href={`${link.url}`}
-                target="blank"
-                rel="noreferrer"
-              >
-                <img src={link.icon} alt={link.title} className="w-6 h-6" />
-              </a>
-            </span>
+            <a
+              title={link.title}
+              href={`${link.url}`}
+              target="blank"
+              rel="noreferrer"
+              className="block w-6 h-6"
+            >
+              <img src={link.icon} alt={link.title} />
+            </a>
           </li>
         ))}
       </ul>
