@@ -180,13 +180,13 @@ const IndexPage = () => {
       </div>
     </main>,
     <footer className="px-5 py-10 font-light text-gray-700 bg-gray-200 sm:px-0">
-      <div className="container grid justify-between grid-flow-row gap-4 mx-auto align-top md:grid-flow-col">
+      <div className="container grid justify-between grid-flow-row gap-4 mx-auto align-top md:grid-flow-col md:grid-cols-3">
         <span>
           Louis Grasset<br />
       Tous droits réservés.
       Design inspiré par <a href="https://dribbble.com/shots/14572884-Redesigning-my-portfolio-Webflow" target="_blank" rel="noreferrer" className="underline"> ce shot</a>.
         </span>
-        <ul>
+        <ul className="flex md:justify-center">
           {socialLinks.map(link => (
             <li key={link.title} className="inline-block mr-6">
               <span>
@@ -201,7 +201,7 @@ const IndexPage = () => {
             </li>
           ))}
         </ul>
-        <button className="block h-12 px-6 bg-white" onClick={() => window.scroll({ top: 0, behavior: "smooth" })}>
+        <button className="block w-48 h-12 px-6 bg-white md:justify-self-end" onClick={() => window.scroll({ top: 0, behavior: "smooth" })}>
           Retour en haut
           </button>
       </div>
