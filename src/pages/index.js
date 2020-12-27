@@ -12,7 +12,7 @@ import linkedin from "../images/social/linkedin.svg";
 import malt from "../images/social/malt.svg";
 import twitter from "../images/social/twitter.svg";
 
-const socialLinks = [
+const socials = [
   {
     title: "Malt",
     url: "https://malt.com/profile/louisgrasset",
@@ -85,8 +85,8 @@ const IndexPage = () => {
         <nav className="flex justify-between w-full">
           <a href="./">Louis Grasset</a>
           <ul>
-            {socialLinks.map(link => (
-              <li key={link.title} className="inline-block mr-4">
+            {socials.map((link, key) => (
+              <li key={key} className="inline-block mr-4">
                 <a
                   title={link.title}
                   href={`${link.url}`}
@@ -119,9 +119,9 @@ const IndexPage = () => {
           </div>
         </div>
       </div>
-      <ul className="fixed top-0 flex-col items-center justify-center hidden w-10 h-full p-2 px-5 xl:flex left-4">
-        {socialLinks.map(link => (
-          <li key={link.title} className="mb-4">
+      <ul className="fixed top-0 flex-col items-center justify-center hidden w-10 h-screen p-2 px-5 md:flex left-4">
+        {socials.map((link, key) => (
+          <li key={key} className="mb-4">
             <span>
               <a
                 title={link.title}
@@ -145,8 +145,8 @@ const IndexPage = () => {
               <p>Le formulaire ci-contre vous permet également de prendre contact avec moi.</p>
             </div>
             <ul className="justify-self-end">
-              {socialLinks.filter(link => link.title === 'Twitter' || link.title === 'Linkedin').map(link => (
-                <li key={link.title} className="inline-block mt-4 mr-4">
+              {socials.filter(link => link.title === 'Twitter' || link.title === 'Linkedin').map((link, key) => (
+                <li key={key} className="inline-block mt-4 mr-4">
                   <span>
                     <a
                       title={link.title}
@@ -190,8 +190,8 @@ const IndexPage = () => {
         <h2 className="text-2xl font-bold text-gray-900 md:text-3xl">Entreprises</h2>
         <p className="text-gray-500 text-md md:text-lg">Elles me font confiance</p>
         <ul className="grid grid-cols-2 my-6 gap-x-3 gap-y-12 xl:gap-y-6 sm:grid-cols-3 lg:grid-cols-6 xl:flex xl:justify-between xl:flex-wrap">
-          {companies.map(link => (
-            <li key={link.title} className="xl:mr-8 xl:mb-8">
+          {companies.map((link, key) => (
+            <li key={key} className="xl:mr-8 xl:mb-8">
               <a
                 title={link.title}
                 href={`${link.url}`}
@@ -204,7 +204,7 @@ const IndexPage = () => {
           ))}
         </ul>
       </div>
-    </main>,
+    </main >,
     <footer className="px-5 py-10 font-light text-gray-700 bg-gray-200 ">
       <div className="container grid justify-between grid-flow-row gap-4 mx-auto align-top md:grid-flow-col md:grid-cols-3">
         <span>
@@ -213,8 +213,8 @@ const IndexPage = () => {
       Design inspiré par <a href="https://dribbble.com/shots/14572884-Redesigning-my-portfolio-Webflow" target="_blank" rel="noreferrer" className="underline"> ce shot</a>.
         </span>
         <ul className="flex md:justify-center">
-          {socialLinks.map(link => (
-            <li key={link.title} className="inline-block mr-6">
+          {socials.map((link, key) => (
+            <li key={key} className="inline-block mr-6">
               <span>
                 <a
                   title={link.title}
