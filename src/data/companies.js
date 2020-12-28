@@ -50,7 +50,7 @@ const companies = [
         year: 2020
     },
     {
-        slug: '',
+        slug: 'neety',
         title: "Neety",
         url: "https://neety.email",
         icon: neety,

@@ -29,7 +29,14 @@ module.exports = {
       'blur': 'blur(20px)',
       'blur-5': 'blur(5px)',
     },
-    extend: {},
+    extend: {
+      height: {
+        'portfolio': '32.3rem',
+      },
+      maxHeight: {
+        'projectslist': 'calc(100% - 2.3rem)'
+      },
+    },
   },
   variants: {
     filter: ['responsive'], // defaults to ['responsive']
