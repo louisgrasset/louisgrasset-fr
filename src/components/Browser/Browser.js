@@ -2,7 +2,7 @@ import * as React from 'react';
 const Browser = (props) => {
     let address = props.url.substring(8, props.url.length);
     return (
-        <div className="rounded-xl ring-1 ring-black ring-opacity-5">
+        <div className="h-full rounded-xl ring-1 ring-black ring-opacity-5">
             <div className="grid items-center gap-6 px-4 py-2 rounded-tr-xl sm:rounded-t-xl bg-gradient-to-b from-gray-50 to-gray-100" style={{ gridTemplateColumns: '1fr minmax(min-content, 640px) 1fr' }}>
                 <div className="flex space-x-1.5">
                     <div className="w-3 h-3 bg-gray-300 rounded-full"></div>
