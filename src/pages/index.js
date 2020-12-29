@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Helmet } from "react-helmet";
 
 // Import components 
 import Alert from "../components/Alert/Alert";
@@ -55,6 +56,18 @@ const IndexPage = () => {
 
   return (
     <>
+      <Helmet
+        title="Louis Grasset - Développeur web front end freelance"
+        meta={[
+          { name: 'charset', content: 'utf-8' },
+          { name: 'description', content: 'Louis Grasset, développeur web front end freelance. Développement adapté à vos besoins.' },
+          { name: 'author', content: 'Louis Grasset' },
+          { name: 'twitter:creator', content: '@louisgrasset' },
+          { name: 'keywords', content: 'freelance, louis, grasset, louisgrasset, fullstack, lyon, développeur, dev, developpement, portolio, php, css, sass, intégration, web, vitrine, laravel, reactjs, react, javascript, sql, html, entrepreneur' },
+        ]}
+      >
+        <html lang="fr" />
+      </Helmet>
       <main className="overflow-x-hidden" ref={refs.top}>
         <Alert text={"Votre message a bien été envoyé."} show={isContactFormSubmitted} />
         <div className="container relative flex px-5 pt-8 mx-auto align-middle md:px-10 xl:px-20">
