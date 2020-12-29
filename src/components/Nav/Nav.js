@@ -5,7 +5,7 @@ const Nav = () => {
     return (
         <nav className="flex justify-between w-full">
             <a href="./">Louis Grasset</a>
-            <ul>
+            <ul className="text-right">
                 {socials.map((link, key) => (
                     <li key={key} className="inline-block mr-4">
                         <a
