@@ -102,8 +102,9 @@ const IndexPage = () => {
                   href={`${link.url}`}
                   target="blank"
                   rel="noreferrer"
+                  className="w-full"
                 >
-                  <img src={link.icon} alt={link.title} className="h-12 p-1" />
+                  <img src={link.icon} alt={link.title} className="h-12 p-1" style={{ maxWidth: '9rem' }} />
                 </a>
               </li>
             ))}
