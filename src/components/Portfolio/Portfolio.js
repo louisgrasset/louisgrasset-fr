@@ -17,7 +17,7 @@ const Portfolio = () => {
                     <Gallery project={project} />
                     <div className="absolute bottom-4 right-4">
                         {project.stacks.map((stack, key) => (
-                            <div key={key} className={`bg-${project.color}-${500 + 100 * key} rounded-md py-1 px-2 uppercase text-sm font-medium text-white inline-block ml-2`}>{stack}</div>
+                            <div key={key} className={`bg-${project.color}-${500 + 100 * key} rounded-md py-1 px-2 uppercase text-sm shadow-md font-medium text-white inline-block ml-2`}>{stack}</div>
                         ))}
                     </div>
                 </div>

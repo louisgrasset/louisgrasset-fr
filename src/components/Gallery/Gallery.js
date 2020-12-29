@@ -27,10 +27,11 @@ const Gallery = ({ project }) => {
 
     return (
         <div className="relative h-full overflow-hidden">
-
             <div className={"flex flex-nowrap h-full  transition-transform translate-x-0"} style={{ transform: `translateX(-${(image - 1) * 100}%)` }}>
                 {gallery}
             </div>
+            <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white"></div>
+
             <GalleryButton hidden={image === 1} onClick={previousImage} reverse={true} />
             <GalleryButton hidden={image === project.images} onClick={nextImage} />
         </div>
