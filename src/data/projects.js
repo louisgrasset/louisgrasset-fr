@@ -42,7 +42,7 @@ const projects = [
     {
         slug: 'neety',
         company: 'neety',
-        name: 'Neety',
+        name: 'Neety (Free Your Inbox)',
         year: 2019,
         url: 'https://neety.email',
         stacks: ['Laravel', 'SASS', 'VueJs', 'Vagrant'],
@@ -59,6 +59,16 @@ const projects = [
         color: 'green',
         images: 2
     },
+    {
+        slug: 'eureka',
+        company: 'eureka',
+        name: 'Eurêka',
+        year: 2016,
+        url: 'https://eureka-officiel.com',
+        stacks: ['SailsJS', 'SASS', 'Heroku'],
+        color: 'blue',
+        images: 1
+    }
 ];
 
 export default projects;

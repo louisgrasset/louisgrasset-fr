@@ -47,12 +47,19 @@ module.exports = {
       height: {
         'portfolio-2xl': '32.3rem',
         'portfolio-xl': '26.3rem',
-        'portfolio-lg': '23.3rem'
+        'portfolio-lg': '23.3rem',
+        'portfolio-md': '31.75rem',
+        'portfolio-sm': '28.6rem',
+        'portfolio-xs': '24.7rem'
 
       },
       maxHeight: {
         'projectslist': 'calc(100% - 2.3rem)'
       },
+      gridTemplateRows: {
+        'portfolio-xs': '6.8rem 1fr',
+        'portfolio': '7.5rem 1fr'
+      }
     },
   },
   variants: {

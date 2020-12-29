@@ -1,12 +1,13 @@
 import * as React from 'react';
 import GalleryButton from '../GalleryButton/GalleryButton';
 
-const Gallery = ({ project }) => {
+const Gallery = ({ project, projectSelected }) => {
     const [image, setImage] = React.useState(1);
 
+    // Reset gallery counter each time the Gallery is shown
     React.useEffect(() => {
         setImage(1);
-    }, [project]);
+    }, [projectSelected]);
 
     const nextImage = () => {
         (image + 1 <= project.images)
@@ -20,17 +21,17 @@ const Gallery = ({ project }) => {
             : setImage(project.images);
     };
 
-    let gallery = [];
+    let images = [];
     for (let key = 1; key <= project.images; key++) {
-        gallery.push(<div key={key} className="flex-shrink-0 w-full h-full bg-no-repeat bg-contain rounded-r-xl" aria-label={`Projet ${project.name} (${key})`} style={{ backgroundImage: 'url(' + require(`../../images/projects/${project.slug}/${project.slug}-${key}.png`) + ')' }} />);
+        images.push(<div key={key} className="flex-shrink-0 w-full h-full bg-no-repeat bg-cover md:bg-contain lg:rounded-r-xl" aria-label={`Projet ${project.name} (${key})`} style={{ backgroundImage: 'url(' + require(`../../images/projects/${project.slug}/${project.slug}-${key}.png`) + ')' }} />);
     };
 
     return (
         <div className="relative h-full overflow-hidden">
             <div className={"flex flex-nowrap h-full  transition-transform translate-x-0"} style={{ transform: `translateX(-${(image - 1) * 100}%)` }}>
-                {gallery}
+                {images}
             </div>
-            <div className="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-gray-100 rounded-br-xl"></div>
+            <div className="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-gray-100 lg:rounded-br-xl"></div>
 
             <GalleryButton hidden={image === 1} onClick={previousImage} reverse={true} />
             <GalleryButton hidden={image === project.images} onClick={nextImage} />

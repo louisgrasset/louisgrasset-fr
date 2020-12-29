@@ -1,5 +1,4 @@
 import * as React from "react";
-import { useState, useEffect, useCallback } from "react";
 import { Helmet } from "react-helmet";
 
 import Alert from "../components/Alert/Alert";
@@ -9,6 +8,7 @@ import Headline from "../components/Headline/Headline";
 import SocialAside from "../components/SocialAside/SocialAside";
 import ContactModal from "../components/ContactModal/ContactModal";
 import Portfolio from "../components/Portfolio/Portfolio";
+import Studies from "../components/Studies/Studies";
 import Footer from "../components/Footer/Footer";
 
 import companies from "../data/companies";
@@ -38,12 +38,12 @@ const IndexPage = () => {
     };
   }, [isContactModalActive, toggleContactModal]);
 
-  const [isContactFormSubmitted, setContactFormSubmission] = useState(false);
-  const toggleContactFormSubmission = useCallback(() => {
+  const [isContactFormSubmitted, setContactFormSubmission] = React.useState(false);
+  const toggleContactFormSubmission = React.useCallback(() => {
     setContactFormSubmission(!isContactFormSubmitted);
   }, [isContactFormSubmitted]);
 
-  useEffect(() => {
+  React.useEffect(() => {
     // Get contact form success
     const hash = window.location.hash;
     if (hash && hash.substring(1, hash.length) === 'success') {
@@ -71,7 +71,7 @@ const IndexPage = () => {
             <h1 className="text-4xl font-medium text-gray-900 sm:text-6xl md:text-7xl lg:text-8xl">
               <span className="font-semibold text-black">Louis Grasset</span> <span className="invisible block text-sm md:visible md:inline-block md:text-7xl lg:text-8xl">—</span> Développeur web front end passionné. Je&nbsp;croque le web.<br />
             </h1>
-            <p className="my-8 font-light text-gray-500 text-md">Actuellement en poste de Développeur R&amp;D chez <a href="https://yseop.com" className="underline">Yseop</a> et freelance.</p>
+            <p className="my-8 font-light text-gray-500 text-md">Actuellement en poste de Développeur R&amp;D chez <a href="https://yseop.com" className="underline"><img className="inline h-6 -mt-1.5" src={require('../images/companies/yseop.svg')} alt="Yseop" /></a> et freelance.</p>
             <div className="grid grid-rows-2 gap-4 sm:max-w-md sm:grid-cols-2">
               <button onClick={toggleContactModal} className="block h-12 px-6 font-medium text-white uppercase bg-gray-900 rounded-md shadow-md focus:ring-opacity-50 focus:outline-none focus:ring-4 focus:ring-pink-500">
                 Prendre contact
@@ -82,20 +82,19 @@ const IndexPage = () => {
             </div>
           </div>
         </div>
-        <SocialAside />
         <ContactModal show={isContactModalActive} setContactModalActive={setContactModalActive} />
         <div className="container px-5 py-10 mx-auto md:px-10 xl:px-20" ref={refs.companies}>
           <Headline title="Entreprises" subtitle="Elles me font confiance" />
           <ul className="grid grid-cols-2 my-6 gap-x-3 gap-y-12 xl:gap-y-6 sm:grid-cols-3 lg:grid-cols-6 xl:flex xl:justify-between xl:flex-wrap">
             {companies.map((link, key) => (
-              <li key={key} className="xl:mr-8 xl:mb-8">
+              <li key={key} className={(key !== companies.length - 1) ? "xl:mr-6 xl:mb-6" : ''}>
                 <a
                   title={link.title}
                   href={`${link.url}`}
                   target="blank"
                   rel="noreferrer"
                 >
-                  <img src={link.icon} alt={link.title} className="h-12" />
+                  <img src={link.icon} alt={link.title} className="h-12 p-1" />
                 </a>
               </li>
             ))}
@@ -105,8 +104,14 @@ const IndexPage = () => {
           <Headline title="Réalisations" subtitle="Projets sur lesquels j'ai travaillé" />
           <Portfolio />
         </div>
-      </main >
+
+        <div className="container px-5 py-10 mx-auto md:px-10 xl:px-20">
+          <Headline title="Etudes" subtitle="Voici mon parcours" />
+          <Studies />
+        </div>
+      </main>
       <Footer refs={refs} />
+      <SocialAside />
     </>
   );
 };
