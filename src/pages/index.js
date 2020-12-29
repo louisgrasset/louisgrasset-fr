@@ -53,7 +53,6 @@ const IndexPage = () => {
 
   }, [toggleContactFormSubmission]);
 
-
   return (
     <>
       <main className="overflow-x-hidden" ref={refs.top}>
