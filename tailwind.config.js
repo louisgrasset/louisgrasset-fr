@@ -31,7 +31,10 @@ module.exports = {
     },
     extend: {
       height: {
-        'portfolio': '32.3rem',
+        'portfolio-2xl': '32.3rem',
+        'portfolio-xl': '26.3rem',
+        'portfolio-lg': '23.3rem'
+
       },
       maxHeight: {
         'projectslist': 'calc(100% - 2.3rem)'
