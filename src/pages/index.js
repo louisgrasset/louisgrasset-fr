@@ -1,6 +1,6 @@
 import * as React from "react";
-import { Helmet } from "react-helmet";
 
+// Import components 
 import Alert from "../components/Alert/Alert";
 import BeachBall from "../components/BeachBall/BeachBall";
 import Nav from "../components/Nav/Nav";
@@ -11,9 +11,9 @@ import Portfolio from "../components/Portfolio/Portfolio";
 import Studies from "../components/Studies/Studies";
 import Footer from "../components/Footer/Footer";
 
+// Import data 
 import companies from "../data/companies";
 import scrollInto from "../utils/scrollInto";
-import profile from "../images/profile.jpg";
 
 const IndexPage = () => {
   let refs = [];
@@ -57,9 +57,6 @@ const IndexPage = () => {
   return (
     <>
       <main className="overflow-x-hidden" ref={refs.top}>
-        <Helmet>
-          <title>Louis Grasset</title>
-        </Helmet>
         <Alert text={"Votre message a bien été envoyé."} show={isContactFormSubmitted} />
         <div className="container relative flex px-5 pt-8 mx-auto align-middle md:px-10 xl:px-20">
           <BeachBall />
@@ -67,7 +64,7 @@ const IndexPage = () => {
         </div>
         <div className="container flex px-5 mx-auto mb-5 align-middle md:px-10 xl:px-20">
           <div className="pt-20 pb-10">
-            <img src={profile} alt="Louis Grasset" className="w-20 h-20 mb-4 rounded-full shadow-md"></img>
+            <img src={require('../images/profile.jpg')} alt="Louis Grasset" className="w-20 h-20 mb-4 rounded-full shadow-md" />
             <h1 className="text-4xl font-medium text-gray-900 sm:text-6xl md:text-7xl lg:text-8xl">
               <span className="font-semibold text-black">Louis Grasset</span> <span className="invisible block text-sm md:visible md:inline-block md:text-7xl lg:text-8xl">—</span> Développeur web front end passionné. Je&nbsp;croque le web.<br />
             </h1>
