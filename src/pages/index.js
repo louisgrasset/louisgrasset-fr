@@ -66,7 +66,7 @@ const IndexPage = () => {
           <Nav />
         </div>
         <div className="container flex px-5 mx-auto mb-5 align-middle md:px-10 xl:px-20">
-          <div className="py-20">
+          <div className="pt-20 pb-10">
             <img src={profile} alt="Louis Grasset" className="w-20 h-20 mb-4 rounded-full shadow-md"></img>
             <h1 className="text-4xl font-medium text-gray-900 sm:text-6xl md:text-7xl lg:text-8xl">
               <span className="font-semibold text-black">Louis Grasset</span> <span className="invisible block text-sm md:visible md:inline-block md:text-7xl lg:text-8xl">—</span> Développeur web front end passionné. Je&nbsp;croque le web.<br />

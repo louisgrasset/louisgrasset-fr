@@ -10,7 +10,7 @@ const ProjectList = ({ projects, project, setProject }) => {
                         <span className={(project.id === key ? "w-full" : "group-hover:w-full") + "  absolute transform h-1 bg-gray-300 rounded-b-md bottom-0"}></span>
                         <div className={(project.id === key ? "font-bold bg-gray-200" : "hover:bg-gray-200") + " grid items-center gap-1 p-3 cursor-pointer rounded-md select-none"} style={{ gridTemplateColumns: '16px minmax(max-content, 1fr)' }}>
                             <img aria-label="hidden" src={iconRepository} className={(project.id === key ? "" : "opacity-30") + " w-4 h-4 mt-0.5"} />
-                            <span>{p.name}</span>
+                            <div>{p.name} <span className="hidden text-sm text-left text-gray-500 lg:inline">- {p.year}</span></div>
                         </div>
                     </div>
                 ))}

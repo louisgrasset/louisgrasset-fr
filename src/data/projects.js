@@ -1,5 +1,15 @@
 const projects = [
     {
+        slug: 'radiance',
+        company: 'radiance',
+        name: 'Radiance Mutuelle',
+        year: 2020,
+        url: 'https://radiance.fr',
+        stacks: ['Drupal', 'SASS', 'jQuery', 'Docker'],
+        color: 'yellow',
+        images: 2
+    },
+    {
         slug: 'manitowoc',
         company: 'manitowoc',
         name: 'Manitowoc',
@@ -7,26 +17,6 @@ const projects = [
         url: 'https://manitowoc.com',
         stacks: ['Drupal', 'SASS', 'jQuery', 'Docker'],
         color: 'red',
-        images: 2
-    },
-    {
-        slug: 'neety',
-        company: 'neety',
-        name: 'Neety',
-        year: 2019,
-        url: 'https://neety.email',
-        stacks: ['Laravel', 'SASS', 'VueJs', 'Vagrant'],
-        color: 'indigo',
-        images: 2
-    },
-    {
-        slug: 'pressecitron',
-        company: 'keleops',
-        name: 'Presse Citron',
-        year: 2019,
-        url: 'https://presse-citron.net',
-        stacks: ['WordPress', 'SASS', 'Adobe XD'],
-        color: 'green',
         images: 2
     },
     {
@@ -48,7 +38,27 @@ const projects = [
         stacks: ['Laravel', 'ReactJS', 'SASS'],
         color: 'purple',
         images: 5
-    }
+    },
+    {
+        slug: 'neety',
+        company: 'neety',
+        name: 'Neety',
+        year: 2019,
+        url: 'https://neety.email',
+        stacks: ['Laravel', 'SASS', 'VueJs', 'Vagrant'],
+        color: 'green',
+        images: 2
+    },
+    {
+        slug: 'pressecitron',
+        company: 'keleops',
+        name: 'Presse Citron',
+        year: 2019,
+        url: 'https://presse-citron.net',
+        stacks: ['WordPress', 'SASS', 'Adobe XD'],
+        color: 'green',
+        images: 2
+    },
 ];
 
 export default projects;
