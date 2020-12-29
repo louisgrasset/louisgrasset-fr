@@ -5,56 +5,56 @@ import radiance from "../images/companies/radiance.svg";
 import manitowoc from "../images/companies/manitowoc.svg";
 import sqli from "../images/companies/sqli.svg";
 import neety from "../images/companies/neety.svg";
+import pressecitron from "../images/companies/pressecitron.svg";
 
 const companies = [
     {
         slug: 'yseop',
         title: "Yseop",
         url: "https://yseop.com",
-        icon: yseop,
-        year: 2020
+        icon: yseop
     },
     {
         slug: 'unicancer',
         title: "Unicancer",
         url: "http://www.unicancer.fr",
-        icon: unicancer,
-        year: 2020
+        icon: unicancer
     },
     {
         slug: 'keleps',
         title: "Keleops",
         url: "https://www.keleops.ch",
-        icon: keleops,
-        year: 2020
+        icon: keleops
     },
     {
         slug: 'sqli',
         title: "SQLI",
         url: "https://sqli.com",
-        icon: sqli,
-        year: 2020
+        icon: sqli
     },
     {
         slug: 'radiance',
         title: "Radiance Mutuelle",
         url: "https://radiance.fr",
-        icon: radiance,
-        year: 2020
+        icon: radiance
     },
     {
         slug: 'manitowoc',
         title: "Manitowoc",
         url: "https://manitowoc.com",
-        icon: manitowoc,
-        year: 2020
+        icon: manitowoc
     },
     {
         slug: 'neety',
         title: "Neety",
         url: "https://neety.email",
-        icon: neety,
-        year: 2020
+        icon: neety
+    },
+    {
+        slug: 'pressecitron',
+        title: "Presse Citron",
+        url: "https://www.presse-citron.net/",
+        icon: pressecitron
     },
 ];
 
