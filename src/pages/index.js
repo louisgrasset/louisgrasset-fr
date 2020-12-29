@@ -61,11 +61,11 @@ const IndexPage = () => {
           <title>Louis Grasset</title>
         </Helmet>
         <Alert text={"Votre message a bien été envoyé."} show={isContactFormSubmitted} />
-        <div className="container relative flex px-5 pt-8 mx-auto align-middle xl:px-20">
+        <div className="container relative flex px-5 pt-8 mx-auto align-middle md:px-10 xl:px-20">
           <BeachBall />
           <Nav />
         </div>
-        <div className="container flex px-5 mx-auto mb-5 align-middle xl:px-20">
+        <div className="container flex px-5 mx-auto mb-5 align-middle md:px-10 xl:px-20">
           <div className="py-20">
             <img src={profile} alt="Louis Grasset" className="w-20 h-20 mb-4 rounded-full shadow-md"></img>
             <h1 className="text-4xl font-medium text-gray-900 sm:text-6xl md:text-7xl lg:text-8xl">
@@ -84,7 +84,7 @@ const IndexPage = () => {
         </div>
         <SocialAside />
         <ContactModal show={isContactModalActive} setContactModalActive={setContactModalActive} />
-        <div className="container px-5 py-10 mx-auto xl:px-20" ref={refs.companies}>
+        <div className="container px-5 py-10 mx-auto md:px-10 xl:px-20" ref={refs.companies}>
           <Headline title="Entreprises" subtitle="Elles me font confiance" />
           <ul className="grid grid-cols-2 my-6 gap-x-3 gap-y-12 xl:gap-y-6 sm:grid-cols-3 lg:grid-cols-6 xl:flex xl:justify-between xl:flex-wrap">
             {companies.map((link, key) => (
@@ -101,7 +101,7 @@ const IndexPage = () => {
             ))}
           </ul>
         </div>
-        <div className="container px-5 py-10 mx-auto xl:px-20">
+        <div className="container px-5 py-10 mx-auto md:px-10 xl:px-20">
           <Headline title="Réalisations" subtitle="Projets sur lesquels j'ai travaillé" />
           <Portfolio />
         </div>

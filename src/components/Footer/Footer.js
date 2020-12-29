@@ -4,7 +4,7 @@ import scrollInto from "../../utils/scrollInto";
 
 const Footer = ({ refs }) => {
     return (
-        <footer className="px-5 py-10 font-light text-gray-700 bg-gray-200 ">
+        <footer className="px-5 py-10 font-light text-gray-700 bg-gray-200 md:px-10 ">
             <div className="container grid justify-between grid-flow-row gap-4 mx-auto align-top md:grid-flow-col md:grid-cols-3">
                 <span>
                     Louis Grasset<br />Tous droits réservés. Design inspiré par <a href="https://dribbble.com/shots/14572884-Redesigning-my-portfolio-Webflow" target="_blank" rel="noreferrer" className="underline"> ce shot</a>.
