@@ -85,7 +85,7 @@ const IndexPage = () => {
         <ContactModal show={isContactModalActive} setContactModalActive={setContactModalActive} />
         <div className="container px-5 py-10 mx-auto md:px-10 xl:px-20" ref={refs.companies}>
           <Headline title="Entreprises" subtitle="Elles me font confiance" />
-          <ul className="grid grid-cols-2 my-6 gap-x-3 gap-y-12 xl:gap-y-6 sm:grid-cols-3 lg:grid-cols-6 xl:flex xl:justify-between xl:flex-wrap">
+          <ul className="grid grid-cols-2 mt-6 gap-x-3 gap-y-12 xl:gap-y-6 sm:grid-cols-3 lg:grid-cols-6 xl:flex xl:justify-between xl:flex-wrap">
             {companies.map((link, key) => (
               <li key={key} className={(key !== companies.length - 1) ? "xl:mr-6 xl:mb-6" : ''}>
                 <a
