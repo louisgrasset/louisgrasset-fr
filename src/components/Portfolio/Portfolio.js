@@ -13,11 +13,11 @@ const Portfolio = () => {
                     <h3 className="px-4 py-2 text-sm font-light uppercase border-b-2 border-gray-200 lg:px-7">Projets</h3>
                     <ProjectList projects={projects} project={project} setProject={setProject} />
                 </div>
-                <div className="relative lg:col-span-2 ">
+                <div className="relative h-full lg:col-span-2">
                     <Gallery project={project} />
                     <div className="absolute bottom-4 right-4">
                         {project.stacks.map((stack, key) => (
-                            <div key={key} className={`bg-${project.color}-${500 + 100 * key} rounded-sm py-1 px-2 uppercase text-sm font-medium text-white inline-block ml-2`}>{stack}</div>
+                            <div key={key} className={`bg-${project.color}-${500 + 100 * key} rounded-md py-1 px-2 uppercase text-sm font-medium text-white inline-block ml-2`}>{stack}</div>
                         ))}
                     </div>
                 </div>

@@ -1,15 +1,5 @@
 const projects = [
     {
-        slug: 'aastudio',
-        company: 'yseop',
-        name: 'AA Studio',
-        year: 2020,
-        url: 'https://yseop.com',
-        stacks: ['ReactJS', 'SASS', 'TypeScript'],
-        color: 'purple',
-        images: 2
-    },
-    {
         slug: 'manitowoc',
         company: 'manitowoc',
         name: 'Manitowoc',
@@ -57,78 +47,8 @@ const projects = [
         url: 'https://blablalinge.fr',
         stacks: ['Laravel', 'ReactJS', 'SASS'],
         color: 'purple',
-        images: 2
-    },
-    {
-        slug: '----------',
-        company: 'freelance',
-        name: 'BlaBlaLinge',
-        year: 2020,
-        url: 'https://blablalinge.fr',
-        stacks: ['Laravel', 'ReactJS', 'SASS'],
-        color: 'purple',
-        images: 2
-    },
-    {
-        slug: '----------',
-        company: 'freelance',
-        name: 'BlaBlaLinge',
-        year: 2020,
-        url: 'https://blablalinge.fr',
-        stacks: ['Laravel', 'ReactJS', 'SASS'],
-        color: 'purple',
-        images: 2
-    },
-    {
-        slug: '----------',
-        company: 'freelance',
-        name: 'BlaBlaLinge',
-        year: 2020,
-        url: 'https://blablalinge.fr',
-        stacks: ['Laravel', 'ReactJS', 'SASS'],
-        color: 'purple',
-        images: 2
-    },
-    {
-        slug: '----------',
-        company: 'freelance',
-        name: 'BlaBlaLinge',
-        year: 2020,
-        url: 'https://blablalinge.fr',
-        stacks: ['Laravel', 'ReactJS', 'SASS'],
-        color: 'purple',
-        images: 2
-    },
-    {
-        slug: '----------',
-        company: 'freelance',
-        name: 'BlaBlaLinge',
-        year: 2020,
-        url: 'https://blablalinge.fr',
-        stacks: ['Laravel', 'ReactJS', 'SASS'],
-        color: 'purple',
-        images: 2
-    },
-    {
-        slug: '----------',
-        company: 'freelance',
-        name: 'BlaBlaLinge',
-        year: 2020,
-        url: 'https://blablalinge.fr',
-        stacks: ['Laravel', 'ReactJS', 'SASS'],
-        color: 'purple',
-        images: 2
-    },
-    {
-        slug: '----------',
-        company: 'freelance',
-        name: 'BlaBlaLinge',
-        year: 2020,
-        url: 'https://blablalinge.fr',
-        stacks: ['Laravel', 'ReactJS', 'SASS'],
-        color: 'purple',
-        images: 2
-    },
+        images: 5
+    }
 ];
 
 export default projects;
