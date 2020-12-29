@@ -30,7 +30,7 @@ const Gallery = ({ project }) => {
             <div className={"flex flex-nowrap h-full  transition-transform translate-x-0"} style={{ transform: `translateX(-${(image - 1) * 100}%)` }}>
                 {gallery}
             </div>
-            <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white rounded-br-xl"></div>
+            <div className="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-gray-100 rounded-br-xl"></div>
 
             <GalleryButton hidden={image === 1} onClick={previousImage} reverse={true} />
             <GalleryButton hidden={image === project.images} onClick={nextImage} />

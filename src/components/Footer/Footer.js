@@ -24,7 +24,7 @@ const Footer = ({ refs }) => {
                         </li>
                     ))}
                 </ul>
-                <button className="block w-48 h-12 px-6 font-medium bg-white rounded-md md:justify-self-end focus:outline-none focus:ring-4 focus:ring-pink-500" onClick={() => scrollInto(refs.top)}>
+                <button className="block w-48 h-12 px-6 font-medium bg-white rounded-md focus:ring-opacity-50 md:justify-self-end focus:outline-none focus:ring-4 focus:ring-pink-500" onClick={() => scrollInto(refs.top)}>
                     Retour en haut
             </button>
             </div>

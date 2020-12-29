@@ -16,7 +16,7 @@ const Portfolio = () => {
                 </div>
                 <div className="relative h-full lg:col-span-2">
                     <Gallery project={project} />
-                    <a className="absolute flex items-center px-4 py-2 space-x-2 text-center bg-white shadow-md bottom-4 left-4 rounded-3xl" href={project.url} target="_blank" rel="noreferrer">
+                    <a className={`absolute flex items-center px-4 py-2 space-x-2 text-sm text-center text-gray-900 uppercase bg-white border border-gray-100 rounded-md shadow-lg bottom-4 left-4 focus:outline-none focus:ring-opacity-50 focus:ring-4 focus:ring-${project.color}-500`} href={project.url} target="_blank" rel="noreferrer">
                         <span>Ouvrir le projet</span> <img src={iconExternal} aria-hidden="true" className="w-3 h-3 cursor-pointer" />
                     </a>
                     <div className="absolute bottom-4 right-4">

@@ -7,6 +7,7 @@ module.exports = {
           let classes = [];
           for (let count = 0; count < 9; count++) {
             classes.push(`bg-${color}-${900 - 100 * count}`);
+            classes.push(`focus:ring-${color}-500`);
           }
           return classes;
         }
