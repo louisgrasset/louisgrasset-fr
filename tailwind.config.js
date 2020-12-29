@@ -1,5 +1,18 @@
 module.exports = {
-  purge: ['./src/**/*.{js,html}'],
+  purge: {
+    content: ['./src/**/*.{js,html}'],
+    options: {
+      safelist: ['pink', 'red', 'yellow', 'indigo', 'green', 'gray', 'blue', 'purple'].map(
+        color => {
+          let classes = [];
+          for (let count = 0; count < 9; count++) {
+            classes.push(`bg-${color}-${900 - 100 * count}`);
+          }
+          return classes;
+        }
+      ).reduce((entry, merge) => [...merge, ...entry])
+    }
+  },
   darkMode: 'media', // or 'media' or 'class'
   theme: {
     filter: { // defaults to {}
