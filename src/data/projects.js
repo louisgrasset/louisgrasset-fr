@@ -60,6 +60,46 @@ const projects = [
         images: 2
     },
     {
+        slug: 'endangeredeverglades',
+        company: 'university',
+        name: 'Endangered Everglades',
+        year: 2019,
+        url: 'https://univ.louisgrasset.fr/endangered-everglades/',
+        stacks: ['HarpJS', 'SASS', 'Netlify'],
+        color: 'green',
+        images: 3
+    },
+    {
+        slug: 'fastefully',
+        company: 'university',
+        name: 'Fastefully',
+        year: 2019,
+        url: 'https://fastefully.alwaysdata.net',
+        stacks: ['PHP', 'MSYSQL', 'SASS'],
+        color: 'blue',
+        images: 4
+    },
+    {
+        slug: 'beesandcities',
+        company: 'university',
+        name: 'Bees And Cities',
+        year: 2018,
+        url: 'https://univ.louisgrasset.fr/bees-and-cities/',
+        stacks: ['HarpJS', 'SASS', 'Netlify'],
+        color: 'yellow',
+        images: 4
+    },
+    {
+        slug: 'agenceinlight',
+        company: 'university',
+        name: 'Agence Inlight',
+        year: 2017,
+        url: 'https://univ.louisgrasset.fr/agence-inlight/',
+        stacks: ['PHP', 'MSYSQL', 'CSS'],
+        color: 'pink',
+        images: 1
+    },
+    {
         slug: 'eureka',
         company: 'eureka',
         name: 'Eurêka',
@@ -68,6 +108,16 @@ const projects = [
         stacks: ['SailsJS', 'SASS', 'Heroku'],
         color: 'blue',
         images: 1
+    },
+    {
+        slug: 'ephemhair',
+        company: 'university',
+        name: 'Ephemhair',
+        year: 2015,
+        url: 'https://univ.louisgrasset.fr/ephemhair/',
+        stacks: ['HTML', 'CSS'],
+        color: 'gray',
+        images: 3
     }
 ];
 
