@@ -7,7 +7,7 @@ const Studies = () => {
             {
                 studies.map((diploma, key) => (
                     <div key={key} className="grid items-center gap-12 gap-y-4" style={{ gridTemplateColumns: '8rem 1fr' }}>
-                        <img src={require(`../../images/studies/${diploma.institution.slug}.svg`)} className="w-36" />
+                        <img src={require(`../../images/studies/${diploma.institution.slug}.svg`)} alt={diploma.institution.name} className="w-36" />
                         <div>
                             <h3 className="text-xl font-bold">{diploma.label}</h3>
                             <p>{diploma.institution.name}</p>
