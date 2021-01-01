@@ -6,7 +6,6 @@ import Alert from "../components/Alert/Alert";
 import BeachBall from "../components/BeachBall/BeachBall";
 import Nav from "../components/Nav/Nav";
 import Headline from "../components/Headline/Headline";
-import SocialAside from "../components/SocialAside/SocialAside";
 import ContactModal from "../components/ContactModal/ContactModal";
 import Portfolio from "../components/Portfolio/Portfolio";
 import Studies from "../components/Studies/Studies";
@@ -70,9 +69,9 @@ const IndexPage = () => {
       </Helmet>
       <main className="overflow-x-hidden" ref={refs.top}>
         <Alert text={"Votre message a bien été envoyé."} show={isContactFormSubmitted} />
+        <Nav />
         <div className="container relative flex px-5 pt-8 mx-auto align-middle md:px-10 xl:px-20">
           <BeachBall />
-          <Nav />
         </div>
         <div className="container flex px-5 mx-auto mb-5 align-middle md:px-10 xl:px-20">
           <div className="pt-20 pb-10">
@@ -121,7 +120,6 @@ const IndexPage = () => {
         </div>
       </main>
       <Footer refs={refs} />
-      <SocialAside />
     </>
   );
 };
