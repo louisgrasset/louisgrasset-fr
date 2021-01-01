@@ -1,9 +1,9 @@
 import * as React from 'react';
 import socials from '../../data/socials';
 
-const SocialAside = () => {
+const SocialAside = ({ hidden }) => {
     return (
-        <ul className="top-0 flex items-center justify-center h-10 p-2 px-5 space-x-2 xl:fixed xl:space-x-0 xl:space-y-2 xl:flex-col xl:w-10 xl:h-screen xl:flex xl:left-4">
+        <ul className={(hidden ? "xl:scale-0" : "") + " top-0 flex items-center justify-center h-10 p-2 px-5 space-x-2 xl:fixed xl:space-x-0 xl:transform xl:transition-transform xl:space-y-2 xl:flex-col xl:w-10 xl:h-screen xl:flex xl:left-4"}>
             {socials.map((link, key) => (
                 <li key={key}>
                     <a

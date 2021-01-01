@@ -6,7 +6,7 @@ import iconArrowTop from "../../images/icons/arrow-top.svg";
 const Footer = ({ refs, toggleContactModal }) => {
     let year = new Date().getFullYear();
     return (
-        <footer className="mt-20 text-white bg-black">
+        <footer className="mt-20 text-white bg-black" ref={refs.footer}>
             <div className="container px-5 py-20 mx-auto font-light md:px-10 xl:px-20 ">
                 <div className="grid grid-flow-row gap-8 sm:col-span-3 md:grid-flow-col lg:grid-cols-2">
                     <div className="col-span-2 md:col-span-1">
