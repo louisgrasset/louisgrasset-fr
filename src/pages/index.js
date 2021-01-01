@@ -119,7 +119,7 @@ const IndexPage = () => {
           <Studies />
         </div>
       </main>
-      <Footer refs={refs} />
+      <Footer refs={refs} toggleContactModal={toggleContactModal} />
     </>
   );
 };
