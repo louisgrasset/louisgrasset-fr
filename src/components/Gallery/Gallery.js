@@ -23,7 +23,7 @@ const Gallery = ({ project, projectSelected }) => {
 
     let images = [];
     for (let key = 1; key <= image.max; key++) {
-        images.push(<div key={key} className="flex-shrink-0 w-full h-full bg-no-repeat bg-cover md:bg-contain lg:rounded-r-xl" aria-label={`Projet ${project.name} (${key})`} style={{ backgroundImage: 'url(' + require(`../../images/projects/${project.slug}/${project.slug}-${key}.png`) + ')' }} />);
+        images.push(<div key={key} className="flex-shrink-0 w-full h-full bg-center bg-top bg-no-repeat bg-contain lg:rounded-r-xl" aria-label={`Projet ${project.name} (${key})`} style={{ backgroundImage: 'url(' + require(`../../images/projects/${project.slug}/${project.slug}-${key}.png`) + ')' }} />);
     };
 
     return (
