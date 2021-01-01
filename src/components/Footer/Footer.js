@@ -21,9 +21,9 @@ const Footer = ({ refs }) => {
                         Retour en haut
                     </button>
                 </div>
-                <div className="mt-12 mb-6 uppercase">
+                <div className="flex flex-wrap items-center mt-12 mb-6 uppercase">
                     <span className="mr-6 text-sm tracking-wider opacity-40">Louis Grasset, {year}</span>
-                    <ul className="inline align-middle md:justify-center">
+                    <ul className="inline md:justify-center mt-0.5">
                         {socials.map((link, key) => (
                             <li key={key} className="inline-block transition opacity-40 hover:opacity-100">
                                 <span>
