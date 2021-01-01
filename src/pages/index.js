@@ -82,17 +82,17 @@ const IndexPage = () => {
             <p className="my-8 font-light text-gray-500 text-md">Actuellement en poste de Développeur R&amp;D chez <a href="https://yseop.com" className="underline"><img className="inline h-6 -mt-1.5" src={require('../images/companies/yseop.svg')} alt="Yseop" /></a> et freelance.</p>
             <div className="grid grid-rows-2 gap-4 sm:max-w-md sm:grid-cols-2">
               <button onClick={toggleContactModal} className="block h-12 px-6 font-medium text-white uppercase bg-gray-900 rounded-md shadow-md focus:ring-opacity-50 focus:outline-none focus:ring-4 focus:ring-pink-500">
-                Prendre contact
+                Dire bonjour
             </button>
               <button onClick={() => { scrollInto(refs.companies); }} className="block h-12 px-6 font-medium text-gray-900 uppercase bg-white border border-gray-100 rounded-md shadow-md focus:ring-opacity-50 focus:outline-none focus:ring-4 focus:ring-pink-500">
-                Me connaître
+                En savoir plus
           </button>
             </div>
           </div>
         </div>
         <ContactModal show={isContactModalActive} setContactModalActive={setContactModalActive} />
         <div className="container px-5 py-10 mx-auto md:px-10 xl:px-20" ref={refs.companies}>
-          <Headline title="Entreprises" subtitle="Elles me font confiance" />
+          <Headline title="Entreprises" subtitle="Elles m'ont fait confiance" />
           <ul className="grid grid-cols-2 mt-6 gap-x-3 gap-y-12 xl:gap-y-6 sm:grid-cols-3 lg:grid-cols-6 xl:flex xl:justify-between xl:flex-wrap">
             {companies.map((link, key) => (
               <li key={key} className={(key !== companies.length - 1) ? "xl:mr-6 xl:mb-6" : ''}>
