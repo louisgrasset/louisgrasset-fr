@@ -5,8 +5,8 @@ import scrollInto from "../../utils/scrollInto";
 const Footer = ({ refs }) => {
     let year = new Date().getFullYear();
     return (
-        <footer className="mt-10 text-white bg-black">
-            <div className="container px-5 py-10 mx-auto font-light md:px-10 xl:px-20 ">
+        <footer className="mt-20 text-white bg-black">
+            <div className="container px-5 py-20 mx-auto font-light md:px-10 xl:px-20 ">
                 <div className="grid grid-flow-row gap-8 md:grid-flow-col md:grid-cols-2">
                     <div>
                         <h3 className="mb-2 text-3xl font-bold">A propos</h3>
