@@ -83,8 +83,8 @@ const IndexPage = () => {
             <p className="my-8 font-light text-gray-500 text-md">Actuellement en poste de Développeur R&amp;D chez <a href="https://yseop.com" className="underline"><img className="inline h-6 -mt-1.5" src={require('../images/companies/yseop.svg')} alt="Yseop" /></a> et freelance.</p>
             <div className="grid grid-rows-2 gap-4 sm:max-w-md sm:grid-cols-2">
               <button onClick={toggleContactModal} className="block h-12 px-6 font-medium text-white uppercase bg-gray-900 rounded-md shadow-md focus:ring-opacity-50 focus:outline-none focus:ring-4 focus:ring-pink-500">
-                Dire bonjour&nbsp;&nbsp;🙂
-            </button>
+                Dire bonjour&nbsp;&nbsp;<span role='img' aria-label="smiley">🙂</span>
+              </button>
               <button onClick={() => { scrollInto(refs.companies); }} className="block h-12 px-6 font-medium text-gray-900 uppercase bg-white border border-gray-100 rounded-md shadow-md focus:ring-opacity-50 focus:outline-none focus:ring-4 focus:ring-pink-500">
                 En savoir plus
           </button>
