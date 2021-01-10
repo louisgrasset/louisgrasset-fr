@@ -19,7 +19,7 @@ const Nav = ({ refs }) => {
         window.addEventListener("scroll", onScroll);
 
         return () => window.removeEventListener("scroll", onScroll);
-    }, [scrollTop]);
+    }, [scrollTop, scrollBottom, refs.footer]);
 
 
     return (
