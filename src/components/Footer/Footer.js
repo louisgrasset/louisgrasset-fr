@@ -21,7 +21,7 @@ const Footer = ({ refs, toggleContactModal, setScrolling }) => {
                         <button className="block w-48 h-12 px-6 font-medium text-black bg-white rounded-md md:mt-12 lg:mt-0 md:justify-self-end focus:outline-none focus:ring-opacity-50 focus:ring-4 focus:ring-pink-500" onClick={toggleContactModal}>
                             Prendre contact
                         </button>
-                        <button className="flex items-center justify-center w-12 h-12 font-medium text-white bg-gray-700 rounded-md md:mt-12 lg:mt-0 md:justify-self-end focus:outline-none focus:ring-opacity-50 focus:ring-4 focus:ring-pink-500" onClick={() => { scrollInto(refs.top); setScrolling(false); }} aria-label="Remonter en haut">
+                        <button onClick={() => { scrollInto(refs.top); }} className="flex items-center justify-center w-12 h-12 font-medium text-white bg-gray-700 rounded-md md:mt-12 lg:mt-0 md:justify-self-end focus:outline-none focus:ring-opacity-50 focus:ring-4 focus:ring-pink-500" aria-label="Remonter en haut">
                             <img src={iconArrowTop} className="w-4 h-4 filter-invert" alt="Fleche vers le haut" />
                         </button>
                     </div>

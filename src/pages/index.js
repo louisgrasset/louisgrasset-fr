@@ -26,8 +26,6 @@ const IndexPage = () => {
     setContactModalActive(!isContactModalActive);
   }, [isContactModalActive]);
 
-  const [scrolling, setScrolling] = React.useState(false);
-
   React.useEffect(() => {
     // Close contact modal with escape key
     const onKeyUp = (event) => {
@@ -72,7 +70,7 @@ const IndexPage = () => {
       </Helmet>
       <main className="overflow-x-hidden" ref={refs.top}>
         <Alert text={"Votre message a bien été envoyé."} show={isContactFormSubmitted} />
-        <Nav refs={refs} scrolling={scrolling} setScrolling={setScrolling} />
+        <Nav refs={refs} />
         <div className="container relative flex px-5 pt-8 mx-auto align-middle md:px-10 xl:px-20">
           <BeachBall />
         </div>
@@ -83,7 +81,7 @@ const IndexPage = () => {
               <span className="font-semibold text-black">Louis Grasset</span> <span className="invisible block text-sm md:visible md:inline-block md:text-7xl lg:text-8xl">—</span> Développeur web front end passionné. Je&nbsp;croque le web.<br />
             </h1>
             <p className="my-8 font-light text-gray-500 text-md">Actuellement en poste de Développeur R&amp;D chez <a href="https://yseop.com" className="underline"><img className="inline h-6 -mt-1.5" src={require('../images/companies/yseop.svg')} alt="Yseop" /></a> et freelance.</p>
-            <div className="grid grid-rows-2 gap-4 sm:max-w-md sm:grid-cols-2">
+            <div className="grid max-w-sm grid-rows-2 gap-4 sm:max-w-md sm:grid-rows-none sm:grid-cols-2">
               <button onClick={toggleContactModal} className="block h-12 px-6 font-medium text-white uppercase bg-gray-900 rounded-md shadow-md focus:ring-opacity-50 focus:outline-none focus:ring-4 focus:ring-pink-500">
                 Dire bonjour&nbsp;&nbsp;<span role='img' aria-label="smiley">🙂</span>
               </button>
@@ -122,7 +120,7 @@ const IndexPage = () => {
           <Studies />
         </div>
       </main>
-      <Footer refs={refs} toggleContactModal={toggleContactModal} setScrolling={setScrolling} />
+      <Footer refs={refs} toggleContactModal={toggleContactModal} />
     </>
   );
 };
