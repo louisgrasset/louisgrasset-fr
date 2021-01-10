@@ -36,7 +36,7 @@ const ContactModal = (props) => {
                     </div>
                     <form name="contact" action="/#success" method="POST" data-netlify="true" className="grid grid-cols-1 gap-4 pb-4 pl-0 border-gray-200 sm:pb-0 xl:pl-12 xl:border-l">
                         <input type="hidden" name="form-name" value="contact" />
-                        <div className="grid gap-4 sm:grid-cols-2">
+                        <div className="grid grid-cols-2 gap-4">
                             <div className="mb-2 sm:mb-0">
                                 <label htmlFor="firstname" className="block text-sm font-medium text-gray-700">Prénom</label>
                                 <input type="text" name="firstname" id="firstname" className="block w-full px-3 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent sm:text-sm" />
