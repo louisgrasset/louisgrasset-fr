@@ -30,7 +30,7 @@ module.exports = {
         theme_color: `#ffffff`,
         display: `fullscreen`,
         icon: `src/images/icon.png`,
-        include_favicon: false, // exclude favicons
+        include_favicon: true, // exclude favicons
       },
     },
   ],
