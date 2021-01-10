@@ -77,7 +77,7 @@ const IndexPage = () => {
           <BeachBall />
         </div>
         <div className="container flex px-5 mx-auto mb-5 align-middle md:px-10 xl:px-20">
-          <div className="pt-20 pb-10">
+          <div className="pt-20">
             <img src={require('../images/profile.jpg')} alt="Louis Grasset" className="w-20 h-20 mb-4 rounded-full shadow-md" />
             <h1 className="text-4xl font-medium text-gray-900 sm:text-6xl md:text-7xl lg:text-8xl">
               <span className="font-semibold text-black">Louis Grasset</span> <span className="invisible block text-sm md:visible md:inline-block md:text-7xl lg:text-8xl">—</span> Développeur web front end passionné. Je&nbsp;croque le web.<br />
@@ -94,7 +94,7 @@ const IndexPage = () => {
           </div>
         </div>
         <ContactModal show={isContactModalActive} setContactModalActive={setContactModalActive} />
-        <div className="container px-5 py-10 mx-auto md:px-10 xl:px-20" ref={refs.companies}>
+        <div className="container px-5 pt-20 pb-10 mx-auto md:px-10 xl:px-20" ref={refs.companies}>
           <Headline title="Entreprises" subtitle="Elles m'ont fait confiance" />
           <ul className="grid grid-cols-2 mt-6 gap-x-3 gap-y-12 xl:gap-y-6 sm:grid-cols-3 lg:grid-cols-6 xl:flex xl:justify-between xl:flex-wrap">
             {companies.map((link, key) => (
