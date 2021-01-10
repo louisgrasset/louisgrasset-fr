@@ -74,7 +74,7 @@ const IndexPage = () => {
         <div className="container relative flex px-5 pt-8 mx-auto align-middle md:px-10 xl:px-20">
           <BeachBall />
         </div>
-        <div className="container flex px-5 mx-auto mb-5 align-middle md:px-10 xl:px-20">
+        <div className="container flex px-5 mx-auto mb-10 align-middle md:px-10 xl:px-20">
           <div className="pt-20">
             <img src={require('../images/profile.jpg')} alt="Louis Grasset" className="w-20 h-20 mb-4 rounded-full shadow-md" />
             <h1 className="text-4xl font-medium text-gray-900 sm:text-6xl md:text-7xl lg:text-8xl">
