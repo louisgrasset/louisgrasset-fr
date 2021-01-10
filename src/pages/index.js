@@ -26,6 +26,8 @@ const IndexPage = () => {
     setContactModalActive(!isContactModalActive);
   }, [isContactModalActive]);
 
+  const [scrolling, setScrolling] = React.useState(false);
+
   React.useEffect(() => {
     // Close contact modal with escape key
     const onKeyUp = (event) => {
@@ -70,7 +72,7 @@ const IndexPage = () => {
       </Helmet>
       <main className="overflow-x-hidden" ref={refs.top}>
         <Alert text={"Votre message a bien été envoyé."} show={isContactFormSubmitted} />
-        <Nav refs={refs} />
+        <Nav refs={refs} scrolling={scrolling} setScrolling={setScrolling} />
         <div className="container relative flex px-5 pt-8 mx-auto align-middle md:px-10 xl:px-20">
           <BeachBall />
         </div>
@@ -120,7 +122,7 @@ const IndexPage = () => {
           <Studies />
         </div>
       </main>
-      <Footer refs={refs} toggleContactModal={toggleContactModal} />
+      <Footer refs={refs} toggleContactModal={toggleContactModal} setScrolling={setScrolling} />
     </>
   );
 };

@@ -1,10 +1,9 @@
 import * as React from 'react';
 import SocialAside from '../SocialAside/SocialAside';
 
-const Nav = ({ refs }) => {
+const Nav = ({ refs, scrolling, setScrolling }) => {
     const [scrollTop, setScrollTop] = React.useState(0);
     const [scrollBottom, setScrollBottom] = React.useState(0);
-    const [scrolling, setScrolling] = React.useState(false);
     const [scrollingOnFooter, setScrollingOnFooter] = React.useState(false);
 
     React.useEffect(() => {
@@ -19,7 +18,7 @@ const Nav = ({ refs }) => {
         window.addEventListener("scroll", onScroll);
 
         return () => window.removeEventListener("scroll", onScroll);
-    }, [scrollTop, scrollBottom, refs.footer]);
+    }, [scrollTop, scrollBottom, setScrolling, refs.footer]);
 
 
     return (
