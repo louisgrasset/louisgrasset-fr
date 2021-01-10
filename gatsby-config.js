@@ -20,5 +20,18 @@ module.exports = {
       },
       __key: "images",
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Louis Grasset - Développeur web front end freelance`,
+        short_name: `Louis Grasset`,
+        start_url: `/`,
+        background_color: `#FFFFFF`,
+        theme_color: `#ffffff`,
+        display: `standalone`,
+        icon: `src/images/icon.png`,
+        include_favicon: false, // exclude favicons
+      },
+    },
   ],
 };
