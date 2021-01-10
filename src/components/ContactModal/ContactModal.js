@@ -8,7 +8,9 @@ const ContactModal = (props) => {
         <div className={(props.show ? "flex" : "hidden") + " fixed top-0 left-0 items-center justify-center w-full h-screen backdrop-blur-5 z-20"}>
             <div onClick={() => closeModal()} role="button" aria-label="Fermer" tabIndex="0" className="absolute w-full h-full bg-gray-900 cursor-pointer opacity-20" style={{ zIndex: -1 }}></div>
             <div className="container relative grid max-w-xl max-h-screen gap-8 p-10 overflow-y-auto bg-white shadow-2xl overscroll-contain xl:gap-0 xl:max-w-3xl rounded-xl xl:grid-cols-2">
-                <img src={iconClose} onClick={() => closeModal()} className="absolute w-8 h-8 top-4 right-4" role="button" aria-label="Fermer" title="Fermer" />
+                <button className="absolute w-8 h-8 top-4 right-4" aria-label="Fermer" onClick={() => closeModal()}>
+                    <img src={iconClose} alt="Croix" />
+                </button>
                 <div className="flex-col pr-0 xl:pr-12">
                     <h2 className="mb-4 text-2xl font-bold">Par où préfèrez-vous me contacter ?</h2>
                     <div className="font-light text-gray-700">
