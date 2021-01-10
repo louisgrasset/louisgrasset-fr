@@ -8,17 +8,19 @@ const Nav = ({ refs, scrolling, setScrolling }) => {
 
     React.useEffect(() => {
         const onScroll = e => {
-            let footerHeight = refs.footer.current.getBoundingClientRect().height;
             let windowHeight = window.innerHeight;
             setScrollTop(e.target.documentElement.scrollTop);
             setScrollBottom(e.target.documentElement.getBoundingClientRect().bottom);
             setScrolling(scrollTop > windowHeight * 0.75);
-            setScrollingOnFooter(scrollBottom - (windowHeight / 2 + 50) <= footerHeight);
+            if (refs.footer.current) {
+                let footerHeight = refs.footer.current.getBoundingClientRect().height;
+                setScrollingOnFooter(scrollBottom - (windowHeight / 2 + 50) <= footerHeight);
+            }
         };
         window.addEventListener("scroll", onScroll);
 
         return () => window.removeEventListener("scroll", onScroll);
-    }, [scrollTop, scrollBottom, setScrolling, refs.footer]);
+    }, [scrollTop, scrollBottom, setScrolling, refs]);
 
 
     return (
