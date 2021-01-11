@@ -25,10 +25,10 @@ const Nav = ({ refs }) => {
     return (
         <nav className={"fixed top-0 w-full py-3 z-40 px-5  md:px-10 xl:px-20"} >
             <div style={{ zIndex: '-1' }} className={(scrolling ? "show  border-gray-200 " : "") + " origin-top  absolute left-0 w-full h-full  bg-white opacity-0 -mt-3  xl:hidden  border-b border-transparent xl:border-transparent transition-all"} ></div>
-            <div style={{ gridTemplateColumns: '24px 1fr 108px' }} className="grid items-center grid-flow-col lg:flex lg:justify-between">
+            <div style={{ gridTemplateColumns: '24px 1fr 108px' }} className="grid items-center grid-flow-col">
                 <img src={require('../../images/profile.jpg')} alt="Louis Grasset" className={(!scrolling ? "scale-0" : "scale-1 xl:hidden") + " duration-200 transition-all bg-transparent transform w-6 h-6 rounded-full shadow-md"} />
                 <div className="h-6 overflow-x-hidden font-semibold xl:invisible" >
-                    <span className={(scrolling ? "opacity-100 translate-x-2" : "-translate-x-24 ") + "  opacity-0 block transform transition-all  ease-out"}>Louis Grasset</span>
+                    <span className={(scrolling ? "opacity-100 translate-x-3" : "-translate-x-24 ") + "  opacity-0 block transform transition-all  ease-out"}>Louis Grasset</span>
                 </div>
                 <SocialAside hidden={scrollingOnFooter} />
             </div>
