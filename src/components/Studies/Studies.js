@@ -1,7 +1,7 @@
 import * as React from 'react';
 import studies from '../../data/studies';
 
-const Studies = () => {
+export const Studies = () => {
     return (
         <div className="grid gap-12 mt-10 md:grid-cols-2">
             {
@@ -16,7 +16,6 @@ const Studies = () => {
                     </div>
                 ))
             }
-        </div>);
+        </div>
+    );
 };
-
-export default Studies;

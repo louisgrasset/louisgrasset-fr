@@ -1,7 +1,7 @@
 import * as React from 'react';
 import socials from '../../data/socials';
 
-const SocialAside = ({ hidden }) => {
+export const SocialAside = ({ hidden }) => {
     return (
         <ul className={(hidden ? "xl:scale-0" : "") + " top-0 flex items-center justify-center h-10 py-2 xl:px-0 space-x-0.5 xl:fixed xl:space-x-0 xl:transform xl:transition-transform xl:space-y-2 xl:flex-col xl:w-10 xl:h-screen xl:flex xl:left-4"}>
             {socials.map((link, key) => (
@@ -18,7 +18,6 @@ const SocialAside = ({ hidden }) => {
                 </li>
             ))
             }
-        </ul >);
+        </ul>
+    );
 };
-
-export default SocialAside;

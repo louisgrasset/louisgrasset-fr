@@ -3,7 +3,7 @@ import socials from '../../data/socials';
 import scrollInto from "../../utils/scrollInto";
 import iconArrowTop from "../../images/icons/arrow-top.svg";
 
-const Footer = ({ refs, toggleContactModal, setScrolling }) => {
+export const Footer = ({ refs, toggleContactModal }) => {
     let year = new Date().getFullYear();
     return (
         <footer className="mt-20 text-white bg-black" ref={refs.footer}>
@@ -50,5 +50,3 @@ const Footer = ({ refs, toggleContactModal, setScrolling }) => {
         </footer>
     );
 };
-
-export default Footer;

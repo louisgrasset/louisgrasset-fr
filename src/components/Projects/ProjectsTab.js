@@ -1,7 +1,7 @@
 import * as React from 'react';
 import iconRepository from '../../images/icons/repository.svg';
 
-const ProjectsTab = ({ id, project, projects, projectSelected, setProject, show }) => {
+export const ProjectsTab = ({ id, project, projects, projectSelected, setProject, show }) => {
     return (
         <button
             id={`tab${id}`}
@@ -17,5 +17,3 @@ const ProjectsTab = ({ id, project, projects, projectSelected, setProject, show 
         </button>
     );
 };
-
-export default ProjectsTab;

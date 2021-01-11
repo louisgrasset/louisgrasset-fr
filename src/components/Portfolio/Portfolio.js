@@ -1,9 +1,8 @@
 import * as React from 'react';
-import ProjectsTabs from '../Projects/ProjectsTabs';
-import ProjectsPanel from '../Projects/ProjectsPanel';
+import { ProjectsTabs, ProjectsPanel } from '../Projects';
 import projects from '../../data/projects';
 
-const Portfolio = () => {
+export const Portfolio = () => {
     const [projectSelected, setProject] = React.useState({ id: 0, ...projects[0] });
 
     return (
@@ -19,8 +18,6 @@ const Portfolio = () => {
                     ))}
                 </div>
             </div>
-        </div >
+        </div>
     );
 };
-
-export default Portfolio;

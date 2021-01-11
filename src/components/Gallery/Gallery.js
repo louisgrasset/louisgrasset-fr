@@ -1,7 +1,7 @@
 import * as React from 'react';
-import GalleryButton from './GalleryButton';
+import { GalleryButton } from './';
 
-const Gallery = ({ project, projectSelected }) => {
+export const Gallery = ({ project, projectSelected }) => {
     const [image, setImage] = React.useState({ counter: 1, max: 1 });
 
     // Reset gallery counter each time the Gallery is shown
@@ -38,5 +38,3 @@ const Gallery = ({ project, projectSelected }) => {
         </div>
     );
 };
-
-export default Gallery;

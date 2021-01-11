@@ -1,8 +1,9 @@
 import * as React from 'react';
-import Gallery from '../Gallery/Gallery';
+import { Gallery } from '../Gallery';
+
 import iconExternal from '../../images/icons/external.svg';
 
-const ProjectsPanel = ({ project, projectSelected, show, id }) => {
+export const ProjectsPanel = ({ project, projectSelected, show, id }) => {
     return (
         <div className={(show ? 'block' : 'hidden') + " w-full h-full"} role="tabpanel" id={`panel${id}`} aria-labelledby={`panel${id}`}>
             <Gallery project={project} projectSelected={projectSelected} />
@@ -18,5 +19,3 @@ const ProjectsPanel = ({ project, projectSelected, show, id }) => {
         </div>
     );
 };
-
-export default ProjectsPanel;

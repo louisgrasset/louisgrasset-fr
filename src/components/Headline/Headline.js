@@ -1,5 +1,6 @@
 import * as React from 'react';
-const Headline = ({ title, subtitle }) => {
+
+export const Headline = ({ title, subtitle }) => {
     return (
         <>
             <h2 className="text-2xl font-bold text-gray-900 md:text-3xl">{title}</h2>
@@ -7,4 +8,3 @@ const Headline = ({ title, subtitle }) => {
         </>
     );
 };
-export default Headline;

@@ -1,9 +1,15 @@
 import * as React from "react";
 
-const Alert = ({ text, show }) => {
+export const Alert = ({ text, show, hideAlert }) => {
+    React.useEffect(() => {
+        setTimeout(() => {
+            show && hideAlert();
+        }, 10000);
+    });
+
     return (
-        <div className={(show ? "" : "hidden") + " w-full px-3 py-2 bg-green-200"}>
-            <div className="container mx-auto max-w-8xl xl:px-20">
+        <div className={(show ? "" : "hidden") + " fixed bottom-0 w-full py-2 bg-green-200 z-40"} onClick={() => hideAlert()}>
+            <div className="container flex px-5 mx-auto max-w-8xl md:px-10 xl:px-20">
                 <p>
                     <span className="px-2 py-1 mr-2 font-medium text-white uppercase bg-green-400 rounded-sm">
                         Info
@@ -11,8 +17,6 @@ const Alert = ({ text, show }) => {
                     {text}
                 </p>
             </div>
-        </div >
+        </div>
     );
 };
-
-export default Alert;

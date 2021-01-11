@@ -2,13 +2,12 @@ import * as React from 'react';
 import socials from '../../data/socials';
 import iconClose from '../../images/icons/close.svg';
 
-const ContactModal = (props) => {
-    const closeModal = () => props.setContactModalActive(false);
+export const ContactModal = ({ show, close }) => {
     return (
-        <div className={(props.show ? "flex" : "hidden") + " items-start fixed top-0 left-0 md:items-center justify-center w-full h-screen backdrop-blur-5 z-50"}>
-            <div onClick={() => closeModal()} role="button" aria-label="Fermer" tabIndex="0" className="absolute w-full h-full bg-gray-900 cursor-pointer opacity-20" style={{ zIndex: -1 }}></div>
+        <div className={(show ? "flex" : "hidden") + " items-start fixed top-0 left-0 md:items-center justify-center w-full h-screen backdrop-blur-5 z-50"}>
+            <div onClick={() => close(false)} role="button" aria-label="Fermer" tabIndex="0" className="absolute w-full h-full bg-gray-900 cursor-pointer opacity-20" style={{ zIndex: -1 }}></div>
             <div className="container relative max-w-xl mt-5 bg-white shadow-2xl md:mt-0 xl:max-w-3xl rounded-xl ">
-                <button className="absolute w-7 h-7 top-3.5 right-3.5" aria-label="Fermer" onClick={() => closeModal()}>
+                <button className="absolute w-7 h-7 top-3.5 right-3.5" aria-label="Fermer" onClick={() => close(false)}>
                     <img src={iconClose} alt="Croix" />
                 </button>
                 <div className="grid max-h-screen gap-8 p-10 overflow-y-auto overscroll-contain xl:gap-0 xl:grid-cols-2">
@@ -65,5 +64,3 @@ const ContactModal = (props) => {
         </div>
     );
 };
-
-export default ContactModal;

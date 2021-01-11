@@ -1,5 +1,6 @@
 import * as React from 'react';
-const BeachBall = () => {
+
+export const BeachBall = () => {
     return (
         <div className="absolute top-0 right-0 overflow-hidden filter-blur-70" style={{ animation: 'spin 12s ease-in-out alternate infinite', zIndex: '-1' }}>
             <div className="relative grid grid-cols-2 origin-center transform -rotate-45">
@@ -11,5 +12,3 @@ const BeachBall = () => {
         </div>
     );
 };
-
-export default BeachBall;

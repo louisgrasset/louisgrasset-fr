@@ -1,7 +1,7 @@
 import * as React from 'react';
-import ProjectsTab from './ProjectsTab';
+import { ProjectsTab } from './';
 
-const ProjectsTabs = ({ projects, projectSelected, setProject }) => {
+export const ProjectsTabs = ({ projects, projectSelected, setProject }) => {
     return (
         <div className="max-w-full p-4 overflow-x-auto lg:max-h-projectslist xl:flex-row lg:overflow-x-hidden lg:overflow-y-auto ">
             <div role="tablist" className="flex flex-nowrap lg:flex-col space-x-1.5 lg:space-x-0 lg:space-y-1.5">
@@ -20,5 +20,3 @@ const ProjectsTabs = ({ projects, projectSelected, setProject }) => {
         </div>
     );
 };
-
-export default ProjectsTabs;

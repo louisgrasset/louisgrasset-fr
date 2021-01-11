@@ -1,7 +1,7 @@
 import * as React from 'react';
-import SocialAside from '../SocialAside/SocialAside';
+import { SocialAside } from '../SocialAside';
 
-const Nav = ({ refs }) => {
+export const Nav = ({ refs }) => {
     const [scrollBottom, setScrollBottom] = React.useState(0);
     const [scrolling, setScrolling] = React.useState(false);
     const [scrollingOnFooter, setScrollingOnFooter] = React.useState(false);
@@ -23,7 +23,7 @@ const Nav = ({ refs }) => {
     }, [scrollBottom, setScrolling, refs]);
 
     return (
-        <nav className={"fixed top-0 w-full py-3 z-40 px-5  md:px-10 xl:px-20"} >
+        <nav className={"fixed top-0 w-full py-3 z-40 px-5  md:px-10 xl:px-20"}>
             <div style={{ zIndex: '-1' }} className={(scrolling ? "show  border-gray-200 " : "") + " origin-top  absolute left-0 w-full h-full  bg-white opacity-0 -mt-3  xl:hidden  border-b border-transparent xl:border-transparent transition-all"} ></div>
             <div style={{ gridTemplateColumns: '24px 1fr 108px' }} className="grid items-center grid-flow-col">
                 <img src={require('../../images/profile.jpg')} alt="Louis Grasset" className={(!scrolling ? "scale-0" : "scale-1 xl:hidden") + " duration-200 transition-all bg-transparent transform w-6 h-6 rounded-full shadow-md"} />
@@ -33,8 +33,6 @@ const Nav = ({ refs }) => {
                 <SocialAside hidden={scrollingOnFooter} />
             </div>
 
-        </nav >
+        </nav>
     );
 };
-
-export default Nav;
