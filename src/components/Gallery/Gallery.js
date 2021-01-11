@@ -1,5 +1,5 @@
 import * as React from 'react';
-import GalleryButton from '../GalleryButton/GalleryButton';
+import GalleryButton from './GalleryButton';
 
 const Gallery = ({ project, projectSelected }) => {
     const [image, setImage] = React.useState({ counter: 1, max: 1 });
