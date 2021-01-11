@@ -57,16 +57,29 @@ const IndexPage = () => {
 
   }, [toggleContactFormSubmission]);
 
+  let metaTitle = 'Louis Grasset - Développeur web front end freelance';
+  let metaDecription = 'Louis Grasset, développeur web front end freelance. Développement adapté à vos besoins.';
   return (
     <>
       <Helmet
-        title="Louis Grasset - Développeur web front end freelance"
+        title={metaTitle}
         meta={[
           { name: 'charset', content: 'utf-8' },
-          { name: 'description', content: 'Louis Grasset, développeur web front end freelance. Développement adapté à vos besoins.' },
+          { name: 'description', content: metaDecription },
           { name: 'author', content: 'Louis Grasset' },
-          { name: 'twitter:creator', content: '@louisgrasset' },
           { name: 'keywords', content: 'freelance, louis, grasset, louisgrasset, fullstack, lyon, développeur, dev, developpement, portolio, php, css, sass, intégration, web, vitrine, laravel, reactjs, react, javascript, sql, html, entrepreneur' },
+          { name: 'twitter:card', content: 'summary_large_image' },
+          { name: 'twitter:creator', content: '@louisgrasset' },
+          { name: 'twitter:site', content: '@louisgrasset' },
+          { name: 'twitter:title', content: metaTitle },
+          { name: 'twitter:description', content: metaDecription },
+          { name: 'twitter:image', content: 'https://louisgrasset.fr/tw-preview.png' },
+          { name: 'twitter:image:alt', content: 'website preview' },
+          { property: 'og:type', content: 'article' },
+          { property: 'og:locale', content: 'fr_FR' },
+          { property: 'og:title', content: metaTitle },
+          { property: 'og:description', content: metaDecription },
+          { property: 'og:image', content: 'https://louisgrasset.fr/og-preview.png' },
         ]}
       >
         <html lang="fr" />
