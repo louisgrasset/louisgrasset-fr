@@ -3,9 +3,9 @@ const fetch = require('node-fetch').default;
 exports.handler = async function (event, context, callback) {
     // Pulling out the payload from the body
     const { payload } = JSON.parse(event.body);
-    console.log(payload.data);
+
     // Checking which form has been submitted
-    const isContactForm = payload.data.form === "contact";
+    const isContactForm = payload.data['form-name'] === "contact";
 
     // Build the document JSON and submit it
     if (isContactForm) {

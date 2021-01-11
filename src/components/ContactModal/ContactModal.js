@@ -34,7 +34,6 @@ export const ContactModal = ({ show, close }) => {
                         </ul>
                     </div>
                     <form name="contact" action="/#success" method="POST" data-netlify="true" className="grid grid-cols-1 gap-4 pb-4 pl-0 border-gray-200 sm:pb-0 xl:pl-12 xl:border-l">
-                        <input type="hidden" name="form" value="contact" />
                         <div className="grid grid-cols-2 gap-4">
                             <div className="mb-2 sm:mb-0">
                                 <label htmlFor="firstname" className="block text-sm font-medium text-gray-700">Prénom</label>
