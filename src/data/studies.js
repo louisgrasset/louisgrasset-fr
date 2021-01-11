@@ -48,7 +48,7 @@ const studies = [
             from: 2011,
             to: 2015
         },
-        label: 'Baccalaureat Scientifique (SVT)'
+        label: 'Baccalauréat Scientifique (SVT)'
 
     }
 ];

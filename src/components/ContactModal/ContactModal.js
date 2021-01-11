@@ -13,7 +13,7 @@ const ContactModal = (props) => {
                 </button>
                 <div className="grid max-h-screen gap-8 p-10 overflow-y-auto overscroll-contain xl:gap-0 xl:grid-cols-2">
                     <div className="flex-col pr-0 xl:pr-12">
-                        <h2 className="mb-4 text-2xl font-bold">Par où préfèrez-vous me contacter ?</h2>
+                        <h2 className="mb-4 text-2xl font-bold">Par où préférez-vous me contacter ?</h2>
                         <div className="font-light text-gray-700">
                             <p className="mb-2">N'hésitez pas à me suivre puis à m'envoyer un message privé.</p>
                             <p>Le formulaire ci-contre vous permet également de prendre contact avec moi.</p>

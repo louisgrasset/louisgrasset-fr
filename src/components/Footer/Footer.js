@@ -11,9 +11,10 @@ const Footer = ({ refs, toggleContactModal, setScrolling }) => {
                 <div className="grid grid-flow-row gap-8 sm:col-span-3 md:grid-flow-col lg:grid-cols-2">
                     <div className="col-span-2 md:col-span-1">
                         <h3 className="mb-2 text-3xl font-bold">A propos</h3>
-                        <p className="text-justify opacity-60">
-                            Curieux de nature, je suis passionné par le web et particulièrement son aspect front end. Développement web, conception graphique, production multimédia et communication ont fait partie intégrante de mes études. Je parle français, anglais et ai étudié l'espagnol.
-                            <br /> Mes hobbies ?  📸,🚴🏻‍♂️️,🌍,👨🏻‍💻.
+                        <p className="text-justify ">
+                            <span className="opacity-70">
+                                Curieux de nature, je suis passionné par le web et particulièrement son aspect front end. Développement web, conception graphique, production multimédia et communication ont fait partie intégrante de mes études. Je parle français, anglais et ai étudié l'espagnol.
+                             Mes hobbies ?</span> 📸, 🚴🏻‍♂️️, 🌍, 👨🏻‍💻.
                         </p>
                         <p className="mt-2 opacity-40">Design inspiré par <a href="https://dribbble.com/shots/14572884-Redesigning-my-portfolio-Webflow" target="_blank" rel="noreferrer" className="underline"> ceci</a>.</p>
                     </div>
