@@ -27,7 +27,7 @@ const Nav = ({ refs }) => {
             <div style={{ zIndex: '-1' }} className={(scrolling ? "show  border-gray-200 " : "") + " origin-top  absolute left-0 w-full h-full  bg-white opacity-0 -mt-3  xl:hidden  border-b border-transparent xl:border-transparent transition-all"} ></div>
             <div style={{ gridTemplateColumns: '24px 1fr 108px' }} className="grid items-center grid-flow-col lg:flex lg:justify-between">
                 <img src={require('../../images/profile.jpg')} alt="Louis Grasset" className={(!scrolling ? "scale-0" : "scale-1 xl:hidden") + " duration-200 transition-all bg-transparent transform w-6 h-6 rounded-full shadow-md"} />
-                <div className="h-6 overflow-y-hidden font-semibold md:invisible" >
+                <div className="h-6 overflow-x-hidden font-semibold xl:invisible" >
                     <span className={(scrolling ? "opacity-100 translate-x-2" : "-translate-x-24 ") + "  opacity-0 block transform transition-all  ease-out"}>Louis Grasset</span>
                 </div>
                 <SocialAside hidden={scrollingOnFooter} />
