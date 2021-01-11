@@ -19,8 +19,8 @@ const studies = [
             name: 'Université Lyon 2 - ICOM'
         },
         dateRange: {
-            from: 2019,
-            to: 2017
+            from: 2017,
+            to: 2019
         },
         label: 'DU Communication et Conception Infographiques'
 
