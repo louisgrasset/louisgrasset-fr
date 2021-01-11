@@ -38,11 +38,11 @@ export const ContactModal = ({ show, close }) => {
                         <div className="grid grid-cols-2 gap-4">
                             <div className="mb-2 sm:mb-0">
                                 <label htmlFor="firstname" className="block text-sm font-medium text-gray-700">Prénom</label>
-                                <input type="text" name="firstname" id="firstname" className="block w-full px-3 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent sm:text-sm" />
+                                <input required type="text" name="firstname" id="firstname" className="block w-full px-3 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent sm:text-sm" />
                             </div>
                             <div>
                                 <label htmlFor="lastname" className="block text-sm font-medium text-gray-700">Nom</label>
-                                <input type="text" name="lastname" id="lastname" className="block w-full px-3 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent sm:text-sm" />
+                                <input required type="text" name="lastname" id="lastname" className="block w-full px-3 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent sm:text-sm" />
                             </div>
                         </div>
                         <div>
@@ -51,7 +51,7 @@ export const ContactModal = ({ show, close }) => {
                         </div>
                         <div>
                             <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
-                            <textarea name="message" id="message" className="block w-full px-3 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent sm:text-sm h-30"></textarea>
+                            <textarea required name="message" id="message" className="block w-full px-3 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent sm:text-sm h-30"></textarea>
                         </div>
                         <div>
                             <button className="block h-12 px-6 font-medium text-white uppercase bg-gray-900 rounded-md cursor-pointer group focus:outline-none focus:ring-4 focus:ring-pink-500 focus:border-pink-500">
