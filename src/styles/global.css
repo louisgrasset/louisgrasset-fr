@@ -19,7 +19,13 @@ nav > div:first-child{
     transform: scaleY(0);
     transition: all .125s ease-out;
 }
+
 nav > div:first-child.show {
     transform: scaleY(1);
     opacity: 1;
+}
+
+.__react_component_tooltip {
+    user-select: none;
+    opacity: 0;
 }

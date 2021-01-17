@@ -11,13 +11,12 @@ export const LightSwitch = ({ light, setLight }) => {
 
     let theme = React.useMemo(() => {
         return (`.tooltip-theme {
-                    user-select: none;
                     background-color: ${light ? '#1f2937' : '#e5e7eb'} !important;
                     color: ${light ? '#e5e7eb' : '#1f2937'} !important;
                  }
                  .tooltip-theme::before { border-right: 8px solid ${light ? '#1f2937' : '#e5e7eb'} !important; }
                  .tooltip-theme::after { display:none !important; }
-                 .tooltip-theme.show { margin-left: 10px; }`
+                 .tooltip-theme.show { margin-left: 10px; opacity: 1 }`
         );
     }, [light]);
 
