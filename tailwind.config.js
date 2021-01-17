@@ -14,11 +14,21 @@ module.exports = {
       ).reduce((entry, merge) => [...merge, ...entry])
     }
   },
-  darkMode: 'media', // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     filter: { // defaults to {}
       'none': 'none',
-      'grayscale': 'grayscale(1)',
+      'grayscale-10': 'grayscale(0.1)',
+      'grayscale-20': 'grayscale(0.2)',
+      'grayscale-30': 'grayscale(0.3)',
+      'grayscale-40': 'grayscale(0.4)',
+      'grayscale-50': 'grayscale(0.5)',
+      'grayscale-60': 'grayscale(0.6)',
+      'grayscale-70': 'grayscale(0.7)',
+      'grayscale-80': 'grayscale(0.8)',
+      'grayscale-90': 'grayscale(0.9)',
+      'grayscale-100': 'grayscale(1)',
+      'brightness-100': 'brightness(100)',
       'invert': 'invert(1)',
       'sepia': 'sepia(1)',
       'blur-10': 'blur(10px)',
@@ -65,7 +75,11 @@ module.exports = {
   variants: {
     filter: ['responsive'], // defaults to ['responsive']
     backdropFilter: ['responsive'], // defaults to ['responsive']
-    extend: {},
+    extend: {
+      opacity: ['dark'],
+      filter: ['dark'],
+      scale: ['group-hover']
+    },
   },
   plugins: [
     require('tailwindcss-filters'),

@@ -11,11 +11,15 @@ html {
     100% { transform: rotate(360deg) scale(1.2) }
 }
 
+body {
+    background-color: #ffffff;
+}
+
 nav > div:first-child{
-    transform:  scaleY(0);
+    transform: scaleY(0);
     transition: all .125s ease-out;
 }
 nav > div:first-child.show {
-    transform:  scaleY(1);
+    transform: scaleY(1);
     opacity: 1;
 }

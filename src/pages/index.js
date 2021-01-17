@@ -12,6 +12,7 @@ import { Portfolio } from "../components/Portfolio";
 import { Studies } from "../components/Studies";
 import { Companies } from "../components/Companies";
 import { Footer } from "../components/Footer";
+import { LightSwitch } from '../components/LightSwitch';
 
 const IndexPage = () => {
   let refs = [];
@@ -20,6 +21,9 @@ const IndexPage = () => {
   refs.footer = React.createRef();
 
   const [isContactModalActive, setContactModalActive] = React.useState(false);
+
+  const [light, setLight] = React.useState(window?.matchMedia('(prefers-color-scheme: dark)').matches || true);
+
   const toggleContactModal = React.useCallback(() => {
     setContactModalActive(!isContactModalActive);
   }, [isContactModalActive]);
@@ -36,6 +40,17 @@ const IndexPage = () => {
       document.removeEventListener('keyup', (e) => onKeyUp(e));
     };
   }, [isContactModalActive, toggleContactModal]);
+
+  React.useEffect(() => {
+    document.body.classList.add('transition-colors');
+    if (light) {
+      document.body.classList.remove('dark');
+      document.body.classList.remove('bg-gray-900');
+    } else {
+      document.body.classList.add('dark');
+      document.body.classList.add('bg-gray-900');
+    }
+  }, [light]);
 
   const [isContactFormSubmitted, setContactFormSubmission] = React.useState(false);
   const toggleContactFormSubmission = React.useCallback(() => {
@@ -80,9 +95,8 @@ const IndexPage = () => {
         <html lang="fr" />
       </Helmet>
 
-      <main className="overflow-x-hidden" ref={refs.top}>
+      <main className="pb-20 overflow-x-hidden transition-colors" ref={refs.top}>
         <Alert text={"Votre message a bien été envoyé."} show={isContactFormSubmitted} hideAlert={setContactFormSubmission} />
-
         <Nav refs={refs} />
 
         <div className="container relative flex px-5 pt-8 mx-auto align-middle md:px-10 xl:px-20">
@@ -91,6 +105,7 @@ const IndexPage = () => {
 
         <div className="container flex px-5 mx-auto mb-10 align-middle md:px-10 xl:px-20">
           <Hero refs={refs} toggleContactModal={toggleContactModal} />
+          <LightSwitch light={light} setLight={setLight} />
         </div>
 
         <div className="container px-5 pt-20 pb-10 mx-auto md:px-10 xl:px-20" ref={refs.companies}>

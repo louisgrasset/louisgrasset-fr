@@ -13,7 +13,7 @@ export const SocialAside = ({ hidden }) => {
                         rel="noreferrer"
                         className="block p-2"
                     >
-                        <img src={link.icon} alt={link.title} className="w-5 h-5" />
+                        <img src={link.icon} alt={link.title} className="w-5 h-5 dark:filter-invert" />
                     </a>
                 </li>
             ))
