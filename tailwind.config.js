@@ -18,6 +18,7 @@ module.exports = {
   theme: {
     filter: { // defaults to {}
       'none': 'none',
+      'companies': 'grayscale(1) contrast(0) brightness(100)',
       'grayscale-10': 'grayscale(0.1)',
       'grayscale-20': 'grayscale(0.2)',
       'grayscale-30': 'grayscale(0.3)',
