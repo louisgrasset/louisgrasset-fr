@@ -23,13 +23,13 @@ export const LightSwitch = ({ light, setLight }) => {
 
     return (
         <>
-            <div onClick={() => { setLight(!light); }} data-tip={alt()} className="absolute z-50 flex items-center justify-center text-black transition-colors bg-transparent rounded-full opacity-50 cursor-pointer dark:opacity-60 left-4 top-4 w-9 h-9 dark:text-white group hover:bg-gray-200 dark:hover:bg-gray-700">
+            <ReactTooltip className="tooltip-theme" getContent={alt} id='switch' place="right" effect="float" />
+            <div onClick={() => { setLight(!light); }} data-for='switch' data-tip='' className="absolute z-50 flex items-center justify-center text-black transition-colors bg-transparent rounded-full opacity-50 cursor-pointer dark:opacity-60 left-4 top-4 w-9 h-9 dark:text-white group hover:bg-gray-200 dark:hover:bg-gray-700">
                 <img src={light ? iconLightOn : iconLightOff} alt={alt()} />
             </div>
             <style>
                 {theme}
             </style>
-            <ReactTooltip className="tooltip-theme" getContent={alt} place="right" effect="float" />
         </>
     );
 };
