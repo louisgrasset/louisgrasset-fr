@@ -27,7 +27,7 @@ export const Gallery = ({ project, projectSelected }) => {
     };
 
     return (
-        <div className="relative h-full overflow-hidden">
+        <div className="relative h-full overflow-hidden lg:rounded-r-xl">
             <div className={"flex flex-nowrap h-full  transition-transform translate-x-0"} style={{ width: 100 * image.counter + '%', transform: `translateX(-${(image.counter - 1) * 100}%)` }}>
                 {images}
             </div>
