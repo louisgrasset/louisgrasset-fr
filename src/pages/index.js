@@ -22,7 +22,14 @@ const IndexPage = () => {
 
   const [isContactModalActive, setContactModalActive] = React.useState(false);
 
-  const [light, setLight] = React.useState(window?.matchMedia('(prefers-color-scheme: dark)').matches || true);
+  const defaultTheme = () => {
+    if (typeof window !== 'undefined') {
+      return window?.matchMedia('(prefers-color-scheme: dark)').matches || true;
+    }
+    return true;
+  };
+
+  const [light, setLight] = React.useState(defaultTheme());
 
   const toggleContactModal = React.useCallback(() => {
     setContactModalActive(!isContactModalActive);
