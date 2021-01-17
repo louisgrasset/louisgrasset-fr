@@ -20,7 +20,7 @@ export const Hero = ({ refs, toggleContactModal }) => {
                 <button onClick={toggleContactModal} className="block h-12 px-6 font-medium text-white uppercase bg-gray-900 rounded-md shadow-md dark:bg-white dark:text-gray-900 focus:ring-opacity-50 focus:outline-none focus:ring-4 focus:ring-pink-500">
                     Dire bonjour&nbsp;&nbsp;<span role='img' aria-label="smiley">🙂</span>
                 </button>
-                <button onClick={() => { scrollInto(refs.companies); }} className="block h-12 px-6 font-medium text-gray-900 uppercase bg-white border border-gray-100 rounded-md shadow-md dark:bg-gray-700 dark:border-gray-700 dark:text-white focus:ring-opacity-50 focus:outline-none focus:ring-4 focus:ring-pink-500">
+                <button onClick={() => { scrollInto(refs.companies); }} className="block h-12 px-6 font-medium text-gray-900 uppercase bg-white border border-gray-100 rounded-md shadow-md dark:bg-gray-700 dark:border-gray-600 dark:text-white focus:ring-opacity-50 focus:outline-none focus:ring-4 focus:ring-pink-500">
                     En savoir plus
               </button>
             </div>
