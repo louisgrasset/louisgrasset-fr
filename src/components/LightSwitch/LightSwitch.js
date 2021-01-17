@@ -4,6 +4,7 @@ import iconLightOff from "../../images/icons/light-on.svg";
 import iconLightOn from "../../images/icons/light-off.svg";
 
 export const LightSwitch = ({ light, setLight }) => {
+    let hidden = true;
     let alt = React.useCallback(() => {
         return `Activer le mode ${light ? 'sombre 🙉' : 'lumineux 🙈'}`;
     }, [light]);
@@ -14,7 +15,9 @@ export const LightSwitch = ({ light, setLight }) => {
                     background-color: ${light ? '#1f2937' : '#e5e7eb'} !important;
                     color: ${light ? '#e5e7eb' : '#1f2937'} !important;
                  }
-                 .tooltip-theme::after {  border-right-color: ${light ? '#1f2937' : '#e5e7eb'} !important;}`
+                 .tooltip-theme::before { border-right: 8px solid ${light ? '#1f2937' : '#e5e7eb'} !important; }
+                 .tooltip-theme::after { display:none !important; }
+                 .tooltip-theme.show { margin-left: 10px; }`
         );
     }, [light]);
 
