@@ -9,18 +9,14 @@ export const LightSwitch = ({ light, setLight }) => {
     }, [light]);
 
     let theme = React.useMemo(() => {
-        return (`
-            .tooltip-theme {
-                user-select: none;
-                background-color: ${light ? '#1f2937' : '#e5e7eb'} !important;
-                color: ${light ? '#e5e7eb' : '#1f2937'} !important;
-            }
-            .tooltip-theme::after {  border-right-color: ${light ? '#1f2937' : '#e5e7eb'} !important;}
-        `);
+        return (`.tooltip-theme {
+                    user-select: none;
+                    background-color: ${light ? '#1f2937' : '#e5e7eb'} !important;
+                    color: ${light ? '#e5e7eb' : '#1f2937'} !important;
+                 }
+                 .tooltip-theme::after {  border-right-color: ${light ? '#1f2937' : '#e5e7eb'} !important;}`
+        );
     }, [light]);
-    React.useEffect(() => {
-        ReactTooltip.rebuild();
-    });
 
     return (
         <>
