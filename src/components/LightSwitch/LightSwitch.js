@@ -10,14 +10,15 @@ export const LightSwitch = ({ light, setLight }) => {
     }, [light]);
 
     let theme = React.useMemo(() => {
-        return (`.tooltip-theme {
-                    background-color: ${light ? '#1f2937' : '#e5e7eb'} !important;
-                    color: ${light ? '#e5e7eb' : '#1f2937'} !important;
-                 }
-                 .tooltip-theme::before { border-right: 8px solid ${light ? '#1f2937' : '#e5e7eb'} !important; }
-                 .tooltip-theme::after { display:none !important; }
-                 .tooltip-theme.show { margin-left: 10px; opacity: 1 }`
-        );
+        let style =
+            `.tooltip-theme {
+                background-color: ${light ? '#1f2937' : '#e5e7eb'} !important;
+                color: ${light ? '#e5e7eb' : '#1f2937'} !important;
+            }
+            .tooltip-theme::before { border-right: 8px solid ${light ? '#1f2937' : '#e5e7eb'} !important; }
+            .tooltip-theme::after { display:none !important; }
+            .tooltip-theme.show { margin-left: 10px; opacity: 1 }`;
+        return (style.replace(/(\r\n|\n|\r)/gm, '')).replace(/\s+/g, ' ');
     }, [light]);
 
     return (
