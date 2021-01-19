@@ -4,6 +4,7 @@ import keleops from "../images/companies/keleops.svg";
 import radiance from "../images/companies/radiance.svg";
 import manitowoc from "../images/companies/manitowoc.svg";
 import sqli from "../images/companies/sqli.svg";
+import sncf from "../images/companies/sncf.svg";
 import neety from "../images/companies/neety.svg";
 import pressecitron from "../images/companies/pressecitron.svg";
 
@@ -43,6 +44,12 @@ const companies = [
         title: "Manitowoc",
         url: "https://manitowoc.com",
         icon: manitowoc
+    },
+    {
+        slug: 'sncf',
+        title: "SNCF",
+        url: "https://sncf.com",
+        icon: sncf
     },
     {
         slug: 'neety',
