@@ -24,7 +24,7 @@ const IndexPage = () => {
 
   const defaultTheme = () => {
     if (typeof window !== 'undefined') {
-      return window?.matchMedia('(prefers-color-scheme: dark)').matches || true;
+      return window?.matchMedia ? window.matchMedia('(prefers-color-scheme: light)').matches : true;
     }
     return true;
   };
