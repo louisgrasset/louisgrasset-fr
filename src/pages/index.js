@@ -49,14 +49,8 @@ const IndexPage = () => {
   }, [isContactModalActive, toggleContactModal]);
 
   React.useEffect(() => {
-    document.body.classList.add('transition-colors');
-    if (light) {
-      document.body.classList.remove('dark');
-      document.body.classList.remove('bg-gray-900');
-    } else {
-      document.body.classList.add('dark');
-      document.body.classList.add('bg-gray-900');
-    }
+    document.body.classList.add(light ? 'light' : 'dark');
+    document.body.classList.remove(light ? 'dark' : 'light');
   }, [light]);
 
   const [isContactFormSubmitted, setContactFormSubmission] = React.useState(false);

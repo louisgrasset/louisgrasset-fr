@@ -11,11 +11,16 @@ export const LightSwitch = ({ light, setLight }) => {
 
     let theme = React.useMemo(() => {
         let style =
-            `.tooltip-theme {
-                background-color: ${light ? '#1f2937' : '#e5e7eb'} !important;
-                color: ${light ? '#e5e7eb' : '#1f2937'} !important;
+            `@media screen and (pointer: coarse) {
+                .tooltip-theme {
+                    display:none !important;
+                }
             }
-            .tooltip-theme::before { border-right: 8px solid ${light ? '#1f2937' : '#e5e7eb'} !important; }
+            .tooltip-theme {
+                background-color: ${light ? '#111927' : '#e5e7eb'} !important;
+                color: ${light ? '#e5e7eb' : '#111927'} !important;
+            }
+            .tooltip-theme::before { border-right: 8px solid ${light ? '#111927' : '#e5e7eb'} !important; }
             .tooltip-theme::after { display:none !important; }
             .tooltip-theme.show { margin-left: 10px; opacity: 1 }`;
         return (style.replace(/(\r\n|\n|\r)/gm, '')).replace(/\s+/g, ' ');

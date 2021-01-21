@@ -6,9 +6,28 @@ html {
     0% { transform: rotate(0deg) scale(1) }
     100% { transform: rotate(360deg) scale(1.2) }
 }
+$theme-light : rgb(255, 255, 255);
+$theme-dark : rgb(17, 24, 39);
 
 body {
-    background-color: #ffffff;
+    transition: all .125s ease;
+    background-color: $theme-light;
+    @media (prefers-color-scheme: light) {
+        & {
+            background-color: $theme-light;
+        }
+    }
+    @media (prefers-color-scheme: dark) {
+        & {
+            background-color: $theme-dark;
+        }
+    }
+    &.light {
+        background-color: $theme-light;
+    }
+    &.dark {
+        background-color: $theme-dark;
+    }
 }
 
 nav > div:first-child{
@@ -44,30 +63,32 @@ nav > div:first-child.show {
         animation-play-state: paused;
     }
 
+    $theme: rgb(255, 255, 255);
     &:before,
     &::after {
         content: "";
-        background: linear-gradient(to right, #ffffff 0,rgba(255, 255, 255, 0) 100%);
+        background: linear-gradient(to right, transparentize($theme-light, 0) 0, transparentize($theme-light, 1) 100%);
         position: absolute;
         left: 0;
         top: 0;
         bottom: 0;
         width: 8%;
         z-index: 2;
+        transition: all 0 .125s ease;
     }
 
     &::after {
         left: unset;
         right: 0;
-        background: linear-gradient(to left, #ffffff 0,rgba(255, 255, 255, 0) 100%);
+        background: linear-gradient(to left, transparentize($theme-light, 0) 0, transparentize($theme-light, 1) 100%);
     }
 }
 
 .dark .companies {
     &::before {
-        background: linear-gradient(to right, rgba(17, 24, 39, 1) 0,rgba(255, 255, 255, 0) 100%);
+        background: linear-gradient(to right, transparentize($theme-dark, 0) 0, transparentize($theme-dark, 1) 100%);
     } 
     &::after {
-        background: linear-gradient(to left, rgba(17, 24, 39, 1) 0,rgba(255, 255, 255, 0) 100%);
+        background: linear-gradient(to left, transparentize($theme-dark, 0) 0,transparentize($theme-dark, 1) 100%);
     }
 }
