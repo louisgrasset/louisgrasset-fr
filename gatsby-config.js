@@ -7,6 +7,7 @@ module.exports = {
     name: 'Louis Grasset'
   },
   plugins: [
+    "gatsby-plugin-sass",
     "gatsby-plugin-postcss",
     "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",

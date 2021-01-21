@@ -3,22 +3,30 @@ import companies from '../../data/companies';
 
 export const Companies = () => {
     return (
-        <ul className="grid grid-cols-2 mt-6 gap-x-3 gap-y-12 xl:gap-y-6 sm:grid-cols-3 lg:grid-cols-6 xl:flex xl:justify-between xl:flex-wrap">
-            {
-                companies.map((link, key) => (
-                    <li key={key} className={(key !== companies.length - 1) ? "xl:mr-6 xl:mb-6" : ''}>
-                        <a
-                            title={link.title}
-                            href={`${link.url}`}
-                            target="blank"
-                            rel="noreferrer"
-                            className="w-full"
-                        >
-                            <img src={link.icon} alt={link.title} className="h-12 p-1 dark:filter-companies" style={{ maxWidth: '9rem' }} />
-                        </a>
-                    </li>
-                ))
-            }
-        </ul>
+        <div className="relative h-24 px-4 overflow-x-hidden companies">
+            <div className="flex flex-row flex-nowrap">
+                {
+                    [0, 1].map((i, key) => (
+                        <ul key={key} className="relative flex items-center justify-between mt-6 flex-nowrap gap-y-6">
+                            {
+                                companies.map((link, key) => (
+                                    <li key={key} className="mr-14 md:mr-20 lg:mr-32">
+                                        <a
+                                            title={link.title}
+                                            href={`${link.url}`}
+                                            target="blank"
+                                            rel="noreferrer"
+                                            className="w-full"
+                                        >
+                                            <img src={link.icon} alt={link.title} className="h-10 p-1 lg:h-11 xl:h-12 dark:filter-companies" style={{ maxWidth: '10rem' }} />
+                                        </a>
+                                    </li>
+                                ))
+                            }
+                        </ul>)
+                    )
+                }
+            </div>
+        </div>
     );
 };

@@ -1,31 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-html {
-    scroll-behavior: smooth;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg) scale(1) }
-    100% { transform: rotate(360deg) scale(1.2) }
-}
-
-body {
-    background-color: #ffffff;
-}
-
-nav > div:first-child{
-    transform: scaleY(0);
-    transition: all .125s ease-out;
-}
-
-nav > div:first-child.show {
-    transform: scaleY(1);
-    opacity: 1;
-}
-
-.__react_component_tooltip {
-    user-select: none;
-    opacity: 0;
-}

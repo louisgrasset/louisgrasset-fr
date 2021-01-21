@@ -1,0 +1,73 @@
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg) scale(1) }
+    100% { transform: rotate(360deg) scale(1.2) }
+}
+
+body {
+    background-color: #ffffff;
+}
+
+nav > div:first-child{
+    transform: scaleY(0);
+    transition: all .125s ease-out;
+}
+
+nav > div:first-child.show {
+    transform: scaleY(1);
+    opacity: 1;
+}
+
+.__react_component_tooltip {
+    user-select: none;
+    opacity: 0;
+}
+
+@keyframes companies {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.companies {
+    ul {
+        animation: companies 30s linear infinite;
+    }
+
+    &:hover ul {
+        animation-play-state: paused;
+    }
+
+    &:before,
+    &::after {
+        content: "";
+        background: linear-gradient(to right, #ffffff 0,rgba(255, 255, 255, 0) 100%);
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 8%;
+        z-index: 2;
+    }
+
+    &::after {
+        left: unset;
+        right: 0;
+        background: linear-gradient(to left, #ffffff 0,rgba(255, 255, 255, 0) 100%);
+    }
+}
+
+.dark .companies {
+    &::before {
+        background: linear-gradient(to right, rgba(17, 24, 39, 1) 0,rgba(255, 255, 255, 0) 100%);
+    } 
+    &::after {
+        background: linear-gradient(to left, rgba(17, 24, 39, 1) 0,rgba(255, 255, 255, 0) 100%);
+    }
+}
