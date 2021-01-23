@@ -10,7 +10,6 @@ $theme-light : rgb(255, 255, 255);
 $theme-dark : rgb(17, 24, 39);
 
 body {
-    transition: all .125s ease;
     background-color: $theme-light;
     @media (prefers-color-scheme: light) {
         & {
@@ -74,7 +73,6 @@ nav > div:first-child.show {
         bottom: 0;
         width: 8%;
         z-index: 2;
-        transition: all 0 .125s ease;
     }
 
     &::after {
