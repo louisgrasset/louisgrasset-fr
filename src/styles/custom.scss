@@ -44,6 +44,46 @@ nav > div:first-child.show {
     opacity: 0;
 }
 
+@keyframes contact {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #contact {
+        transform-origin: bottom;
+    }
+    @keyframes contact {
+        from {
+            opacity: 0;
+            transform: translateY(128px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+#contact {
+    .container {
+        display: none;
+    }
+
+    &:not(.hidden) {
+        .container {
+            display: block;
+            animation: contact .2s ease-out forwards;
+        }
+    }
+}
+
 @keyframes companies {
     from {
         transform: translateX(0%);
