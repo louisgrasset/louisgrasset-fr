@@ -27,7 +27,7 @@ export const ContactModal = ({ show, close }) => {
                                         target='blank'
                                         className="flex items-center h-10 px-4 py-2 font-medium text-white uppercase bg-gray-900 border border-gray-200 rounded-md cursor-pointer dark:text-gray-900 dark:bg-white group focus:outline-none focus:ring-4 focus:ring-pink-500 focus:border-pink-500"
                                     >
-                                        <img src={link.icon} alt={link.title} className="inline-block w-4 h-4 filter-invert dark:filter-none" />
+                                        <img src={link.icon} alt={link.title} className="inline-block w-4 h-4 border-none filter-invert dark:filter-none" />
                                     </a>
                                 </li>
                             ))}
