@@ -11,16 +11,6 @@ $theme-dark : rgb(17, 24, 39);
 
 body {
     background-color: $theme-light;
-    @media (prefers-color-scheme: light) {
-        & {
-            background-color: $theme-light;
-        }
-    }
-    @media (prefers-color-scheme: dark) {
-        & {
-            background-color: $theme-dark;
-        }
-    }
     &.light {
         background-color: $theme-light;
     }

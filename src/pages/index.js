@@ -22,7 +22,7 @@ const IndexPage = () => {
 
   const [isContactModalActive, setContactModalActive] = React.useState(false);
 
-  const [light, setLight] = React.useState('light');
+  const [light, setLight] = React.useState(true);
 
   const toggleContactModal = React.useCallback(() => {
     setContactModalActive(!isContactModalActive);
