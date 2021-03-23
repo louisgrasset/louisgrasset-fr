@@ -4,7 +4,6 @@ import iconLightOff from "../../images/icons/light-on.svg";
 import iconLightOn from "../../images/icons/light-off.svg";
 
 export const LightSwitch = ({ light, setLight }) => {
-    let hidden = true;
     let alt = React.useCallback(() => {
         return `Activer le mode ${light ? 'sombre 🙉' : 'lumineux 🙈'}`;
     }, [light]);
