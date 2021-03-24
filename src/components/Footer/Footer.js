@@ -14,8 +14,8 @@ export const Footer = ({ language, lang, refs, toggleContactModal }) => {
                         <h3 className="mb-2 text-3xl font-bold">{lang.about.headline.title}</h3>
                         <p className="text-justify ">
                             <span className="opacity-70">
-                                {lang.about.headline.subtitle}
-                            </span> 📸, 🚴🏻‍♂️️, 🌍, 👨🏻‍💻.
+                                {lang.about.headline.subtitle} 📸, 🚴🏻‍♂️️, 🌍, 👨🏻‍💻.
+                            </span>
                         </p>
                         <p className="mt-2 opacity-40">{lang.about.footnote.text} <a href="https://dribbble.com/shots/14572884-Redesigning-my-portfolio-Webflow" target="_blank" rel="noreferrer" className="underline"> {lang.about.footnote.link}</a>.</p>
                     </div>
