@@ -29,8 +29,8 @@ const translations = {
         },
         'theme': {
             'text': {
-                'light': 'Toggle light mode',
-                'dark': 'Toggle dark mode',
+                'dark': 'Toggle light mode',
+                'light': 'Toggle dark mode',
             }
         },
         'hero': {
@@ -108,8 +108,8 @@ const translations = {
         },
         'theme': {
             'text': {
-                'light': 'Activer le mode clair',
-                'dark': 'Activer le mode sombre',
+                'dark': 'Activer le mode clair',
+                'light': 'Activer le mode sombre',
             }
         },
         'hero': {
