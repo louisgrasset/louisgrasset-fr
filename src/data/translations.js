@@ -35,7 +35,7 @@ const translations = {
         },
         'hero': {
             'title': 'Passionate front end web developer. I crunch the web.',
-            'position': 'Currently working as an R&D Developer at',
+            'position': 'Currently working as a R&D Developer at',
             'cta': {
                 'primary': 'Say hello',
                 'secondary': 'Learn more'
