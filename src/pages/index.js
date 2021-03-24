@@ -14,7 +14,13 @@ import { Companies } from "../components/Companies";
 import { Footer } from "../components/Footer";
 import { LightSwitch } from '../components/LightSwitch';
 
-const IndexPage = () => {
+// Import data
+import translations from '../data/translations';
+
+const IndexPage = ({ pathContext, ...props }) => {
+  const [language, setLanguage] = React.useState(pathContext.langKey);
+  const lang = React.useMemo(() => translations[language], [translations, language]);
+
   let refs = [];
   refs.top = React.createRef();
   refs.companies = React.createRef();
@@ -23,6 +29,7 @@ const IndexPage = () => {
   const [isContactModalActive, setContactModalActive] = React.useState(false);
 
   const [light, setLight] = React.useState(true);
+
 
   const toggleContactModal = React.useCallback(() => {
     setContactModalActive(!isContactModalActive);
@@ -61,8 +68,8 @@ const IndexPage = () => {
 
   }, [toggleContactFormSubmission]);
 
-  let metaTitle = 'Louis Grasset - Développeur web front end freelance';
-  let metaDecription = 'Louis Grasset, développeur web front end freelance. Développement adapté à vos besoins.';
+  let metaTitle = lang.meta.title;
+  let metaDecription = lang.meta.decription;
   return (
     <>
       <Helmet
@@ -80,17 +87,17 @@ const IndexPage = () => {
           { name: 'twitter:image', content: 'https://louisgrasset.fr/tw-preview.png' },
           { name: 'twitter:image:alt', content: 'website preview' },
           { property: 'og:type', content: 'article' },
-          { property: 'og:locale', content: 'fr_FR' },
+          { property: 'og:locale', content: lang.language.code },
           { property: 'og:title', content: metaTitle },
           { property: 'og:description', content: metaDecription },
           { property: 'og:image', content: 'https://louisgrasset.fr/og-preview.png' },
         ]}
       >
-        <html lang="fr" />
+        <html lang={language} />
       </Helmet>
 
       <main className="pb-20 overflow-x-hidden transition-colors" ref={refs.top}>
-        <Alert text={"Votre message a bien été envoyé."} show={isContactFormSubmitted} hideAlert={setContactFormSubmission} />
+        <Alert text={lang.alert.contact.text} show={isContactFormSubmitted} hideAlert={setContactFormSubmission} />
         <Nav refs={refs} />
 
         <div className="container relative flex px-5 pt-8 mx-auto align-middle md:px-10 xl:px-20">
@@ -98,28 +105,28 @@ const IndexPage = () => {
         </div>
 
         <div className="container flex px-5 mx-auto mb-10 align-middle md:px-10 xl:px-20">
-          <Hero refs={refs} toggleContactModal={toggleContactModal} />
-          <LightSwitch light={light} setLight={setLight} />
+          <Hero lang={lang} refs={refs} toggleContactModal={toggleContactModal} />
+          <LightSwitch lang={lang} light={light} setLight={setLight} />
         </div>
 
         <div className="container px-5 pt-20 pb-10 mx-auto md:px-10 xl:px-20" ref={refs.companies}>
-          <Headline title="Entreprises" subtitle="Elles m'ont fait confiance" />
-          <Companies />
+          <Headline title={lang.companies.headline.title} subtitle={lang.companies.headline.subtitle} />
+          <Companies lang={lang} />
         </div>
 
         <div className="container px-5 py-10 mx-auto md:px-10 xl:px-20">
-          <Headline title="Réalisations" subtitle="Projets sur lesquels j'ai travaillé" />
-          <Portfolio />
+          <Headline title={lang.portfolio.headline.title} subtitle={lang.portfolio.headline.subtitle} />
+          <Portfolio lang={lang} />
         </div>
 
         <div className="container px-5 py-10 mx-auto md:px-10 xl:px-20">
-          <Headline title="Etudes" subtitle="Voici mon parcours" />
-          <Studies />
+          <Headline title={lang.studies.headline.title} subtitle={lang.studies.headline.subtitle} />
+          <Studies lang={lang} />
         </div>
 
-        <ContactModal show={isContactModalActive} close={setContactModalActive} />
+        <ContactModal lang={lang} show={isContactModalActive} close={setContactModalActive} />
       </main>
-      <Footer refs={refs} toggleContactModal={toggleContactModal} />
+      <Footer translations={translations} language={language} lang={lang} refs={refs} toggleContactModal={toggleContactModal} />
     </>
   );
 };

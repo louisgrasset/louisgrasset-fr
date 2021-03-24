@@ -3,9 +3,9 @@ import ReactTooltip from 'react-tooltip';
 import iconLightOff from "../../images/icons/light-on.svg";
 import iconLightOn from "../../images/icons/light-off.svg";
 
-export const LightSwitch = ({ light, setLight }) => {
+export const LightSwitch = ({ lang, light, setLight }) => {
     let alt = React.useCallback(() => {
-        return `Activer le mode ${light ? 'sombre 🙉' : 'lumineux 🙈'}`;
+        return light ? (lang.theme.text['light'] + ' 🙉') : (lang.theme.text['dark'] + ' 🙈');
     }, [light]);
 
     let theme = React.useMemo(() => {
@@ -36,4 +36,4 @@ export const LightSwitch = ({ light, setLight }) => {
             </style>
         </>
     );
-};
+};;;;;;;
