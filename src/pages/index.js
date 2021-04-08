@@ -19,7 +19,7 @@ import translations from '../data/translations';
 
 const IndexPage = ({ pathContext, ...props }) => {
   const [language, setLanguage] = React.useState(pathContext.langKey);
-  const lang = React.useMemo(() => translations[language], [translations, language]);
+  const lang = React.useMemo(() => translations[language], [language]);
 
   let refs = [];
   refs.top = React.createRef();
