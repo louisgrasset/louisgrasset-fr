@@ -5,12 +5,14 @@ export const GalleryImage = ({ counter, project }) => {
     const source = `/images/projects/${project.slug}/${project.slug}-${counter}`;
     const [load, setLoad] = React.useState(false);
 
-    const imageLoader = new Image();
-    imageLoader.src = source + extension;
+    if (typeof window !== 'undefined') {
+        const imageLoader = new Image();
+        imageLoader.src = source + extension;
+        imageLoader.onload = () => {
+            setLoad(true);
+        };
+    }
 
-    imageLoader.onload = () => {
-        setLoad(true);
-    };
     return (
         <>
             <div
