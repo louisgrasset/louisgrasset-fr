@@ -6,7 +6,7 @@ import iconLightOn from "../../images/icons/light-off.svg";
 export const LightSwitch = ({ lang, light, setLight }) => {
     let alt = React.useCallback(() => {
         return light ? (lang.theme.text['light'] + ' 🙉') : (lang.theme.text['dark'] + ' 🙈');
-    }, [light]);
+    }, [light, lang.theme.text]);
 
     let theme = React.useMemo(() => {
         let style =
