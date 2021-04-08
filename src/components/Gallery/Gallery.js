@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { GalleryButton } from './';
+import { GalleryImage } from './';
 
-export const Gallery = ({ project, projectSelected }) => {
+export const Gallery = ({ show, project, projectSelected }) => {
     const [image, setImage] = React.useState({ counter: 1, max: 1 });
 
     // Reset gallery counter each time the Gallery is shown
@@ -23,10 +24,10 @@ export const Gallery = ({ project, projectSelected }) => {
 
     let images = [];
     for (let key = 1; key <= image.max; key++) {
-        images.push(<div key={key} className="flex-shrink-0 w-full h-full bg-no-repeat bg-contain lg:rounded-r-xl" aria-label={`Projet ${project.name} (${key})`} style={{ backgroundImage: 'url(' + require(`../../images/projects/${project.slug}/${project.slug}-${key}.png`) + ')' }} />);
+        images.push(<GalleryImage key={key} counter={key} project={project} />);
     };
 
-    return (
+    return (show &&
         <div className="relative h-full overflow-hidden lg:rounded-r-xl">
             <div className={"flex flex-nowrap h-full  transition-transform translate-x-0"} style={{ width: 100 * image.counter + '%', transform: `translateX(-${(image.counter - 1) * 100}%)` }}>
                 {images}
