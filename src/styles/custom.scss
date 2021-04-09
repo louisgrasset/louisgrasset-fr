@@ -111,6 +111,10 @@ nav > div:first-child.show {
         right: 0;
         background: linear-gradient(to left, transparentize($theme-light, 0) 0, transparentize($theme-light, 1) 100%);
     }
+
+    img {
+        width: unset;
+    }
 }
 
 .dark .companies {
