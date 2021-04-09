@@ -11,7 +11,7 @@ import profile from "../../images/profile.jpg";
 export const Hero = ({ refs, toggleContactModal, lang }) => {
     return (
         <div className="pt-20">
-            <img src={profile} alt="Louis Grasset" className="w-20 h-20 mb-4 rounded-full shadow-md dark:border-2" />
+            <img src={profile} alt="Louis Grasset" width="80" height="80" className="w-20 h-20 mb-4 rounded-full shadow-md dark:border-2" />
             <h1 className="text-4xl font-medium text-gray-900 dark:text-gray-200 sm:text-6xl md:text-7xl lg:text-8xl">
                 <span className="font-semibold text-black dark:text-white">Louis Grasset</span> <span className="invisible block text-sm md:visible md:inline-block md:text-7xl lg:text-8xl">—</span> {lang.hero.title}<br />
             </h1>

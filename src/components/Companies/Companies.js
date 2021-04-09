@@ -18,7 +18,7 @@ export const Companies = () => {
                                             rel="noreferrer"
                                             className="w-full"
                                         >
-                                            <img src={link.icon} alt={link.title} className="h-10 p-1 lg:h-11 xl:h-12 dark:filter-companies" style={{ maxWidth: '10rem' }} />
+                                            <img src={link.icon} alt={link.title} width="100" height="50" className="h-10 p-1 lg:h-11 xl:h-12 dark:filter-companies" style={{ maxWidth: '10rem' }} />
                                         </a>
                                     </li>
                                 ))
