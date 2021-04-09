@@ -1,13 +1,9 @@
+$theme-light : rgb(255, 255, 255);
+$theme-dark : rgb(17, 24, 39);
+
 html {
     scroll-behavior: smooth;
 }
-
-@keyframes spin {
-    0% { transform: rotate(0deg) scale(1) }
-    100% { transform: rotate(360deg) scale(1.2) }
-}
-$theme-light : rgb(255, 255, 255);
-$theme-dark : rgb(17, 24, 39);
 
 body {
     background-color: $theme-light;
@@ -32,6 +28,20 @@ nav > div:first-child.show {
 .__react_component_tooltip {
     user-select: none;
     opacity: 0;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg) scale(1) }
+    100% { transform: rotate(360deg) scale(1.2) }
+}
+
+@keyframes companies {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
 }
 
 @keyframes contact {
@@ -74,17 +84,13 @@ nav > div:first-child.show {
     }
 }
 
-@keyframes companies {
-    from {
-        transform: translateX(0%);
-    }
-    to {
-        transform: translateX(-100%);
-    }
+#beachball {
+    will-change: transform;
 }
 
 .companies {
     ul {
+        will-change: transform;
         animation: companies 30s linear infinite;
     }
 
