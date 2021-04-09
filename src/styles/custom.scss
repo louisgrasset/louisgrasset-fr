@@ -84,13 +84,8 @@ nav > div:first-child.show {
     }
 }
 
-#beachball {
-    will-change: transform;
-}
-
 .companies {
     ul {
-        will-change: transform;
         animation: companies 30s linear infinite;
     }
 
