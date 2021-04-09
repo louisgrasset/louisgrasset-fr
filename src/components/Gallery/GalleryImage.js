@@ -3,6 +3,8 @@ import * as React from 'react';
 export const GalleryImage = ({ counter, project }) => {
     const extension = '.png';
     const source = `/images/projects/${project.slug}/${project.slug}-${counter}`;
+    const fallback = require(`../../../static/images/projects/${project.slug}/${project.slug}-${counter}.thumb${extension}`);
+
     const [load, setLoad] = React.useState(false);
 
     if (typeof window !== 'undefined') {
@@ -19,7 +21,7 @@ export const GalleryImage = ({ counter, project }) => {
                 className={(load ? "" : "filter-blur-20") + " transition-all flex-shrink-0 w-full h-full bg-no-repeat bg-contain lg:rounded-r-xl"}
                 aria-label={`Projet ${project.name} (${counter})`}
                 style={{
-                    backgroundImage: 'url(' + (load ? `${source}${extension}` : `${require(`../../../static/images/projects/${project.slug}/${project.slug}-${counter}` + `.thumb${extension}`)}`) + ')'
+                    backgroundImage: 'url(' + (load ? `${source}${extension}` : `${fallback}`) + ')'
                 }} />
         </>
     );
