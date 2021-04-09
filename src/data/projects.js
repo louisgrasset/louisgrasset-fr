@@ -1,5 +1,15 @@
 const projects = [
     {
+        slug: 'yseopaa',
+        company: 'yseop',
+        name: 'Yseop Augmented Analyst',
+        year: 2021,
+        url: 'https://www.yseop.com/solutions/augmented-financial-analyst',
+        stacks: ['React', 'SASS'],
+        color: 'yellow',
+        images: 2
+    },
+    {
         slug: 'radiance',
         company: 'radiance',
         name: 'Radiance Mutuelle',
