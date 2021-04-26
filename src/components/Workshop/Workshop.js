@@ -7,9 +7,10 @@ export const Workshop = () => {
             {
                 workshop.map((project, key) => (
                     <a className="" href={project.url} target="_blank" rel="noreferrer">
-                        <article key={key} className="p-4 pb-2 bg-gray-100 rounded-md dark:bg-gray-800 ">
+                        <article key={key} className="relative p-4 pb-2 bg-gray-100 rounded-md dark:bg-gray-800">
                             <div className="bg-cover rounded-md" style={{ paddingBottom: '56.25%', backgroundImage: `url(/images/workshop/${project.slug}.png)` }}></div>
-                            <h3 className="mt-1 text-lg font-bold dark:text-white">{project.name}</h3>
+                            <h3 className="mt-2 text-lg font-bold dark:text-white">{project.name}</h3>
+                            <span className="absolute text-gray-500 bottom-2 right-4">{project.year}</span>
                         </article>
                     </a>
                 ))
