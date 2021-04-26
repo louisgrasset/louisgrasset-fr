@@ -13,6 +13,7 @@ import { Studies } from "../components/Studies";
 import { Companies } from "../components/Companies";
 import { Footer } from "../components/Footer";
 import { LightSwitch } from '../components/LightSwitch';
+import { Workshop } from '../components/Workshop';
 
 // Import data
 import translations from '../data/translations';
@@ -117,6 +118,11 @@ const IndexPage = ({ pathContext, ...props }) => {
         <div className="container px-5 py-10 mx-auto md:px-10 xl:px-20">
           <Headline title={lang.portfolio.headline.title} subtitle={lang.portfolio.headline.subtitle} />
           <Portfolio lang={lang} />
+        </div>
+
+        <div className="container px-5 py-10 mx-auto md:px-10 xl:px-20">
+          <Headline title={lang.workshop.headline.title} subtitle={lang.workshop.headline.subtitle} />
+          <Workshop lang={lang} />
         </div>
 
         <div className="container px-5 py-10 mx-auto md:px-10 xl:px-20">

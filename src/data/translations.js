@@ -57,6 +57,12 @@ const translations = {
             },
             'open': 'See project'
         },
+        'workshop': {
+            'headline': {
+                'title': 'Workshop',
+                'subtitle': 'Side projects I worked on',
+            }
+        },
         'studies': {
             'headline': {
                 'title': 'Studies',
@@ -135,6 +141,12 @@ const translations = {
                 'title': 'Projets'
             },
             'open': 'Voir le projet'
+        },
+        'workshop': {
+            'headline': {
+                'title': 'Atelier',
+                'subtitle': 'Projets annexes sur lesquels j\'ai travaillé',
+            }
         },
         'studies': {
             'headline': {

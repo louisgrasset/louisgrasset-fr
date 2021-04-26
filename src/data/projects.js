@@ -40,6 +40,16 @@ const projects = [
         images: 2
     },
     {
+        slug: 'locaulac',
+        company: 'university',
+        name: 'Loc Au Lac',
+        year: 2020,
+        url: 'https://locaulac.herokuapp.com/',
+        stacks: ['Laravel', 'JS', 'SASS'],
+        color: 'blue',
+        images: 1
+    },
+    {
         slug: 'blablalinge',
         company: 'freelance',
         name: 'BlaBlaLinge',
