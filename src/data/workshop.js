@@ -1,5 +1,13 @@
 const workshop = [
     {
+        slug: 'emojistable',
+        name: 'Emojis Table',
+        year: 2021,
+        url: 'https://emojis-table.netlify.app/',
+        repo: 'https://github.com/louisgrasset/emojis-table',
+        stacks: ['ReactJS', 'SCSS', 'WebExtension']
+    },
+    {
         slug: 'doneio',
         name: 'Done IO',
         year: 2021,
