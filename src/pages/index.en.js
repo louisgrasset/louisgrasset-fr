@@ -1,4 +1,5 @@
 import React from 'react';
 import IndexPage from './index';
 
-export default (props) => <IndexPage {...props} />;
+const Index = (props) => <IndexPage {...props} />;
+export default Index;
