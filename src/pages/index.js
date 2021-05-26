@@ -18,8 +18,8 @@ import { Workshop } from '../components/Workshop';
 // Import data
 import translations from '../data/translations';
 
-const IndexPage = ({ pathContext, ...props }) => {
-  const [language, setLanguage] = React.useState(pathContext.langKey);
+const IndexPage = ({ pageContext, ...props }) => {
+  const [language, setLanguage] = React.useState(pageContext.langKey);
   const lang = React.useMemo(() => translations[language], [language]);
 
   let refs = [];
