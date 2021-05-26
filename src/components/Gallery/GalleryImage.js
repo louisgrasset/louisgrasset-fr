@@ -3,7 +3,7 @@ import * as React from 'react';
 export const GalleryImage = ({ counter, project }) => {
     const extension = '.png';
     const source = `/images/projects/${project.slug}/${project.slug}-${counter}`;
-    const fallback = require(`../../../static/images/projects/${project.slug}/${project.slug}-${counter}.thumb${extension}`);
+    const fallback = require(`../../../static/images/projects/${project.slug}/${project.slug}-${counter}.thumb${extension}`).default;
 
     const [load, setLoad] = React.useState(false);
 
