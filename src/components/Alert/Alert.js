@@ -8,7 +8,7 @@ export const Alert = ({ text, show, hideAlert }) => {
     });
 
     return (
-        <div className={(show ? "" : "hidden") + " fixed left-0 bottom-0 w-full py-2 bg-green-200 z-40"} onClick={() => hideAlert()}>
+        <button style={{ appearance: 'none' }} className={(show ? "" : "hidden") + " fixed left-0 bottom-0 w-full py-2 bg-green-200 z-40"} onClick={() => hideAlert()}>
             <div className="container flex px-5 mx-auto max-w-8xl md:px-10 xl:px-20">
                 <p>
                     <span className="px-2 py-1 mr-2 font-medium text-white uppercase bg-green-400 rounded-sm">
@@ -17,6 +17,6 @@ export const Alert = ({ text, show, hideAlert }) => {
                     {text}
                 </p>
             </div>
-        </div>
+        </button>
     );
 };

@@ -7,7 +7,7 @@ export const ContactModal = ({ lang, show, close }) => {
     const [showForm, setShowForm] = React.useState(false);
     return (
         <div id="contact" className={(show ? "flex" : "hidden") + " items-end fixed top-0 left-0 md:items-center justify-center w-full h-screen backdrop-blur-5 z-50"}>
-            <div onClick={() => { setShowForm(false); close(false); }} role="button" aria-label="Fermer" tabIndex="0" className="absolute w-full h-full bg-gray-900 cursor-pointer dark:bg-gray-100 opacity-20" style={{ zIndex: -1 }}></div>
+            <button style={{ appearance: 'none', zIndex: -1 }} onClick={() => { setShowForm(false); close(false); }} aria-label="Fermer" tabIndex="0" className="absolute w-full h-full bg-gray-900 cursor-pointer dark:bg-gray-100 opacity-20"></button>
             <div className="container relative max-w-xl mt-5 bg-white shadow-2xl dark:text-white dark:bg-gray-800 md:mt-0 xl:max-w-3xl rounded-t-xl md:rounded-xl">
                 <button className="absolute w-7 h-7 top-3.5 right-3.5 flex items-center justify-center" aria-label="Fermer" onClick={() => { setShowForm(false); close(false); }}>
                     <img src={iconClose} alt="Croix" className="dark:filter-invert" />
@@ -32,7 +32,8 @@ export const ContactModal = ({ lang, show, close }) => {
                                 </li>
                             ))}
                             <li className="md:hidden">
-                                <a
+                                <button
+                                    style={{ appearance: 'none' }}
                                     onClick={() => setShowForm(true)}
                                     title={lang.modal.contact.form.form}
                                     href="#"
@@ -40,7 +41,7 @@ export const ContactModal = ({ lang, show, close }) => {
                                 >
                                     <img src={iconForm} alt={lang.modal.contact.form.form} className="inline-block w-4 h-4 mr-2 filter-invert dark:filter-none" />
                                     <span>{lang.modal.contact.form.form}</span>
-                                </a>
+                                </button>
                             </li>
                         </ul>
                     </div>
