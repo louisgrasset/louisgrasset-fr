@@ -58,6 +58,9 @@ nav > div:first-child.show {
 }
 
 @media screen and (max-width: 768px) {
+    #beachball {
+        animation-play-state: paused !important;
+    }
     #contact {
         transform-origin: bottom;
     }
