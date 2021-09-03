@@ -1,5 +1,13 @@
 const workshop = [
     {
+        slug: 'clockclock',
+        name: 'Clock Clock',
+        year: 2021,
+        url: 'https://clockclock.netlify.app/',
+        repo: 'https://github.com/louisgrasset/clock-clock',
+        stacks: ['ReactJS', 'SCSS']
+    },
+    {
         slug: 'emojistable',
         name: 'Emojis Table',
         year: 2021,
