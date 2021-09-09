@@ -57,6 +57,12 @@ const translations = {
             },
             'open': 'See project'
         },
+        'skills': {
+            'headline': {
+                'title': 'Skills',
+                'subtitle': 'What I am good at',
+            }
+        },
         'workshop': {
             'headline': {
                 'title': 'Workshop',
@@ -141,6 +147,12 @@ const translations = {
                 'title': 'Projets'
             },
             'open': 'Voir le projet'
+        },
+        'skills': {
+            'headline': {
+                'title': 'Compétences',
+                'subtitle': 'Ce que je sais faire',
+            }
         },
         'workshop': {
             'headline': {
