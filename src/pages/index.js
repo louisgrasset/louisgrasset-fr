@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Helmet } from "react-helmet";
 
-// Import components 
+// Import components
 import { Alert } from "../components/Alert";
 import { BeachBall } from "../components/BeachBall";
 import { Nav } from "../components/Nav";
@@ -13,6 +13,7 @@ import { Studies } from "../components/Studies";
 import { Companies } from "../components/Companies";
 import { Footer } from "../components/Footer";
 import { LightSwitch } from '../components/LightSwitch';
+import { Skills } from '../components/Skills'
 import { Workshop } from '../components/Workshop';
 
 // Import data
@@ -120,6 +121,11 @@ const IndexPage = ({ pageContext, ...props }) => {
           <Portfolio lang={lang} />
         </div>
 
+        <div className="container px-5 py-10 mx-auto md:px-10 xl:px-20">
+          <Headline title={lang.skills.headline.title} subtitle={lang.skills.headline.subtitle} />
+          <Skills lang={lang} light={light} />
+        </div>
+        
         <div className="container px-5 py-10 mx-auto md:px-10 xl:px-20">
           <Headline title={lang.workshop.headline.title} subtitle={lang.workshop.headline.subtitle} />
           <Workshop lang={lang} />
