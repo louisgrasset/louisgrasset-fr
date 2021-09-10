@@ -2,7 +2,6 @@ import linkedin from "../images/socials/linkedin.svg";
 import malt from "../images/socials/malt.svg";
 import twitter from "../images/socials/twitter.svg";
 import github from "../images/socials/github.svg";
-import gitlab from "../images/socials/gitlab.svg";
 
 const socials = [
     {
@@ -25,12 +24,7 @@ const socials = [
         title: "GitHub",
         url: "https://github.com/louisgrasset",
         icon: github,
-    },
-    {
-        title: "Gitlab",
-        url: "https://gitlab.com/louisgrasset",
-        icon: gitlab,
-    },
+    }
 ];
 
 export default socials;
