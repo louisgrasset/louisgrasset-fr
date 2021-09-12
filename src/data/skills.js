@@ -7,6 +7,7 @@ import htmlDark from "../images/skills/htmlDark.svg";
 import css from "../images/skills/css.svg";
 import cssDark from "../images/skills/cssDark.svg";
 import sass from "../images/skills/sass.svg";
+import php from "../images/skills/php.svg";
 import laravel from "../images/skills/laravel.svg";
 import npm from "../images/skills/npm.svg";
 import jest from "../images/skills/jest.svg";
@@ -25,6 +26,16 @@ const skills = [
         icon: typescript,
     },
     {
+        slug: 'php',
+        name: 'PHP',
+        icon: php,
+    },
+    {
+        slug: 'jest',
+        name: 'Jest',
+        icon: jest,
+    },
+    {
         slug: 'reactjs',
         name: 'ReactJs',
         icon: reactjs,
@@ -33,11 +44,6 @@ const skills = [
         slug: 'sass',
         name: 'SASS',
         icon: sass,
-    },
-    {
-        slug: 'jest',
-        name: 'Jest',
-        icon: jest,
     },
     {
         slug: 'laravel',
