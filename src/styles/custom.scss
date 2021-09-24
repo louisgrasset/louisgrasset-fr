@@ -130,3 +130,8 @@ nav > div:first-child.show {
         background: linear-gradient(to left, transparentize($theme-dark, 0) 0,transparentize($theme-dark, 1) 100%);
     }
 }
+@media screen and (max-width: 639px)  {
+    .gallery-item {
+        min-width: 200%;
+    }
+}

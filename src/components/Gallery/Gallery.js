@@ -29,7 +29,7 @@ export const Gallery = ({ show, project, projectSelected }) => {
 
     return (show &&
         <div className="relative h-full overflow-hidden lg:rounded-r-xl">
-            <div className={"flex flex-nowrap h-full  transition-transform translate-x-0"} style={{ width: 100 * image.counter + '%', transform: `translateX(-${(image.counter - 1) * 100}%)` }}>
+            <div className={"gallery-item flex flex-nowrap h-full  transition-transform translate-x-0"} style={{ width: 100 * image.counter + '%', transform: `translateX(-${(image.counter - 1) * 100}%)` }}>
                 {images}
             </div>
             <div className="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-gray-100 dark:from-gray-900 lg:rounded-br-xl"></div>
