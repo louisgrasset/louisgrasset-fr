@@ -1,56 +1,44 @@
 const studies = [
-    {
-        slug: 'mastercim',
-        institution: {
-            slug: 'univlyon2',
-            name: 'Université Lyon 2 - ICOM'
-        },
-        dateRange: {
-            from: 2019,
-            to: 2020
-        },
-        label: 'Master 2 Conception et Intégration Multimédia'
-
+  {
+    slug: "mastercim",
+    institution: {
+      slug: "univlyon2",
     },
-    {
-        slug: 'ducci',
-        institution: {
-            slug: 'univlyon2',
-            name: 'Université Lyon 2 - ICOM'
-        },
-        dateRange: {
-            from: 2017,
-            to: 2019
-        },
-        label: 'DU Communication et Conception Infographiques'
-
+    dateRange: {
+      from: 2019,
+      to: 2020,
     },
-    {
-        slug: 'mmi',
-        institution: {
-            slug: 'univtoulon',
-            name: 'Université de Toulon'
-        },
-        dateRange: {
-            from: 2015,
-            to: 2017
-        },
-        label: 'DUT Métiers du Multimédia et de l\'Internet'
-
+  },
+  {
+    slug: "ducci",
+    institution: {
+      slug: "univlyon2",
     },
-    {
-        slug: 'baccalaureat',
-        institution: {
-            slug: 'highschool',
-            name: 'Lycée Edouard Herriot'
-        },
-        dateRange: {
-            from: 2011,
-            to: 2015
-        },
-        label: 'Baccalauréat Scientifique (SVT)'
-
-    }
+    dateRange: {
+      from: 2017,
+      to: 2019,
+    },
+  },
+  {
+    slug: "mmi",
+    institution: {
+      slug: "univtoulon",
+    },
+    dateRange: {
+      from: 2015,
+      to: 2017,
+    },
+  },
+  {
+    slug: "baccalaureat",
+    institution: {
+      slug: "highschool",
+    },
+    dateRange: {
+      from: 2011,
+      to: 2015,
+    },
+  },
 ];
 
 export default studies;
