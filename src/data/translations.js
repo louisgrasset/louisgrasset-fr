@@ -36,7 +36,7 @@ const translations = {
     },
     hero: {
       title: "Passionate front end web developer. I crunch the web.",
-      position: "Currently working as a R&D Developer at",
+      position: "Currently working as a Software Engineer at",
       cta: {
         primary: "Say hello",
         secondary: "Learn more",
@@ -154,7 +154,7 @@ const translations = {
     },
     hero: {
       title: "Développeur web front end passionné. Je croque le web.",
-      position: "Actuellement en poste de Développeur R&D chez",
+      position: "Actuellement en poste de Sofware Engineer chez",
       cta: {
         primary: "Dire bonjour",
         secondary: "En savoir plus",

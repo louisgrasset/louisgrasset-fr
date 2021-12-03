@@ -1,3 +1,4 @@
+import dashlane from "../images/companies/dashlane.svg";
 import yseop from "../images/companies/yseop.svg";
 import unicancer from "../images/companies/unicancer.svg";
 import keleops from "../images/companies/keleops.svg";
@@ -10,6 +11,12 @@ import ouitalk from "../images/companies/ouitalk.svg";
 import pressecitron from "../images/companies/pressecitron.svg";
 
 const companies = [
+    {
+        slug: 'dashlane',
+        title: "Dashlane",
+        url: "https://dashlane.com",
+        icon: dashlane
+    },
     {
         slug: 'yseop',
         title: "Yseop",
