@@ -4,7 +4,7 @@ module.exports = {
     description: `Louis Grasset, développeur web front end freelance. Développement adapté à vos besoin.`,
     author: `@louisgrasset`,
     siteUrl: `${process.env.GATSBY_SITE_URL || "https://louisgrasset.fr"}`,
-    name: 'Louis Grasset'
+    name: "Louis Grasset",
   },
   plugins: [
     "gatsby-plugin-sass",
@@ -13,6 +13,14 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     "gatsby-transformer-sharp",
+    {
+      resolve: `gatsby-plugin-typescript`,
+      options: {
+        isTSX: true, // defaults to false
+        jsxPragma: `jsx`, // defaults to "React"
+        allExtensions: true, // defaults to false
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -35,11 +43,11 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-i18n',
+      resolve: "gatsby-plugin-i18n",
       options: {
-        langKeyDefault: 'fr',
-        useLangKeyLayout: false
-      }
-    }
+        langKeyDefault: "fr",
+        useLangKeyLayout: false,
+      },
+    },
   ],
 };
