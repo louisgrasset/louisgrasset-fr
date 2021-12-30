@@ -12,7 +12,7 @@ interface GalleryImageProps {
  * A component that render an image for the Gallery.
  */
 export const GalleryImage = ({ counter, project }: GalleryImageProps) => {
-    const extension = '.png';
+    const extension = '.webp';
     const source = `/images/projects/${project.slug}/${project.slug}-${counter}`;
     const fallback = require(`../../../static/images/projects/${project.slug}/${project.slug}-${counter}.thumb${extension}`).default;
 
@@ -36,4 +36,4 @@ export const GalleryImage = ({ counter, project }: GalleryImageProps) => {
                 }} />
         </>
     );
-};;;
+};

@@ -1,6 +1,7 @@
 node_modules/
 .cache/
 public
-static/images/projects/**/*.thumb.png
+static/images/**/**/*.thumb.png
+static/images/**/**/*.webp
 .DS_Store
 
