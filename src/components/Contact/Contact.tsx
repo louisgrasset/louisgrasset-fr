@@ -21,10 +21,10 @@ export const Contact = ({ lang, show, close }: ContactProps) => {
         <div id="contact" className={(show ? "flex" : "hidden") + " items-end fixed top-0 left-0 md:items-center justify-center w-full h-screen backdrop-blur-5 z-50"}>
             <button style={{ appearance: 'none', zIndex: -1 }} onClick={() => { setShowForm(false); close(false); }} aria-label="Fermer" tabIndex="0" className="absolute w-full h-full bg-gray-900 cursor-pointer dark:bg-gray-100 opacity-20"></button>
             <div className="container relative max-w-xl mt-5 bg-white shadow-2xl dark:text-white dark:bg-gray-800 md:mt-0 xl:max-w-3xl rounded-t-xl md:rounded-xl">
-                <button className="absolute w-7 h-7 top-3.5 right-3.5 flex items-center justify-center" aria-label="Fermer" onClick={() => { setShowForm(false); close(false); }}>
+                <button className="absolute w-12 h-12 top-0 right-0 flex items-center justify-center" aria-label="Fermer" onClick={() => { setShowForm(false); close(false); }}>
                     <img src={iconClose} alt="Croix" className="dark:filter-invert" />
                 </button>
-                <div className="grid max-h-screen gap-8 p-10 overflow-y-auto overscroll-contain xl:gap-0 xl:grid-cols-2">
+                <div className="grid max-h-screen gap-8 pb-[6.5rem] p-10 md:pb-10 overflow-y-auto overscroll-contain xl:gap-0 xl:grid-cols-2">
                     <div className="flex-col pr-0 xl:pr-12 md:self-center">
                         <h2 className="mb-4 text-2xl font-bold">{lang.modal.contact.title}</h2>
                         <div className="text-gray-700 dark:text-gray-200 font-theme">
@@ -37,7 +37,7 @@ export const Contact = ({ lang, show, close }: ContactProps) => {
                                         title={link.title}
                                         href={`${link.dm ? link.dm : link.url}`}
                                         target='blank'
-                                        className="flex items-center h-10 px-4 py-2 font-medium text-white uppercase bg-gray-900 rounded-md cursor-pointer dark:text-gray-900 dark:bg-white group focus:outline-none focus:ring-4 focus:ring-pink-500 focus:border-pink-500"
+                                        className="flex items-center h-10 px-4 py-2 font-medium text-white uppercase bg-gray-900 rounded-md cursor-pointer dark:text-gray-900 dark:bg-white group focus:outline-none focus:ring-4 focus:ring-pink-500 focus:border-pink-500 shadow-md"
                                     >
                                         <img src={link.icon} alt={link.title} className="inline-block w-4 h-4 filter-invert dark:filter-none" />
                                     </a>
@@ -78,7 +78,7 @@ export const Contact = ({ lang, show, close }: ContactProps) => {
                             <textarea required name="message" id="message" className="block w-full px-3 border-gray-300 rounded-md dark:border-gray-600 dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent sm:text-sm h-30"></textarea>
                         </div>
                         <div>
-                            <button className="block h-12 px-6 font-medium text-white uppercase bg-gray-900 rounded-md cursor-pointer dark:text-gray-900 dark:bg-white group focus:outline-none focus:ring-4 focus:ring-pink-500 focus:border-pink-500">
+                            <button className="block h-12 px-6 font-medium text-white uppercase bg-gray-900 rounded-md cursor-pointer dark:text-gray-900 dark:bg-white group focus:outline-none focus:ring-4 focus:ring-pink-500 focus:border-pink-500 shadow-md">
                                 {lang.modal.contact.form.submit}
                             </button>
                         </div>
