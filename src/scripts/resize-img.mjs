@@ -6,8 +6,8 @@ import { getItemsFromPath } from "./utils.mjs";
 /**
  * Generate images thumbnails in the given path.
  */
-const resizeImages = (paths) => {
-  paths.forEach((path) => {
+const resizeImages = (paths, sizes) => {
+  paths.forEach((path, pathIndex) => {
     getItemsFromPath(path).forEach((item, index, array) => {
       fs.readdir(item, (err, files) => {
         if (err) {
@@ -23,8 +23,8 @@ const resizeImages = (paths) => {
               const image = await resizeImg(
                 fs.readFileSync(`${item}/${file}`),
                 {
-                  width: 64,
-                  height: 36,
+                  width: sizes[pathIndex][0],
+                  height: sizes[pathIndex][1],
                 }
               );
 
@@ -43,4 +43,10 @@ const resizeImages = (paths) => {
   });
 };
 
-resizeImages(["./static/images/projects", "./static/images/workshop"]);
+resizeImages(
+  ["./static/images/projects", "./static/images/workshop"],
+  [
+    [64, 36],
+    [600, 338],
+  ]
+);

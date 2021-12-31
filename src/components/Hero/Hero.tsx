@@ -4,7 +4,7 @@ import scrollInto from '../../utils/scrollInto';
 
 import iconPin from "../../images/icons/pin.svg";
 import company from "../../images/companies/dashlane.svg";
-import profile from "../../images/profile.jpg";
+import profile from "../../images/profile.webp";
 
 interface HeroProps {
     /** Language string to get translations. */
