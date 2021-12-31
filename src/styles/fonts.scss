@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Source Sans Pro";
   src: local("Source Sans Pro"),
-    url("../fonts/source-sans-pro/SourceSansPro-Bold.ttf") format("truetype");
+    url("../fonts/source-sans-pro/SourceSansPro-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -9,8 +9,7 @@
 @font-face {
   font-family: "Source Sans Pro";
   src: local("Source Sans Pro"),
-    url("../fonts/source-sans-pro/SourceSansPro-SemiBold.ttf")
-      format("truetype");
+    url("../fonts/source-sans-pro/SourceSansPro-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -18,7 +17,7 @@
 @font-face {
   font-family: "Source Sans Pro";
   src: local("Source Sans Pro"),
-    url("../fonts/source-sans-pro/SourceSansPro-Regular.ttf") format("truetype");
+    url("../fonts/source-sans-pro/SourceSansPro-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
