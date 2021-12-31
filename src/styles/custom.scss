@@ -1,137 +1,157 @@
-@import './fonts.scss';
-$theme-light : rgb(255, 255, 255);
-$theme-dark : rgb(17, 24, 39);
+$theme-light: rgb(255, 255, 255);
+$theme-dark: rgb(17, 24, 39);
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
+  background-color: $theme-light;
+  font-family: "Source Sans Pro", -apple-system, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  &.light {
     background-color: $theme-light;
-    font-family: "Source Sans Pro", -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
-    &.light {
-        background-color: $theme-light;
-    }
-    &.dark {
-        background-color: $theme-dark;
-    }
+  }
+  &.dark {
+    background-color: $theme-dark;
+  }
 }
 
-nav > div:first-child{
-    transform: scaleY(0);
-    transition: all .125s ease-out;
+nav > div:first-child {
+  transform: scaleY(0);
+  transition: all 0.125s ease-out;
 }
 
 nav > div:first-child.show {
-    transform: scaleY(1);
-    opacity: 1;
+  transform: scaleY(1);
+  opacity: 1;
 }
 
 .__react_component_tooltip {
-    user-select: none;
-    opacity: 0;
+  user-select: none;
+  opacity: 0;
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg) scale(1) }
-    100% { transform: rotate(360deg) scale(1.2) }
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1.2);
+  }
 }
 
 @keyframes companies {
-    from {
-        transform: translateX(0%);
-    }
-    to {
-        transform: translateX(-100%);
-    }
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 @keyframes contact {
-    from {
-        opacity: 0;
-        transform: scale(0.95);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 @media screen and (max-width: 768px) {
-    #beachball {
-        animation-play-state: paused !important;
+  #beachball {
+    animation-play-state: paused !important;
+  }
+  #contact {
+    transform-origin: bottom;
+  }
+  @keyframes contact {
+    from {
+      opacity: 0;
+      transform: translateY(128px);
     }
-    #contact {
-        transform-origin: bottom;
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
-    @keyframes contact {
-        from {
-            opacity: 0;
-            transform: translateY(128px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
+  }
 }
 
 #contact {
-    .container {
-        display: none;
-    }
+  .container {
+    display: none;
+  }
 
-    &:not(.hidden) {
-        .container {
-            display: block;
-            animation: contact .2s ease-out forwards;
-        }
+  &:not(.hidden) {
+    .container {
+      display: block;
+      animation: contact 0.2s ease-out forwards;
     }
+  }
 }
 
 .companies {
-    ul {
-        animation: companies 30s linear infinite;
-    }
+  ul {
+    animation: companies 30s linear infinite;
+  }
 
-    &:hover ul {
-        animation-play-state: paused;
-    }
+  &:hover ul {
+    animation-play-state: paused;
+  }
 
-    $theme: rgb(255, 255, 255);
-    &:before,
-    &::after {
-        content: "";
-        background: linear-gradient(to right, transparentize($theme-light, 0) 0, transparentize($theme-light, 1) 100%);
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        width: 8%;
-        z-index: 2;
-    }
+  $theme: rgb(255, 255, 255);
+  &:before,
+  &::after {
+    content: "";
+    background: linear-gradient(
+      to right,
+      transparentize($theme-light, 0) 0,
+      transparentize($theme-light, 1) 100%
+    );
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 8%;
+    z-index: 2;
+  }
 
-    &::after {
-        left: unset;
-        right: 0;
-        background: linear-gradient(to left, transparentize($theme-light, 0) 0, transparentize($theme-light, 1) 100%);
-    }
+  &::after {
+    left: unset;
+    right: 0;
+    background: linear-gradient(
+      to left,
+      transparentize($theme-light, 0) 0,
+      transparentize($theme-light, 1) 100%
+    );
+  }
 
-    img {
-        width: unset;
-    }
+  img {
+    width: unset;
+  }
 }
 
 .dark .companies {
-    &::before {
-        background: linear-gradient(to right, transparentize($theme-dark, 0) 0, transparentize($theme-dark, 1) 100%);
-    } 
-    &::after {
-        background: linear-gradient(to left, transparentize($theme-dark, 0) 0,transparentize($theme-dark, 1) 100%);
-    }
+  &::before {
+    background: linear-gradient(
+      to right,
+      transparentize($theme-dark, 0) 0,
+      transparentize($theme-dark, 1) 100%
+    );
+  }
+  &::after {
+    background: linear-gradient(
+      to left,
+      transparentize($theme-dark, 0) 0,
+      transparentize($theme-dark, 1) 100%
+    );
+  }
 }
-@media screen and (max-width: 639px)  {
-    .gallery-item {
-        min-width: 200%;
-    }
+@media screen and (max-width: 639px) {
+  .gallery-item {
+    min-width: 200%;
+  }
 }
