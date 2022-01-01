@@ -52,7 +52,7 @@ const IndexPage = ({ pageContext }: IndexPageProps) => {
   useEffect(() => {
     // Close contact modal with escape key
     const onKeyUp = (event: KeyboardEvent) => {
-      if (event.keyCode === 27 && isContactActive) {
+      if (event.key === 'Escape' || 'Esc' && isContactActive) {
         toggleContact();
       }
     };
