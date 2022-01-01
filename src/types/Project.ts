@@ -5,6 +5,6 @@ export type Project = {
     name: string,
     slug: string,
     stacks: string[],
-    url: URL,
+    url: string,
     year: number
 }
