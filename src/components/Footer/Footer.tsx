@@ -4,12 +4,13 @@ import socials from '../../data/socials';
 import translations from '../../data/translations';
 import scrollInto from "../../utils/scrollInto";
 import iconArrowTop from "../../images/icons/arrow-top.svg";
+import { PageRefs } from '../../types/PageRefs';
 
 interface FooterProps {
     /** Language string to get translations. */
     lang: string,
     language: any,
-    refs: any,
+    refs: PageRefs,
     /** Callback to toggle Contact display. */
     toggleContact: () => void;
 }
