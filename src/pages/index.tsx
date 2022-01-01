@@ -94,7 +94,7 @@ const IndexPage = ({ pageContext }: IndexPageProps) => {
           {
             name: "keywords",
             content:
-              "freelance, louis, grasset, louisgrasset, fullstack, lyon, développeur, dev, developpement, portolio, php, css, sass, intégration, web, vitrine, laravel, reactjs, react, javascript, sql, html, entrepreneur",
+              "freelance, louis, grasset, louisgrasset, fullstack, lyon, développeur, dev, développement, portfolio, php, css, sass, intégration, web, vitrine, laravel, reactjs, react, javascript, sql, html, entrepreneur",
           },
           { name: "twitter:card", content: "summary_large_image" },
           { name: "twitter:creator", content: "@louisgrasset" },
