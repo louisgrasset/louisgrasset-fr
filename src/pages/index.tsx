@@ -1,5 +1,5 @@
 import * as React from "react";
-import { createRef, RefObject, useCallback, useEffect, useMemo, useState } from "react";
+import { createRef, useCallback, useEffect, useMemo, useState } from "react";
 
 // Import components
 import { Alert } from "../components/Alert";
@@ -15,6 +15,7 @@ import { Footer } from "../components/Footer";
 import { ThemeSwitch } from "../components/ThemeSwitch";
 import { Skills } from "../components/Skills";
 import { Workshop } from "../components/Workshop";
+import { PageRefs } from "../types/PageRefs";
 
 // Import data
 import translations from "../data/translations";
@@ -31,7 +32,7 @@ const IndexPage = ({ pageContext }: IndexPageProps) => {
   const [language, _setLanguage] = useState(pageContext.langKey);
   const lang = useMemo(() => translations[language], [language]);
 
-  let refs: {top: RefObject<any> |undefined, companies: RefObject<any> |undefined, footer:RefObject<any> |undefined} = {
+  let refs: PageRefs = {
     top: undefined,
     companies: undefined,
     footer: undefined
@@ -51,7 +52,7 @@ const IndexPage = ({ pageContext }: IndexPageProps) => {
   useEffect(() => {
     // Close contact modal with escape key
     const onKeyUp = (event: KeyboardEvent) => {
-      if (event.keyCode === 27 && isContactActive) {
+      if (event.key === 'Escape' || 'Esc' && isContactActive) {
         toggleContact();
       }
     };

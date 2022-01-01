@@ -1,9 +1,10 @@
 import { SocialAside } from '../SocialAside';
 import socials from '../../data/socials';
 import React, { useEffect, useState } from 'react';
+import { PageRefs } from '../../types/PageRefs';
 
 interface NavProps {
-    refs: any
+    refs: PageRefs
 }
 
 /**

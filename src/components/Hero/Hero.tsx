@@ -5,11 +5,12 @@ import scrollInto from '../../utils/scrollInto';
 import iconPin from "../../images/icons/pin.svg";
 import company from "../../images/companies/dashlane.svg";
 import profile from "../../images/profile.webp";
+import { PageRefs } from "../../types/PageRefs";
 
 interface HeroProps {
     /** Language string to get translations. */
     lang: string,
-    refs: any,
+    refs: PageRefs,
     toggleContact: () => void,
 }
 
