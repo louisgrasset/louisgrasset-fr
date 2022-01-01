@@ -4,18 +4,16 @@ import { GalleryButton } from './GalleryButton';
 import { GalleryImage } from './GalleryImage';
 
 interface GalleryProps {
-    /** Whether or not show the Gallery. */
-    show: boolean,
     /** The Project to handle. */
     project: Project,
     /** The current Project. */
-    projectSelected: string
+    projectSelected: number
 }
 
 /**
  * A component that render the gallery of a project.
  */
-export const Gallery = ({ show, project, projectSelected }: GalleryProps) => {
+export const Gallery = ({ project, projectSelected }: GalleryProps) => {
     const [image, setImage] = useState({ counter: 1, max: 1 });
 
     // Reset gallery counter each time the Gallery is shown
@@ -38,9 +36,9 @@ export const Gallery = ({ show, project, projectSelected }: GalleryProps) => {
     let images = [];
     for (let key = 1; key <= image.max; key++) {
         images.push(<GalleryImage key={key} counter={key} project={project} />);
-    };
+    }
 
-    return (show &&
+    return (
         <div className="relative h-full overflow-hidden lg:rounded-r-xl">
             <div className={"gallery-item flex flex-nowrap h-full  transition-transform translate-x-0"} style={{ width: 100 * image.counter + '%', transform: `translateX(-${(image.counter - 1) * 100}%)` }}>
                 {images}
