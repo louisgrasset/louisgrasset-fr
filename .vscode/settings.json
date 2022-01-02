@@ -1,13 +1,31 @@
 {
-    "cSpell.words": [
-        "dashlane",
-        "keleops",
-        "manitowoc",
-        "neety",
-        "ouitalk",
-        "pressecitron",
-        "sqli",
-        "unicancer",
-        "yseop"
-    ]
+    "cSpell": {
+        "language": "en",
+        "words": [
+            "baccalaureat",
+            "dashlane",
+            "développement",
+            "développeur",
+            "ducci",
+            "Edouard",
+            "firstname",
+            "grasset",
+            "ICOM",
+            "Infographic",
+            "intégration",
+            "keleops",
+            "laravel",
+            "lastname",
+            "louisgrasset",
+            "manitowoc",
+            "mastercim",
+            "neety",
+            "ouitalk",
+            "pressecitron",
+            "reactjs",
+            "sqli",
+            "unicancer",
+            "yseop"
+        ]
+    }
 }

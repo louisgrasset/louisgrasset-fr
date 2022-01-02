@@ -1,4 +1,6 @@
-const projects = [
+import { Project } from "../types";
+
+const projects: Project[] = [
     {
         slug: 'yseopaa',
         company: 'yseop',

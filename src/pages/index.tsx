@@ -52,7 +52,7 @@ const IndexPage = ({ pageContext }: IndexPageProps) => {
   useEffect(() => {
     // Close contact modal with escape key
     const onKeyUp = (event: KeyboardEvent) => {
-      if (event.key === 'Escape' || 'Esc' && isContactActive) {
+      if (event.key === ('Escape' ||'Esc')  && isContactActive) {
         toggleContact();
       }
     };
@@ -82,25 +82,25 @@ const IndexPage = ({ pageContext }: IndexPageProps) => {
   }, [toggleContactFormSubmission]);
 
   let metaTitle = lang.meta.title;
-  let metaDecription = lang.meta.decription;
+  let metaDescription = lang.meta.description;
   return (
     <>
       <Helmet
         title={metaTitle}
         meta={[
           { name: "charset", content: "utf-8" },
-          { name: "description", content: metaDecription },
+          { name: "description", content: metaDescription },
           { name: "author", content: "Louis Grasset" },
           {
             name: "keywords",
             content:
-              "freelance, louis, grasset, louisgrasset, fullstack, lyon, développeur, dev, developpement, portolio, php, css, sass, intégration, web, vitrine, laravel, reactjs, react, javascript, sql, html, entrepreneur",
+              "freelance, louis, grasset, louisgrasset, fullstack, lyon, développeur, dev, développement, portfolio, php, css, sass, intégration, web, vitrine, laravel, reactjs, react, javascript, sql, html, entrepreneur",
           },
           { name: "twitter:card", content: "summary_large_image" },
           { name: "twitter:creator", content: "@louisgrasset" },
           { name: "twitter:site", content: "@louisgrasset" },
           { name: "twitter:title", content: metaTitle },
-          { name: "twitter:description", content: metaDecription },
+          { name: "twitter:description", content: metaDescription },
           {
             name: "twitter:image",
             content: "https://louisgrasset.fr/tw-preview.png",
@@ -109,7 +109,7 @@ const IndexPage = ({ pageContext }: IndexPageProps) => {
           { property: "og:type", content: "article" },
           { property: "og:locale", content: lang.language.code },
           { property: "og:title", content: metaTitle },
-          { property: "og:description", content: metaDecription },
+          { property: "og:description", content: metaDescription },
           {
             property: "og:image",
             content: "https://louisgrasset.fr/og-preview.png",

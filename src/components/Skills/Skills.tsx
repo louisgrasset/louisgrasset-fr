@@ -4,7 +4,7 @@ import skills from "../../data/skills";
 
 interface SkillsProps {
   /** Whether or not the light theme is enabled */
-  light: Boolean;
+  light: boolean;
 }
 export const Skills = ({ light }: SkillsProps) => {
   return (
