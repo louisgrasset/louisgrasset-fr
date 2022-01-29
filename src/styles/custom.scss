@@ -157,3 +157,35 @@ nav > div:first-child.show {
     min-width: 200%;
   }
 }
+
+
+@mixin scroll-bar($color) {
+  scrollbar-color: #{$color} transparent;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    height: 0.4em;
+    width: 0.4em;
+  }
+
+  &::-webkit-scrollbar,
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    overflow: visible;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #{$color};
+  }
+}
+
+body {
+  &, * {
+    @include scroll-bar(#00000042);
+  }
+  &.dark {
+    &, * {
+      @include scroll-bar(#ffffff42);
+    }
+  }
+}
