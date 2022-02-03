@@ -154,7 +154,7 @@ const translations = {
     },
     hero: {
       title: "Développeur web front end passionné. Je croque le web.",
-      position: "Actuellement en poste de Sofware Engineer chez",
+      position: "Actuellement en poste de Software Engineer chez",
       cta: {
         primary: "Dire bonjour",
         secondary: "En savoir plus",
