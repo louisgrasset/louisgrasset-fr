@@ -7,7 +7,7 @@ import manitowoc from "../images/companies/manitowoc.svg";
 import sqli from "../images/companies/sqli.svg";
 import sncf from "../images/companies/sncf.svg";
 import neety from "../images/companies/neety.svg";
-import ouitalk from "../images/companies/ouitalk.svg";
+import sncfconnect from "../images/companies/sncfconnect.svg";
 import pressecitron from "../images/companies/pressecitron.svg";
 
 const companies = [
@@ -66,10 +66,10 @@ const companies = [
         icon: neety
     },
     {
-        slug: 'ouitalk',
-        title: "OuiTalk",
-        url: "https://ouitalk.oui.sncf",
-        icon: ouitalk
+        slug: 'sncfconnect',
+        title: "SNCF Connect & Vous",
+        url: "https://vous.sncf-connect.com/",
+        icon: sncfconnect
     },
     {
         slug: 'pressecitron',
