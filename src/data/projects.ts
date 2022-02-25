@@ -2,6 +2,16 @@ import { Project } from "../types";
 
 const projects: Project[] = [
     {
+        slug: 'pierrepernigotto',
+        company: 'pierrepernigotto',
+        name: 'Portfolio Pierre Pernigotto',
+        year: 2022,
+        url: "https://pierre.pernigotto.fr",
+        stacks: ['React', 'TypeScript', 'SASS'],
+        color: 'blue',
+        images: 3
+    },
+    {
         slug: 'yseopaa',
         company: 'yseop',
         name: 'Yseop Augmented Analyst',
