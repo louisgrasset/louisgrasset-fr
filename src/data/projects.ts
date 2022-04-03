@@ -2,6 +2,16 @@ import { Project } from "../types";
 
 const projects: Project[] = [
     {
+        slug: '2022etmoi',
+        company: '2022etmoi',
+        name: '2022 et moi - Quiz politique',
+        year: 2022,
+        url: "https://2022etmoi.fr",
+        stacks: ['React', 'TypeScript', 'SASS', 'GithubCI'],
+        color: 'blue',
+        images: 4
+    },
+    {
         slug: 'dashlanepasswordchanger',
         company: 'dashlane',
         name: 'Dashlane - Password Changer',
