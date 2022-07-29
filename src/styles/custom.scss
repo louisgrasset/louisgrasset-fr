@@ -36,10 +36,10 @@ nav > div:first-child.show {
 
 @keyframes spin {
   0% {
-    transform: rotate(0deg) scale(1);
+    transform: rotate(-45deg) scale(1);
   }
   100% {
-    transform: rotate(360deg) scale(1.2);
+    transform: rotate(315deg) scale(1.2);
   }
 }
 
@@ -64,7 +64,7 @@ nav > div:first-child.show {
 }
 
 @media screen and (max-width: 768px) {
-  #beachball {
+  #beachball > div {
     animation-play-state: paused !important;
   }
   #contact {

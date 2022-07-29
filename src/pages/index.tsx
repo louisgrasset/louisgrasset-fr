@@ -120,7 +120,7 @@ const IndexPage = ({ pageContext }: IndexPageProps) => {
       </Helmet>
 
       <main
-        className="pb-20 overflow-x-hidden transition-colors"
+        className="pb-20 transition-colors"
         ref={refs.top}
       >
         <Alert
