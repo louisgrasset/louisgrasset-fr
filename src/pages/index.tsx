@@ -134,7 +134,7 @@ const IndexPage = ({ pageContext }: IndexPageProps) => {
           <BeachBall />
         </div>
 
-        <div className="container flex px-5 mx-auto mb-10 align-middle md:px-10 xl:px-20">
+        <div className="container px-5 mx-auto mb-10 md:px-10 xl:px-20">
           <Hero
             lang={lang}
             refs={refs}
