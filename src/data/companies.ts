@@ -12,70 +12,70 @@ import pressecitron from "../images/companies/pressecitron.svg";
 
 const companies = [
     {
-        slug: 'dashlane',
+        slug: "dashlane",
         title: "Dashlane",
         url: "https://dashlane.com",
-        icon: dashlane
+        icon: dashlane,
     },
     {
-        slug: 'yseop',
+        slug: "yseop",
         title: "Yseop",
         url: "https://yseop.com",
-        icon: yseop
+        icon: yseop,
     },
     {
-        slug: 'unicancer',
+        slug: "unicancer",
         title: "Unicancer",
-        url: "http://www.unicancer.fr",
-        icon: unicancer
+        url: "https://www.unicancer.fr",
+        icon: unicancer,
     },
     {
-        slug: 'keleps',
+        slug: "keleops",
         title: "Keleops",
         url: "https://www.keleops.ch",
-        icon: keleops
+        icon: keleops,
     },
     {
-        slug: 'sqli',
+        slug: "sqli",
         title: "SQLI",
         url: "https://sqli.com",
-        icon: sqli
+        icon: sqli,
     },
     {
-        slug: 'radiance',
+        slug: "radiance",
         title: "Radiance Mutuelle",
         url: "https://radiance.fr",
-        icon: radiance
+        icon: radiance,
     },
     {
-        slug: 'manitowoc',
+        slug: "manitowoc",
         title: "Manitowoc",
         url: "https://manitowoc.com",
-        icon: manitowoc
+        icon: manitowoc,
     },
     {
-        slug: 'sncf',
+        slug: "sncf",
         title: "SNCF",
         url: "https://sncf.com",
-        icon: sncf
+        icon: sncf,
     },
     {
-        slug: 'neety',
+        slug: "neety",
         title: "Neety",
         url: "https://neety.email",
-        icon: neety
+        icon: neety,
     },
     {
-        slug: 'sncfconnect',
+        slug: "sncfconnect",
         title: "SNCF Connect & Vous",
         url: "https://vous.sncf-connect.com/",
-        icon: sncfconnect
+        icon: sncfconnect,
     },
     {
-        slug: 'pressecitron',
+        slug: "pressecitron",
         title: "Presse Citron",
         url: "https://www.presse-citron.net/",
-        icon: pressecitron
+        icon: pressecitron,
     },
 ];
 

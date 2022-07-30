@@ -1,1 +1,1 @@
-export * from './SocialAside';
+export * from "./SocialAside";

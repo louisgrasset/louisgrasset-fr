@@ -1,191 +1,199 @@
-@import "./fonts.scss";
+@import "./fonts";
 
-$theme-light: rgb(255, 255, 255);
-$theme-dark: rgb(17, 24, 39);
+$theme-light: rgb(255 255 255);
+$theme-dark: rgb(17 24 39);
+
+@mixin scroll-bar($color) {
+    scrollbar-color: #{$color} transparent;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+        height: 0.4em;
+        width: 0.4em;
+    }
+
+    &::-webkit-scrollbar,
+    &::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        overflow: visible;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #{$color};
+    }
+}
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  background-color: $theme-light;
-  font-family: "Source Sans Pro", -apple-system, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  &.light {
     background-color: $theme-light;
-  }
-  &.dark {
-    background-color: $theme-dark;
-  }
+    font-family: "Source Sans Pro", -apple-system, "Segoe UI", Roboto, Helvetica,
+        Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+
+    &,
+    * {
+        @include scroll-bar(#00000042);
+    }
+
+    &.light {
+        background-color: $theme-light;
+    }
+
+    &.dark {
+        background-color: $theme-dark;
+
+        &,
+        * {
+            @include scroll-bar(#ffffff42);
+        }
+    }
 }
 
 nav > div:first-child {
-  transform: scaleY(0);
-  transition: all 0.125s ease-out;
+    transform: scaleY(0);
+    transition: all 0.125s ease-out;
 }
 
 nav > div:first-child.show {
-  transform: scaleY(1);
-  opacity: 1;
+    transform: scaleY(1);
+    opacity: 1;
 }
 
+/* stylelint-disable selector-class-pattern */
 .__react_component_tooltip {
-  user-select: none;
-  opacity: 0;
+    user-select: none;
+    opacity: 0;
 }
 
 @keyframes spin {
-  0% {
-    transform: rotate(-45deg) scale(1);
-  }
-  100% {
-    transform: rotate(315deg) scale(1.2);
-  }
+    0% {
+        transform: rotate(-45deg) scale(1);
+    }
+
+    100% {
+        transform: rotate(315deg) scale(1.2);
+    }
 }
 
 @keyframes companies {
-  from {
-    transform: translateX(0%);
-  }
-  to {
-    transform: translateX(-100%);
-  }
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
 }
 
 @keyframes contact {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 @media screen and (max-width: 768px) {
-  #beachball > div {
-    animation-play-state: paused !important;
-  }
-  #contact {
-    transform-origin: bottom;
-  }
-  @keyframes contact {
-    from {
-      opacity: 0;
-      transform: translateY(128px);
+    #beachBall > div {
+        animation-play-state: paused !important;
     }
-    to {
-      opacity: 1;
-      transform: translateY(0);
+
+    #contact {
+        transform-origin: bottom;
     }
-  }
+    @keyframes contact {
+        from {
+            opacity: 0;
+            transform: translateY(128px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 }
 
 #contact {
-  .container {
-    display: none;
-  }
-
-  &:not(.hidden) {
     .container {
-      display: block;
-      animation: contact 0.2s ease-out forwards;
+        display: none;
     }
-  }
+
+    &:not(.hidden) {
+        .container {
+            display: block;
+            animation: contact 0.2s ease-out forwards;
+        }
+    }
 }
 
 .companies {
-  ul {
-    animation: companies 30s linear infinite;
-  }
+    ul {
+        animation: companies 30s linear infinite;
+    }
 
-  &:hover ul {
-    animation-play-state: paused;
-  }
+    &:hover ul {
+        animation-play-state: paused;
+    }
 
-  $theme: rgb(255, 255, 255);
-  &:before,
-  &::after {
-    content: "";
-    background: linear-gradient(
-      to right,
-      transparentize($theme-light, 0) 0,
-      transparentize($theme-light, 1) 100%
-    );
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 8%;
-    z-index: 2;
-  }
+    $theme: rgb(255 255 255);
 
-  &::after {
-    left: unset;
-    right: 0;
-    background: linear-gradient(
-      to left,
-      transparentize($theme-light, 0) 0,
-      transparentize($theme-light, 1) 100%
-    );
-  }
+    &::before,
+    &::after {
+        content: "";
+        background: linear-gradient(
+            to right,
+            transparentize($theme-light, 0) 0,
+            transparentize($theme-light, 1) 100%
+        );
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 8%;
+        z-index: 2;
+    }
 
-  img {
-    width: unset;
-  }
+    &::after {
+        left: unset;
+        right: 0;
+        background: linear-gradient(
+            to left,
+            transparentize($theme-light, 0) 0,
+            transparentize($theme-light, 1) 100%
+        );
+    }
+
+    img {
+        width: unset;
+    }
 }
 
 .dark .companies {
-  &::before {
-    background: linear-gradient(
-      to right,
-      transparentize($theme-dark, 0) 0,
-      transparentize($theme-dark, 1) 100%
-    );
-  }
-  &::after {
-    background: linear-gradient(
-      to left,
-      transparentize($theme-dark, 0) 0,
-      transparentize($theme-dark, 1) 100%
-    );
-  }
+    &::before {
+        background: linear-gradient(
+            to right,
+            transparentize($theme-dark, 0) 0,
+            transparentize($theme-dark, 1) 100%
+        );
+    }
+
+    &::after {
+        background: linear-gradient(
+            to left,
+            transparentize($theme-dark, 0) 0,
+            transparentize($theme-dark, 1) 100%
+        );
+    }
 }
 @media screen and (max-width: 639px) {
-  .gallery-item {
-    min-width: 200%;
-  }
-}
-
-
-@mixin scroll-bar($color) {
-  scrollbar-color: #{$color} transparent;
-  scrollbar-width: thin;
-
-  &::-webkit-scrollbar {
-    height: 0.4em;
-    width: 0.4em;
-  }
-
-  &::-webkit-scrollbar,
-  &::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    overflow: visible;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: #{$color};
-  }
-}
-
-body {
-  &, * {
-    @include scroll-bar(#00000042);
-  }
-  &.dark {
-    &, * {
-      @include scroll-bar(#ffffff42);
+    .gallery-item {
+        min-width: 200%;
     }
-  }
 }

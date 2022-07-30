@@ -13,7 +13,10 @@
         "prebuild": "node ./src/scripts/resize-img.mjs && node ./src/scripts/convert-img.mjs",
         "build": "gatsby build",
         "serve": "gatsby serve",
-        "clean": "gatsby clean"
+        "clean": "gatsby clean",
+        "lint": " lint:eslint && lint:stylelint",
+        "lint:eslint": "eslint *.js src/ --fix",
+        "lint:stylelint": "stylelint src/**/*.scss --fix"
     },
     "license": "0BSD",
     "dependencies": {
@@ -49,6 +52,15 @@
         "typescript": "^4.7.4"
     },
     "devDependencies": {
-        "@babel/plugin-proposal-class-properties": "^7.18.6"
+        "@typescript-eslint/eslint-plugin": "^5.31.0",
+        "@typescript-eslint/parser": "^5.31.0",
+        "eslint": "^8.20.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-plugin-react": "^7.30.1",
+        "stylelint-config-prettier": "^9.0.3",
+        "stylelint-config-recommended": "^8.0.0",
+        "stylelint-config-standard-scss": "^5.0.0",
+        "stylelint-prettier": "^2.0.0"
     }
 }

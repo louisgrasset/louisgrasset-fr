@@ -1,3 +1,3 @@
-export * from './ProjectPanel';
-export * from './ProjectsTab';
-export * from './ProjectsTabs';
+export * from "./ProjectPanel";
+export * from "./ProjectsTab";
+export * from "./ProjectsTabs";

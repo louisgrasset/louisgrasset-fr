@@ -14,7 +14,7 @@ const socials = [
         title: "Twitter",
         url: "https://twitter.com/louisgrasset",
         icon: twitter,
-        dm: "https://twitter.com/messages/compose?recipient_id=1223905705"
+        dm: "https://twitter.com/messages/compose?recipient_id=1223905705",
     },
     {
         title: "Linkedin",
@@ -30,7 +30,7 @@ const socials = [
         title: "GitHub",
         url: "https://github.com/louisgrasset",
         icon: github,
-    }
+    },
 ];
 
 export default socials;

@@ -8,7 +8,7 @@ import { getItemsFromPath } from "./utils.mjs";
  */
 const resizeImages = (paths, sizes) => {
   paths.forEach((path, pathIndex) => {
-    getItemsFromPath(path).forEach((item, index, array) => {
+    getItemsFromPath(path).forEach((item, _index, _array) => {
       fs.readdir(item, (err, files) => {
         if (err) {
           throw err;
@@ -19,7 +19,7 @@ const resizeImages = (paths, sizes) => {
             const fileName = file.substring(0, file.length - 4);
             const fileExtension = file.substring(file.length - 4, file.length);
 
-            (async () => {
+            await (async () => {
               const image = await resizeImg(
                 fs.readFileSync(`${item}/${file}`),
                 {

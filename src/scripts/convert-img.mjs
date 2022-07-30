@@ -9,7 +9,7 @@ import { getItemsFromPath } from "./utils.mjs";
  */
 const convertImages = (paths) => {
   paths.forEach((path) => {
-    getItemsFromPath(path).forEach((item, index, array) => {
+    getItemsFromPath(path).forEach((item, _index, _array) => {
       fs.readdir(item, (err, files) => {
         if (err) {
           throw err;

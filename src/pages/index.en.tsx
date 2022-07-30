@@ -1,5 +1,8 @@
-import React from 'react';
-import IndexPage from './index';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import React from "react";
+import IndexPage from "./index";
 
-const Index = (props) => <IndexPage {...props} />;
+function Index(props: any) {
+    return <IndexPage {...props} />;
+}
 export default Index;

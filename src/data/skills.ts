@@ -15,63 +15,63 @@ import docker from "../images/skills/docker.svg";
 
 const skills = [
     {
-        slug: 'javascript',
-        name: 'JavaScript',
+        slug: "javascript",
+        name: "JavaScript",
         icon: javascript,
-        iconDark: javascriptDark
+        iconDark: javascriptDark,
     },
     {
-        slug: 'typescript',
-        name: 'TypeScript',
+        slug: "typescript",
+        name: "TypeScript",
         icon: typescript,
     },
     {
-        slug: 'php',
-        name: 'PHP',
+        slug: "php",
+        name: "PHP",
         icon: php,
     },
     {
-        slug: 'jest',
-        name: 'Jest',
+        slug: "jest",
+        name: "Jest",
         icon: jest,
     },
     {
-        slug: 'reactjs',
-        name: 'ReactJs',
+        slug: "reactjs",
+        name: "ReactJs",
         icon: reactjs,
     },
     {
-        slug: 'sass',
-        name: 'SASS',
+        slug: "sass",
+        name: "SASS",
         icon: sass,
     },
     {
-        slug: 'laravel',
-        name: 'Laravel',
+        slug: "laravel",
+        name: "Laravel",
         icon: laravel,
     },
     {
-        slug: 'docker',
-        name: 'Docker',
+        slug: "docker",
+        name: "Docker",
         icon: docker,
     },
     {
-        slug: 'npm',
-        name: 'NPM',
+        slug: "npm",
+        name: "NPM",
         icon: npm,
     },
     {
-        slug: 'html',
-        name: 'HTML',
+        slug: "html",
+        name: "HTML",
         icon: html,
-        iconDark: htmlDark
+        iconDark: htmlDark,
     },
     {
-        slug: 'css',
-        name: 'CSS',
+        slug: "css",
+        name: "CSS",
         icon: css,
-        iconDark: cssDark
+        iconDark: cssDark,
     },
-]
+];
 
 export default skills;
