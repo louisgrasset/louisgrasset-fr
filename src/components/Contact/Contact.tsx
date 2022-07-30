@@ -57,9 +57,15 @@ export const Contact = ({ lang, show, close }: ContactProps) => {
                             </li>
                         </ul>
                     </div>
-                    <form name="contact" action="/#success" method="POST" data-netlify="true" className={(showForm ? "grid " : "hidden md:grid ") + "grid grid-cols-1 gap-4 pb-4 pt-6 pl-0 border-gray-200 dark:border-gray-700 sm:pb-0 xl:pl-12 border-t xl:border-l xl:border-t-0"}>
+                    <form data-netlify="true" netlify-honeypot="honeypot" name="contact" action="/#success" method="POST" className={(showForm ? "grid " : "hidden md:grid ") + "grid grid-cols-1 gap-4 pb-4 pt-6 pl-0 border-gray-200 dark:border-gray-700 sm:pb-0 xl:pl-12 border-t xl:border-l xl:border-t-0"}>
                         <input type="hidden" name="form-name" value="contact" />
                         <div className="grid grid-cols-2 gap-4">
+
+                            <div className="hidden">
+                                <label>
+                                    {lang.modal.contact.form.honeypot}: <input name="honeypot" />
+                                </label>
+                            </div>
                             <div className="mb-2 sm:mb-0">
                                 <label htmlFor="firstname" className="block text-sm font-medium text-gray-700 dark:text-gray-200">{lang.modal.contact.form.firstname}</label>
                                 <input required type="text" name="firstname" id="firstname" className="block w-full px-3 border-gray-300 rounded-md dark:border-gray-600 dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent sm:text-sm" />
@@ -75,7 +81,7 @@ export const Contact = ({ lang, show, close }: ContactProps) => {
                         </div>
                         <div>
                             <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-200">{lang.modal.contact.form.message}</label>
-                            <textarea required name="message" id="message" className="block w-full px-3 border-gray-300 rounded-md dark:border-gray-600 dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent sm:text-sm h-30"></textarea>
+                            <textarea required name="message" id="message" className="block w-full px-3 border-gray-300 rounded-md dark:border-gray-600 dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent sm:text-sm h-30"/>
                         </div>
                         <div>
                             <button className="block h-12 px-6 font-medium text-white uppercase bg-gray-900 rounded-md cursor-pointer dark:text-gray-900 dark:bg-white group focus:outline-none focus:ring-4 focus:ring-pink-500 focus:border-pink-500 shadow-md">

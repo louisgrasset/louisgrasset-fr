@@ -25,6 +25,7 @@ const translations = {
           message: "Message",
           submit: "Submit",
           form: "Form",
+          honeypot: "Don’t fill this out if you’re human"
         },
       },
     },
@@ -143,6 +144,7 @@ const translations = {
           message: "Message",
           submit: "Envoyer",
           form: "Formulaire",
+          honeypot: "Ne remplissez pas ce champ si vous êtes humain."
         },
       },
     },
