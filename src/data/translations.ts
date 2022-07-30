@@ -49,7 +49,7 @@ const translations : { [key: string]: Translation} = {
     "about_footnote_text": "Design inspired by",
     "about_footnote_link": "this",
     "about_cta_primary": "Get in touch",
-    "about_cta_navigation": "Back to top"
+    "about_cta_navigation": "Go to top"
   },
   fr: {
     "meta_title": "Louis Grasset - Développeur web front end freelance",
@@ -97,7 +97,7 @@ const translations : { [key: string]: Translation} = {
     "about_footnote_text": "Design inspiré par",
     "about_footnote_link": "ceci",
     "about_cta_primary": "Prendre contact",
-    "about_cta_navigation": "Retour en haut"
+    "about_cta_navigation": "Aller en haut"
   },
 };
 

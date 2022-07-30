@@ -14,7 +14,7 @@ const projects: Project[] = [
     {
         slug: 'dashlanepasswordchanger',
         company: 'dashlane',
-        name: 'Dashlane - Password Changer',
+        name: 'Dashlane / Password Changer',
         year: 2022,
         url: "https://dashlane.com",
         stacks: ['React', 'TypeScript', 'SASS'],
@@ -34,7 +34,7 @@ const projects: Project[] = [
     {
         slug: 'yseopaa',
         company: 'yseop',
-        name: 'Yseop Augmented Analyst',
+        name: 'Yseop / Augmented Analyst',
         year: 2021,
         url: 'https://www.yseop.com/solutions/augmented-financial-analyst',
         stacks: ['React', 'SASS'],
