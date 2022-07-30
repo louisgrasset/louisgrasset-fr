@@ -1,10 +1,11 @@
 import React from 'react';
 
 import studies from "../../data/studies";
+import {Translation} from "../../data/translations";
 
 interface StudiesProps {
   /** Language string to get translations */
-  lang: string
+  lang: Translation
 }
 export const Studies = ({ lang }: StudiesProps) => {
   return (
@@ -19,16 +20,16 @@ export const Studies = ({ lang }: StudiesProps) => {
               require(`../../images/studies/${diploma.institution.slug}.svg`)
                 .default
             }
-            alt={lang.studies[diploma.slug].institution.name}
+            alt={lang[`studies_${diploma.slug}_institution_name`]}
             width="100"
             height="50"
             className="w-24 h-12 lg:w-30 dark:filter-companies"
           />
           <div className="dark:text-white">
             <h3 className="text-xl font-bold">
-              {lang.studies[diploma.slug].label}
+              {lang[`studies_${diploma.slug}_label`]}
             </h3>
-            <p>{lang.studies[diploma.slug].institution.name}</p>
+            <p>{lang[`studies_${diploma.slug}_institution_name`]}</p>
             <p className="text-gray-500">
               {diploma.dateRange.from} - {diploma.dateRange.to}
             </p>

@@ -81,8 +81,8 @@ const IndexPage = ({ pageContext }: IndexPageProps) => {
     }
   }, [toggleContactFormSubmission]);
 
-  let metaTitle = lang.meta.title;
-  let metaDescription = lang.meta.description;
+  let metaTitle = lang['meta_title'];
+  let metaDescription = lang['meta_description'];
   return (
     <>
       <Helmet
@@ -107,7 +107,7 @@ const IndexPage = ({ pageContext }: IndexPageProps) => {
           },
           { name: "twitter:image:alt", content: "website preview" },
           { property: "og:type", content: "article" },
-          { property: "og:locale", content: lang.language.code },
+          { property: "og:locale", content: lang['language_code'] },
           { property: "og:title", content: metaTitle },
           { property: "og:description", content: metaDescription },
           {
@@ -124,7 +124,7 @@ const IndexPage = ({ pageContext }: IndexPageProps) => {
         ref={refs.top}
       >
         <Alert
-          text={lang.alert.contact.text}
+          text={lang['alert_contact_text']}
           show={isContactFormSubmitted}
           hideAlert={()=>setContactFormSubmission(false)}
         />
@@ -148,40 +148,40 @@ const IndexPage = ({ pageContext }: IndexPageProps) => {
           ref={refs.companies}
         >
           <Headline
-            title={lang.companies.headline.title}
-            subtitle={lang.companies.headline.subtitle}
+            title={lang['companies_headline_title']}
+            subtitle={lang['companies_headline_subtitle']}
           />
           <Companies />
         </div>
 
         <div className="container px-5 py-10 mx-auto md:px-10 xl:px-20">
           <Headline
-            title={lang.portfolio.headline.title}
-            subtitle={lang.portfolio.headline.subtitle}
+            title={lang['portfolio_headline_title']}
+            subtitle={lang['portfolio_headline_subtitle']}
           />
           <Portfolio lang={lang} />
         </div>
 
         <div className="container px-5 py-10 mx-auto md:px-10 xl:px-20">
           <Headline
-            title={lang.skills.headline.title}
-            subtitle={lang.skills.headline.subtitle}
+            title={lang['skills_headline_title']}
+            subtitle={lang['skills_headline_subtitle']}
           />
           <Skills light={light} />
         </div>
 
         <div className="container px-5 py-10 mx-auto md:px-10 xl:px-20">
           <Headline
-            title={lang.workshop.headline.title}
-            subtitle={lang.workshop.headline.subtitle}
+            title={lang['workshop_headline_title']}
+            subtitle={lang['workshop_headline_subtitle']}
           />
           <Workshop />
         </div>
 
         <div className="container px-5 py-10 mx-auto md:px-10 xl:px-20">
           <Headline
-            title={lang.studies.headline.title}
-            subtitle={lang.studies.headline.subtitle}
+            title={lang['studies_headline_title']}
+            subtitle={lang['studies_headline_subtitle']}
           />
           <Studies lang={lang} />
         </div>

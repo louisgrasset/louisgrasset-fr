@@ -2,9 +2,10 @@ import ReactTooltip from 'react-tooltip';
 import iconLightOff from "../../images/icons/light-on.svg";
 import iconLightOn from "../../images/icons/light-off.svg";
 import React, { useCallback, useMemo } from 'react';
+import {Translation} from "../../data/translations";
 
 interface ThemeSwitchProps {
-    lang: string,
+    lang: Translation,
     light: boolean,
     setLight: (light: boolean)=> void
 }
@@ -14,8 +15,8 @@ interface ThemeSwitchProps {
  */
 export const ThemeSwitch = ({ lang, light, setLight }: ThemeSwitchProps) => {
     let alt = useCallback(() => {
-        return light ? (lang.theme.text['light'] + ' 🙉') : (lang.theme.text['dark'] + ' 🙈');
-    }, [light, lang.theme.text]);
+        return light ? (lang['theme_text_light'] + ' 🙉') : (lang['theme_text_dark'] + ' 🙈');
+    }, [light, lang['theme_text']]);
 
     let theme = useMemo(() => {
         let style =
