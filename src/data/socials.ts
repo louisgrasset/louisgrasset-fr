@@ -1,6 +1,7 @@
-import linkedin from "../images/socials/linkedin.svg";
 import malt from "../images/socials/malt.svg";
 import twitter from "../images/socials/twitter.svg";
+import reddit from "../images/socials/reddit.svg";
+import linkedin from "../images/socials/linkedin.svg";
 import github from "../images/socials/github.svg";
 
 const socials = [
@@ -19,6 +20,11 @@ const socials = [
         title: "Linkedin",
         url: "https://linkedin.com/in/louisgrasset",
         icon: linkedin,
+    },
+    {
+        title: "Reddit",
+        url: "https://reddit.com/u/louisgrasset",
+        icon: reddit,
     },
     {
         title: "GitHub",
