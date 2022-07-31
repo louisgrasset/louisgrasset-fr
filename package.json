@@ -4,6 +4,9 @@
     "private": true,
     "description": "louisgrasset.fr",
     "author": "Louis Grasset",
+    "engines": {
+        "node": "^v17.9.1"
+    },
     "keywords": [
         "gatsby"
     ],
