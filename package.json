@@ -10,7 +10,7 @@
     "scripts": {
         "develop": "gatsby develop",
         "start": "gatsby develop",
-        "prebuild": "node ./src/scripts/resize-img.mjs && node ./src/scripts/convert-img.mjs",
+        "prebuild": "node ./src/scripts/clean-img.mjs && node ./src/scripts/resize-img.mjs && node ./src/scripts/convert-img.mjs",
         "build": "gatsby build",
         "serve": "gatsby serve",
         "clean": "gatsby clean",
@@ -40,6 +40,7 @@
         "gatsby-transformer-sharp": "^4.19.0",
         "imagemin": "^8.0.1",
         "imagemin-webp": "^7.0.0",
+        "log-update": "^5.0.1",
         "postcss": "^8.4.14",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
