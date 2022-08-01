@@ -16,6 +16,7 @@ export const Studies = ({ lang }: StudiesProps) => {
                     className="flex flex-col items-start gap-12 lg:items-center lg:flex-row gap-y-4"
                 >
                     <img
+                        loading="lazy"
                         src={
                             // eslint-disable-next-line @typescript-eslint/no-var-requires
                             require(`../../images/studies/${diploma.institution.slug}.svg`)

@@ -26,6 +26,7 @@ export const Workshop = () => {
                                 media="(max-width: 768px)"
                             />
                             <img
+                                loading="lazy"
                                 className="object-fit aspect-video rounded-md h-full w-full"
                                 src={`/images/workshop/${project.slug}/${project.slug}-1.thumb.webp`}
                                 alt={project.name}

@@ -24,6 +24,7 @@ export const Companies = () => {
                                     className="w-full"
                                 >
                                     <img
+                                        loading="lazy"
                                         src={link.icon}
                                         alt={link.title}
                                         width="100"
