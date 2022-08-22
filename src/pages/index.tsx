@@ -1,8 +1,9 @@
 import * as React from "react";
+import { Language } from "../types";
+import { PageContext } from "gatsby/internal";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 // Import components
-import { Helmet } from "react-helmet";
 import { Alert } from "../components/Alert";
 import { BeachBall } from "../components/BeachBall";
 import { Nav } from "../components/Nav";
@@ -16,20 +17,46 @@ import { Footer } from "../components/Footer";
 import { ThemeSwitch } from "../components/ThemeSwitch";
 import { Skills } from "../components/Skills";
 import { Workshop } from "../components/Workshop";
-import { Language } from "../types";
-import { PageContext } from "gatsby/internal";
 
 // Import data
 import translations from "../data/translations";
+import { SEO } from "../components/SEO";
+import { navigate } from "gatsby";
+import { Toast } from "../components/Toast";
+
+export const Head = ({ pageContext }: { pageContext: PageContext }) => (
+    <SEO pageContext={pageContext} />
+);
+
+const getBrowserLanguage = () => {
+    const DEFAULT_LANGUAGE = "en";
+    if (typeof navigator === `undefined`) {
+        return DEFAULT_LANGUAGE;
+    }
+
+    const lang =
+        navigator && navigator.language && navigator.language.split("-")[0];
+    if (!lang) return DEFAULT_LANGUAGE;
+
+    switch (lang) {
+        case "fr":
+            return "fr";
+        default:
+            return "en";
+    }
+};
 
 interface IndexPageProps {
     pageContext: PageContext;
+    location: Location;
 }
-
 /**
  * A component that render the main page.
  */
-function IndexPage({ pageContext }: IndexPageProps) {
+function IndexPage({ pageContext, location }: IndexPageProps) {
+    const [translationAvailable, setTranslationAvailable] = useState<
+        Language | undefined
+    >(undefined);
     const [language] = useState<Language>(pageContext.langKey);
     const lang = useMemo(() => translations[language], [language]);
 
@@ -40,12 +67,44 @@ function IndexPage({ pageContext }: IndexPageProps) {
     };
 
     const [isContactActive, setContactActive] = useState(false);
-
     const [light, setLight] = useState(true);
-
     const toggleContact = useCallback(() => {
         setContactActive(!isContactActive);
     }, [isContactActive]);
+    const [showTranslationToast, setShowTranslationToast] = useState(true);
+    const toast = useMemo(() => {
+        if (translationAvailable && showTranslationToast) {
+            return (
+                <Toast
+                    title={
+                        translations[translationAvailable]
+                            .toast_translation_title
+                    }
+                    message={
+                        translations[translationAvailable]
+                            .toast_translation_message
+                    }
+                    handleClick={() =>
+                        navigate(`/${translationAvailable}/`, {
+                            replace: false,
+                        })
+                    }
+                    handleClose={() => setShowTranslationToast(false)}
+                />
+            );
+        }
+    }, [translationAvailable, showTranslationToast]);
+
+    // Redirect non-French-speaking users when loading the root path
+    useEffect(() => {
+        if (location.pathname === "/") {
+            const browserLanguage = getBrowserLanguage();
+
+            if (browserLanguage !== "fr") {
+                setTranslationAvailable(browserLanguage);
+            }
+        }
+    }, []);
 
     useEffect(() => {
         // Close contact modal with escape key
@@ -79,50 +138,15 @@ function IndexPage({ pageContext }: IndexPageProps) {
         }
     }, [toggleContactFormSubmission]);
 
-    const metaTitle = lang.meta_title;
-    const metaDescription = lang.meta_description;
     return (
         <>
-            <Helmet
-                title={metaTitle}
-                meta={[
-                    { name: "charset", content: "utf-8" },
-                    { name: "description", content: metaDescription },
-                    { name: "author", content: "Louis Grasset" },
-                    {
-                        name: "keywords",
-                        content:
-                            "freelance, louis, grasset, louisgrasset, fullstack, lyon, développeur, dev, développement, portfolio, php, css, sass, intégration, web, vitrine, laravel, reactjs, react, javascript, sql, html, entrepreneur",
-                    },
-                    { name: "twitter:card", content: "summary_large_image" },
-                    { name: "twitter:creator", content: "@louisgrasset" },
-                    { name: "twitter:site", content: "@louisgrasset" },
-                    { name: "twitter:title", content: metaTitle },
-                    { name: "twitter:description", content: metaDescription },
-                    {
-                        name: "twitter:image",
-                        content: "https://louisgrasset.fr/tw-preview.png",
-                    },
-                    { name: "twitter:image:alt", content: "website preview" },
-                    { property: "og:type", content: "article" },
-                    { property: "og:locale", content: lang.language_code },
-                    { property: "og:title", content: metaTitle },
-                    { property: "og:description", content: metaDescription },
-                    {
-                        property: "og:image",
-                        content: "https://louisgrasset.fr/og-preview.png",
-                    },
-                ]}
-            >
-                <html lang={language} />
-            </Helmet>
-
             <main className="pb-20 transition-colors" ref={refs.top}>
                 <Alert
                     text={lang.alert_contact_text}
                     show={isContactFormSubmitted}
                     hideAlert={() => setContactFormSubmission(false)}
                 />
+                {translationAvailable && toast}
                 <Nav refs={refs} />
 
                 <div className="container relative flex px-5 pt-8 mx-auto align-middle md:px-10 xl:px-20">

@@ -100,6 +100,7 @@ nav > div:first-child.show {
 }
 
 @media screen and (max-width: 768px) {
+    /* stylelint-disable-next-line */
     #beachBall > div {
         animation-play-state: paused !important;
     }

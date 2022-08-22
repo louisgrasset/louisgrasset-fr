@@ -43,7 +43,7 @@ export const Footer = ({
                             </span>
                         </p>
                         <p className="mt-2 opacity-40">
-                            {lang["about_footnote_text"]}
+                            {lang["about_footnote_text"]}{" "}
                             <a
                                 href="https://dribbble.com/shots/14572884-Redesigning-my-portfolio-Webflow"
                                 target="_blank"
