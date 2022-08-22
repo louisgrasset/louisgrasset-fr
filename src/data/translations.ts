@@ -56,6 +56,8 @@ const translations: Record<Language, Translation> = {
         about_footnote_link: "this",
         about_cta_primary: "Get in touch",
         about_cta_navigation: "Go to top",
+        toast_translation_title: "English speaking?",
+        toast_translation_message: "Click me!",
     },
     fr: {
         meta_title: "Louis Grasset - Développeur web front end freelance",

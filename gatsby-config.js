@@ -1,8 +1,7 @@
 module.exports = {
     siteMetadata: {
-        title: "Louis Grasset - Développeur web freelance",
-        description:
-            "Louis Grasset, développeur web front end freelance. Développement adapté à vos besoin.",
+        title: "Louis Grasset - Software Engineer",
+        description: "Louis Grasset, Software Engineer and Freelance.",
         author: "@louisgrasset",
         siteUrl: `${process.env.GATSBY_SITE_URL || "https://louisgrasset.fr"}`,
         name: "Louis Grasset",
@@ -11,7 +10,6 @@ module.exports = {
         "gatsby-plugin-sass",
         "gatsby-plugin-postcss",
         "gatsby-plugin-sharp",
-        "gatsby-plugin-react-helmet",
         "gatsby-plugin-sitemap",
         "gatsby-transformer-sharp",
         {
@@ -33,7 +31,7 @@ module.exports = {
         {
             resolve: "gatsby-plugin-manifest",
             options: {
-                name: "Louis Grasset - Développeur web front end freelance",
+                name: "Louis Grasset - Software Engineer and Freelance.",
                 short_name: "Louis Grasset",
                 start_url: "/",
                 background_color: "#ffffff",
