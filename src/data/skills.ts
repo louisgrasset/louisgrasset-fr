@@ -10,6 +10,8 @@ import sass from "../images/skills/sass.svg";
 import php from "../images/skills/php.svg";
 import laravel from "../images/skills/laravel.svg";
 import npm from "../images/skills/npm.svg";
+import pnpm from "../images/skills/pnpm.svg";
+import lerna from "../images/skills/lerna.svg";
 import jest from "../images/skills/jest.svg";
 import docker from "../images/skills/docker.svg";
 
@@ -59,6 +61,16 @@ const skills = [
         slug: "npm",
         name: "NPM",
         icon: npm,
+    },
+    {
+        slug: "pnpm",
+        name: "PNPM",
+        icon: pnpm,
+    },
+    {
+        slug: "lerna",
+        name: "Lerna",
+        icon: lerna,
     },
     {
         slug: "html",
