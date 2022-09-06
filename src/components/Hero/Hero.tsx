@@ -3,8 +3,10 @@ import React from "react";
 import scrollInto from "../../utils/scrollInto";
 
 import iconPin from "../../images/icons/pin.svg";
-import company from "../../images/companies/dashlane.svg";
-import profile from "../../images/profile.webp";
+import iconCv from "../../images/icons/cv.svg";
+import iconCompany from "../../images/companies/dashlane.svg";
+import iconProfile from "../../images/profile.webp";
+
 import { PageRefs } from "../../types";
 import { Translation } from "../../data/translations";
 
@@ -22,12 +24,31 @@ export const Hero = ({ lang, refs, toggleContact }: HeroProps) => {
     return (
         <div className="pt-20">
             <img
-                src={profile}
+                src={iconProfile}
                 alt="Louis Grasset"
                 width="80"
                 height="80"
-                className="w-20 h-20 mb-4 rounded-full shadow-md dark:border-2"
+                className="w-20 h-20 rounded-full shadow-md dark:border-2 block mb-7"
             />
+            <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://cv.louisgrasset.fr"
+                className="cursor-pointer inline-block mb-5 border border-gray-50 dark:border-gray-800 dark:text-white rounded-full shadow-sm focus:ring-opacity-50 focus:outline-none focus:ring-4 focus:ring-pink-500"
+            >
+                <div className="flex flex-nowrap">
+                    <div className="bg-gray-100 dark:bg-gray-700 px-2 py-0.5 rounded-l-full w-10 flex justify-items-center justify-center">
+                        <img
+                            className="w-6 ml-1 dark:filter-companies opacity-70"
+                            src={iconCv}
+                            alt={"CV icon"}
+                        />
+                    </div>
+                    <div className="bg-gray-50 dark:bg-gray-800 px-4 py-0.5 rounded-r-full inline-block">
+                        {lang["hero_get_cv"]}
+                    </div>
+                </div>
+            </a>
             <h1 className="text-4xl font-medium text-gray-900 dark:text-gray-200 sm:text-6xl md:text-7xl lg:text-8xl">
                 <span className="font-semibold text-black dark:text-white">
                     Louis Grasset
@@ -44,7 +65,7 @@ export const Hero = ({ lang, refs, toggleContact }: HeroProps) => {
                     <a href="https://dashlane.com" className="underline">
                         <img
                             className="inline h-6 -mt-1.5 mx-1.5 dark:filter-brightness-100"
-                            src={company}
+                            src={iconCompany}
                             alt="Dashlane"
                         />
                     </a>
