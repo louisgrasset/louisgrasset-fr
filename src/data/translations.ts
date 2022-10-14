@@ -59,6 +59,13 @@ const translations: Record<Language, Translation> = {
         about_cta_navigation: "Go to top",
         toast_translation_title: "English speaking?",
         toast_translation_message: "Click me!",
+        carbon_title: "Carbon footprint",
+        carbon_attribution: "Provided by",
+        carbon_of: "of",
+        carbon_view: "view",
+        carbon_cleaner_than: "Webpage cleaner than",
+        carbon_dirtier_than: "Webpage dirtier than",
+        carbon_of_tested_pages: "of pages tested",
     },
     fr: {
         meta_title: "Louis Grasset - Développeur web front end freelance",
@@ -114,6 +121,13 @@ const translations: Record<Language, Translation> = {
         about_footnote_link: "ceci",
         about_cta_primary: "Prendre contact",
         about_cta_navigation: "Aller en haut",
+        carbon_title: "Empreinte carbon",
+        carbon_attribution: "Fourni par",
+        carbon_of: "de",
+        carbon_view: "vue",
+        carbon_cleaner_than: "Page web plus légère que",
+        carbon_dirtier_than: "Page web plus lourde que",
+        carbon_of_tested_pages: "des pages testées",
     },
 };
 

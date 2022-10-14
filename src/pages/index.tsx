@@ -17,12 +17,13 @@ import { Footer } from "../components/Footer";
 import { ThemeSwitch } from "../components/ThemeSwitch";
 import { Skills } from "../components/Skills";
 import { Workshop } from "../components/Workshop";
+import { Toast } from "../components/Toast";
+import { Carbon } from "../components/Carbon";
 
 // Import data
 import translations from "../data/translations";
 import { SEO } from "../components/SEO";
 import { navigate } from "gatsby";
-import { Toast } from "../components/Toast";
 
 export const Head = ({ pageContext }: { pageContext: PageContext }) => (
     <SEO pageContext={pageContext} />
@@ -215,6 +216,9 @@ function IndexPage({ pageContext, location }: IndexPageProps) {
                     close={setContactActive}
                 />
             </main>
+            <div className="container px-5 py-10 mx-auto md:px-10 xl:px-20">
+                <Carbon lang={lang} />
+            </div>
             <Footer
                 language={language}
                 lang={lang}
