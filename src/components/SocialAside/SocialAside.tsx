@@ -20,7 +20,7 @@ export const SocialAside = ({ hidden }: SocialAsideProps) => (
                     title={link.title}
                     href={`${link.url}`}
                     target="blank"
-                    rel="noreferrer"
+                    rel="noreferrer me"
                     className="block p-2"
                 >
                     <img

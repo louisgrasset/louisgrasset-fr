@@ -3,6 +3,7 @@ import twitter from "../images/socials/twitter.svg";
 import reddit from "../images/socials/reddit.svg";
 import linkedin from "../images/socials/linkedin.svg";
 import github from "../images/socials/github.svg";
+import mastodon from "../images/socials/mastodon.svg";
 
 const socials = [
     {
@@ -30,6 +31,11 @@ const socials = [
         title: "GitHub",
         url: "https://github.com/louisgrasset",
         icon: github,
+    },
+    {
+        title: "Mastodon",
+        url: "https://mastodon.social/@louisgrasset",
+        icon: mastodon,
     },
 ];
 
