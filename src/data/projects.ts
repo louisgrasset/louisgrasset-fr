@@ -2,12 +2,22 @@ import { Project } from "../types";
 
 const projects: Project[] = [
     {
+        slug: "touitomamout",
+        company: "Touitomamout",
+        name: "Touitomamout - Tweets crossposter",
+        year: 2023,
+        url: "https://github.com/louisgrasset/touitomamout",
+        stacks: ["NodeJS", "TypeScript", "GithubCI", "Open Source"],
+        color: "blue",
+        images: 1,
+    },
+    {
         slug: "2022etmoi",
         company: "2022etmoi",
         name: "2022 et moi - Quiz politique",
         year: 2022,
         url: "https://2022etmoi.fr",
-        stacks: ["React", "TypeScript", "SASS", "GithubCI"],
+        stacks: ["React", "TypeScript", "SASS", "GithubCI", "Open Source"],
         color: "blue",
         images: 4,
     },
@@ -27,7 +37,7 @@ const projects: Project[] = [
         name: "Portfolio Pierre Pernigotto",
         year: 2022,
         url: "https://pierre.pernigotto.fr",
-        stacks: ["React", "TypeScript", "SASS"],
+        stacks: ["React", "TypeScript", "SASS", "Open Source"],
         color: "blue",
         images: 3,
     },
