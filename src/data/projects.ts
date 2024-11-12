@@ -16,7 +16,7 @@ const projects: Project[] = [
         company: "2022etmoi",
         name: "2022 et moi - Quiz politique",
         year: 2022,
-        url: "https://2022etmoi.fr",
+        url: "https://2022etmoi.netlify.app",
         stacks: ["React", "TypeScript", "SASS", "GithubCI", "Open Source"],
         color: "blue",
         images: 4,
