@@ -89,7 +89,7 @@ const translations: Record<Language, Translation> = {
         theme_text_light: "Activer le mode sombre",
         hero_get_cv: "Obtenir mon CV ici",
         hero_title: "Développeur web front end passionné. Je croque le web.",
-        hero_position: "Actuellement en poste de Sofware Engineer chez",
+        hero_position: "Actuellement en poste de Software Engineer chez",
         hero_cta_primary: "Dire bonjour",
         hero_cta_secondary: "En savoir plus",
         companies_headline_title: "Entreprises",
