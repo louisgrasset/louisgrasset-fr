@@ -4,7 +4,6 @@ import reddit from "../images/socials/reddit.svg";
 import linkedin from "../images/socials/linkedin.svg";
 import github from "../images/socials/github.svg";
 import mastodon from "../images/socials/mastodon.svg";
-import twitter from "../images/socials/twitter.svg";
 
 const socials = [
     {
@@ -36,13 +35,7 @@ const socials = [
         title: "Mastodon",
         url: "https://mastodon.social/@louisgrasset",
         icon: mastodon,
-    },
-    {
-        title: "Twitter",
-        url: "https://twitter.com/louisgrasset",
-        icon: twitter,
-        dm: "https://twitter.com/messages/compose?recipient_id=1223905705",
-    },
+    }
 ];
 
 export default socials;

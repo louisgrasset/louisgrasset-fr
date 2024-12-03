@@ -65,7 +65,7 @@ export const Contact = ({ lang, show, close }: ContactProps) => {
                             {socials
                                 .filter(
                                     (link) =>
-                                        link.title === "Twitter" ||
+                                        link.title === "Bluesky" ||
                                         link.title === "Linkedin"
                                 )
                                 .map((link, key) => (
