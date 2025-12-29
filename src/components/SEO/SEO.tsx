@@ -63,8 +63,6 @@ export function SEO({ pageContext }: { pageContext: PageContext }) {
                 content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
             />
             <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:creator" content="@louisgrasset" />
-            <meta name="twitter:site" content="@louisgrasset" />
             <meta name="twitter:title" content={metaTitle} />
             <meta name="twitter:description" content={metaDescription} />
             <meta
