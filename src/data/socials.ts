@@ -1,4 +1,3 @@
-import malt from "../images/socials/malt.svg";
 import bluesky from "../images/socials/bluesky.svg";
 import reddit from "../images/socials/reddit.svg";
 import linkedin from "../images/socials/linkedin.svg";
@@ -6,11 +5,6 @@ import github from "../images/socials/github.svg";
 import mastodon from "../images/socials/mastodon.svg";
 
 const socials = [
-    {
-        title: "Malt",
-        url: "https://malt.com/profile/louisgrasset",
-        icon: malt,
-    },
     {
         title: "Bluesky",
         url: "https://bsky.app/profile/louisgrasset.fr",
