@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import React, { useState } from "react";
 import socials from "../../data/socials";
 import iconClose from "../../images/icons/close.svg";

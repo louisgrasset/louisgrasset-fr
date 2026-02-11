@@ -14,8 +14,9 @@ interface GalleryImageProps {
 export const GalleryImage = ({ counter, project }: GalleryImageProps) => {
     const extension = ".webp";
     const source = `/images/projects/${project.slug}/${project.slug}-${counter}`;
-    const fallback =
-        require(`../../../static/images/projects/${project.slug}/${project.slug}-${counter}.thumb${extension}`).default;
+    const fallback = require(
+        `../../../static/images/projects/${project.slug}/${project.slug}-${counter}.thumb${extension}`
+    ).default;
 
     const [load, setLoad] = useState(false);
 

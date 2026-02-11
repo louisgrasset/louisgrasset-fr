@@ -19,8 +19,9 @@ export const Studies = ({ lang }: StudiesProps) => {
                         loading="lazy"
                         src={
                             // eslint-disable-next-line @typescript-eslint/no-var-requires
-                            require(`../../images/studies/${diploma.institution.slug}.svg`)
-                                .default
+                            require(
+                                `../../images/studies/${diploma.institution.slug}.svg`
+                            ).default
                         }
                         aria-hidden={true}
                         alt={lang[`studies_${diploma.slug}_institution_name`]}

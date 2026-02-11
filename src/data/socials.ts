@@ -29,7 +29,7 @@ const socials = [
         title: "Mastodon",
         url: "https://mastodon.social/@louisgrasset",
         icon: mastodon,
-    }
+    },
 ];
 
 export default socials;
