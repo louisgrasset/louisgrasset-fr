@@ -73,7 +73,7 @@ export const Contact = ({ lang, show, close }: ContactProps) => {
                                     <li key={key}>
                                         <a
                                             title={link.title}
-                                            href={link.dm ? link.dm : link.url}
+                                            href={link.url}
                                             target="blank"
                                             className="flex items-center h-10 px-4 py-2 font-medium text-white uppercase bg-gray-900 rounded-md cursor-pointer dark:text-gray-900 dark:bg-white group focus:outline-none focus:ring-4 focus:ring-pink-500 focus:border-pink-500 shadow-md"
                                         >
