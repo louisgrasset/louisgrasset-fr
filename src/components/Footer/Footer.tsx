@@ -90,12 +90,14 @@ export const Footer = ({
                                 <span>
                                     <a
                                         title={link.title}
+                                        aria-label={link.title}
                                         href={`${link.url}`}
                                         target="blank"
                                         className="block p-2"
                                     >
                                         <img
                                             src={link.icon}
+                                            aria-hidden={true}
                                             alt={link.title}
                                             className="w-5 h-5 filter-invert"
                                         />
