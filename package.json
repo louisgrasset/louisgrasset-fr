@@ -18,7 +18,7 @@
         "serve": "gatsby serve",
         "clean": "gatsby clean",
         "lint": "npm run lint:eslint && npm run lint:stylelint",
-        "lint:eslint": "eslint *.js src/ --fix",
+        "lint:eslint": "eslint \"**/*.{js,jsx,ts,tsx}\" src/ --fix",
         "lint:stylelint": "stylelint src/**/*.scss --fix"
     },
     "license": "0BSD",
