@@ -15,6 +15,7 @@ export const Skills = ({ light }: SkillsProps) => {
                         key={key}
                         className="mx-2 md:mx-7 lg:mx-16"
                         title={skill.name}
+                        aria-label={skill.name}
                     >
                         <img
                             src={
@@ -23,6 +24,7 @@ export const Skills = ({ light }: SkillsProps) => {
                                     : skill.icon
                             }
                             alt={skill.name}
+                            aria-hidden={true}
                             width="100"
                             height="50"
                             className="h-10 p-1 lg:h-11 xl:h-12 dark:filter-companies"

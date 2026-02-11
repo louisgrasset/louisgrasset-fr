@@ -18,6 +18,7 @@ export const SocialAside = ({ hidden }: SocialAsideProps) => (
             <li key={key}>
                 <a
                     title={link.title}
+                    aria-label={link.title}
                     href={`${link.url}`}
                     target="blank"
                     rel="me"
@@ -25,6 +26,7 @@ export const SocialAside = ({ hidden }: SocialAsideProps) => (
                 >
                     <img
                         src={link.icon}
+                        aria-hidden={true}
                         alt={link.title}
                         className="w-5 h-5 dark:filter-invert"
                     />

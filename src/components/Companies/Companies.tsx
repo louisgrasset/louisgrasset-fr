@@ -18,6 +18,7 @@ export const Companies = () => {
                             <li key={key} className="mr-14 md:mr-20 lg:mr-32">
                                 <a
                                     title={link.title}
+                                    aria-label={link.title}
                                     href={`${link.url}`}
                                     target="blank"
                                     rel="noreferrer"
@@ -27,6 +28,7 @@ export const Companies = () => {
                                         loading="lazy"
                                         src={link.icon}
                                         alt={link.title}
+                                        aria-hidden={true}
                                         width="100"
                                         height="50"
                                         className="h-10 p-1 lg:h-11 xl:h-12 dark:filter-companies"

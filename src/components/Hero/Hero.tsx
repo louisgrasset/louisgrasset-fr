@@ -41,7 +41,8 @@ export const Hero = ({ lang, refs, toggleContact }: HeroProps) => {
                         <img
                             className="w-6 ml-1 dark:filter-companies opacity-70"
                             src={iconCv}
-                            alt={"CV icon"}
+                            alt=""
+                            aria-hidden={true}
                         />
                     </div>
                     <div className="bg-gray-50 dark:bg-gray-800 px-4 py-0.5 rounded-r-full inline-block">
@@ -62,11 +63,17 @@ export const Hero = ({ lang, refs, toggleContact }: HeroProps) => {
             <p className="my-8 text-gray-500 font-theme text-md">
                 <span className="mr-2">
                     {lang["hero_position"]}
-                    <a href="https://dashlane.com" className="underline">
+                    <a
+                        href="https://dashlane.com"
+                        className="underline"
+                        title="Dashlane"
+                        aria-label="Dashlane"
+                    >
                         <img
                             className="inline h-6 -mt-1.5 mx-1.5 dark:filter-brightness-100"
                             src={iconCompany}
                             alt="Dashlane"
+                            aria-hidden={true}
                         />
                     </a>
                     &amp; freelance.

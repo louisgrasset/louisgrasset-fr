@@ -22,6 +22,7 @@ export const Studies = ({ lang }: StudiesProps) => {
                             require(`../../images/studies/${diploma.institution.slug}.svg`)
                                 .default
                         }
+                        aria-hidden={true}
                         alt={lang[`studies_${diploma.slug}_institution_name`]}
                         width="100"
                         height="50"
