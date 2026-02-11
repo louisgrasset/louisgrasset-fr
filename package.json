@@ -5,7 +5,7 @@
     "description": "louisgrasset.fr",
     "author": "Louis Grasset",
     "engines": {
-        "node": "^v18.7.0"
+        "node": "^v22.19.0"
     },
     "keywords": [
         "gatsby"
